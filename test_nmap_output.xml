@@ -1,0 +1,1993 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.80 scan initiated Sun Aug 16 14:30:14 2020 as: nmap -p0- -v -A -T4 -oN nmap_output.nmap -oG nmap_output.grep -oX nmap_output.xml 10.10.10.179,180,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,201,203 -->
+<nmaprun scanner="nmap" args="nmap -p0- -v -A -T4 -oN nmap_output.nmap -oG nmap_output.grep -oX nmap_output.xml 10.10.10.179,180,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,201,203" start="1597602614" startstr="Sun Aug 16 14:30:14 2020" version="7.80" xmloutputversion="1.04">
+	<scaninfo type="syn" protocol="tcp" numservices="65536" services="0-65535"/>
+	<verbose level="1"/>
+	<debugging level="0"/>
+	<taskbegin task="NSE" time="1597602614"/>
+	<taskend task="NSE" time="1597602614"/>
+	<taskbegin task="NSE" time="1597602614"/>
+	<taskend task="NSE" time="1597602614"/>
+	<taskbegin task="NSE" time="1597602614"/>
+	<taskend task="NSE" time="1597602614"/>
+	<taskbegin task="Ping Scan" time="1597602614"/>
+	<taskend task="Ping Scan" time="1597602614" extrainfo="20 total hosts"/>
+	<taskbegin task="Parallel DNS resolution of 20 hosts." time="1597602614"/>
+	<taskend task="Parallel DNS resolution of 20 hosts." time="1597602614"/>
+	<taskbegin task="SYN Stealth Scan" time="1597602614"/>
+	<taskprogress task="SYN Stealth Scan" time="1597602645" percent="17.24" remaining="149" etc="1597602794"/>
+	<taskprogress task="SYN Stealth Scan" time="1597602675" percent="35.34" remaining="112" etc="1597602787"/>
+	<taskprogress task="SYN Stealth Scan" time="1597602705" percent="50.75" remaining="89" etc="1597602793"/>
+	<taskprogress task="SYN Stealth Scan" time="1597602735" percent="68.64" remaining="56" etc="1597602790"/>
+	<taskend task="SYN Stealth Scan" time="1597602788" extrainfo="524288 total ports"/>
+	<taskbegin task="Service scan" time="1597602788"/>
+	<taskend task="Service scan" time="1597602957" extrainfo="59 services on 8 hosts"/>
+	<taskbegin task="Traceroute" time="1597602975"/>
+	<taskend task="Traceroute" time="1597602977"/>
+	<taskbegin task="Parallel DNS resolution of 9 hosts." time="1597602977"/>
+	<taskend task="Parallel DNS resolution of 9 hosts." time="1597602977"/>
+	<taskbegin task="NSE" time="1597602977"/>
+	<taskend task="NSE" time="1597603018"/>
+	<taskbegin task="NSE" time="1597603018"/>
+	<taskend task="NSE" time="1597603198"/>
+	<taskbegin task="NSE" time="1597603198"/>
+	<taskend task="NSE" time="1597603198"/>
+	<host starttime="1597602614" endtime="1597603198"><status state="up" reason="echo-reply" reason_ttl="127"/>
+		<address addr="10.10.10.179" addrtype="ipv4"/>
+		<hostnames>
+		</hostnames>
+		<ports><extraports state="filtered" count="65514">
+				<extrareasons reason="no-responses" count="65514"/>
+			</extraports>
+			<port protocol="tcp" portid="53"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="domain" servicefp="SF-Port53-TCP:V=7.80%I=7%D=8/16%Time=5F397BEF%P=x86_64-pc-linux-gnu%r(DNSVersionBindReqTCP,20,&quot;\0\x1e\0\x06\x81\x04\0\x01\0\0\0\0\0\0\x07version\x04bind\0\0\x10\0\x03&quot;);" method="table" conf="3"/><script id="fingerprint-strings" output="&#xa;  DNSVersionBindReqTCP: &#xa;    version&#xa;    bind"><elem key="DNSVersionBindReqTCP">&#xa;    version&#xa;    bind</elem>
+			</script></port>
+			<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="http" product="Microsoft IIS httpd" version="10.0" ostype="Windows" method="probed" conf="10"><cpe>cpe:/a:microsoft:iis:10.0</cpe><cpe>cpe:/o:microsoft:windows</cpe></service><script id="http-favicon" output="Unknown favicon MD5: 6944F7C42798BE78E1465F1C49B5BF04"/><script id="http-methods" output="&#xa;  Supported Methods: GET HEAD OPTIONS TRACE&#xa;  Potentially risky methods: TRACE"><table key="Supported Methods">
+						<elem>GET</elem>
+						<elem>HEAD</elem>
+						<elem>OPTIONS</elem>
+						<elem>TRACE</elem>
+					</table>
+					<table key="Potentially risky methods">
+						<elem>TRACE</elem>
+					</table>
+					</script><script id="http-server-header" output="Microsoft-IIS/10.0"><elem>Microsoft-IIS/10.0</elem>
+					</script><script id="http-title" output="MegaCorp"><elem key="title">MegaCorp</elem>
+			</script></port>
+			<port protocol="tcp" portid="88"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="kerberos-sec" product="Microsoft Windows Kerberos" extrainfo="server time: 2020-08-16 18:42:09Z" ostype="Windows" method="probed" conf="10"><cpe>cpe:/a:microsoft:kerberos</cpe><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+			<port protocol="tcp" portid="135"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+			<port protocol="tcp" portid="139"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="netbios-ssn" product="Microsoft Windows netbios-ssn" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+			<port protocol="tcp" portid="389"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="ldap" product="Microsoft Windows Active Directory LDAP" extrainfo="Domain: MEGACORP.LOCAL, Site: Default-First-Site-Name" hostname="MULTIMASTER" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+			<port protocol="tcp" portid="445"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="microsoft-ds" product="Windows Server 2016 Standard 14393 microsoft-ds" extrainfo="workgroup: MEGACORP" hostname="MULTIMASTER" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+			<port protocol="tcp" portid="464"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="kpasswd5" method="table" conf="3"/></port>
+			<port protocol="tcp" portid="593"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="ncacn_http" product="Microsoft Windows RPC over HTTP" version="1.0" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+			<port protocol="tcp" portid="636"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+			<port protocol="tcp" portid="3268"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="ldap" product="Microsoft Windows Active Directory LDAP" extrainfo="Domain: MEGACORP.LOCAL, Site: Default-First-Site-Name" hostname="MULTIMASTER" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+			<port protocol="tcp" portid="3269"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+			<port protocol="tcp" portid="3389"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="ms-wbt-server" product="Microsoft Terminal Services" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service><script id="rdp-ntlm-info" output="&#xa;  Target_Name: MEGACORP&#xa;  NetBIOS_Domain_Name: MEGACORP&#xa;  NetBIOS_Computer_Name: MULTIMASTER&#xa;  DNS_Domain_Name: MEGACORP.LOCAL&#xa;  DNS_Computer_Name: MULTIMASTER.MEGACORP.LOCAL&#xa;  DNS_Tree_Name: MEGACORP.LOCAL&#xa;  Product_Version: 10.0.14393&#xa;  System_Time: 2020-08-16T18:45:20+00:00"><elem key="Target_Name">MEGACORP</elem>
+					<elem key="NetBIOS_Domain_Name">MEGACORP</elem>
+					<elem key="NetBIOS_Computer_Name">MULTIMASTER</elem>
+					<elem key="DNS_Domain_Name">MEGACORP.LOCAL</elem>
+					<elem key="DNS_Computer_Name">MULTIMASTER.MEGACORP.LOCAL</elem>
+					<elem key="DNS_Tree_Name">MEGACORP.LOCAL</elem>
+					<elem key="Product_Version">10.0.14393</elem>
+					<elem key="System_Time">2020-08-16T18:45:20+00:00</elem>
+						</script><script id="ssl-cert" output="Subject: commonName=MULTIMASTER.MEGACORP.LOCAL&#xa;Issuer: commonName=MULTIMASTER.MEGACORP.LOCAL&#xa;Public Key type: rsa&#xa;Public Key bits: 2048&#xa;Signature Algorithm: sha256WithRSAEncryption&#xa;Not valid before: 2020-08-15T16:48:54&#xa;Not valid after:  2021-02-14T16:48:54&#xa;MD5:   4c21 1b9c f090 415c 7d3b bb44 d4df 5ecc&#xa;SHA-1: ea02 0e1d 4729 db84 dcec 4d91 e180 7106 20cf 8b36"><table key="subject">
+						<elem key="commonName">MULTIMASTER.MEGACORP.LOCAL</elem>
+					</table>
+					<table key="issuer">
+						<elem key="commonName">MULTIMASTER.MEGACORP.LOCAL</elem>
+					</table>
+					<table key="pubkey">
+						<elem key="bits">2048</elem>
+						<elem key="exponent">userdata: 0x560bf3198898</elem>
+						<elem key="modulus">userdata: 0x560bf31988d8</elem>
+						<elem key="type">rsa</elem>
+					</table>
+					<table key="extensions">
+						<table>
+							<elem key="name">X509v3 Extended Key Usage</elem>
+							<elem key="value">TLS Web Server Authentication</elem>
+						</table>
+						<table>
+							<elem key="name">X509v3 Key Usage</elem>
+							<elem key="value">Key Encipherment, Data Encipherment</elem>
+						</table>
+					</table>
+					<elem key="sig_algo">sha256WithRSAEncryption</elem>
+					<table key="validity">
+						<elem key="notBefore">2020-08-15T16:48:54</elem>
+						<elem key="notAfter">2021-02-14T16:48:54</elem>
+					</table>
+					<elem key="md5">4c211b9cf090415c7d3bbb44d4df5ecc</elem>
+					<elem key="sha1">ea020e1d4729db84dcec4d91e180710620cf8b36</elem>
+					<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIC+DCCAeCgAwIBAgIQUgDCk83LiYxNp/eBuaWVkDANBgkqhkiG9w0BAQsFADAl&#xa;MSMwIQYDVQQDExpNVUxUSU1BU1RFUi5NRUdBQ09SUC5MT0NBTDAeFw0yMDA4MTUx&#xa;NjQ4NTRaFw0yMTAyMTQxNjQ4NTRaMCUxIzAhBgNVBAMTGk1VTFRJTUFTVEVSLk1F&#xa;R0FDT1JQLkxPQ0FMMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAmpHk&#xa;ysong2c18dmfAVhjw8zOhARSx1jbsnfOKposF62n0r+yxi2I+kIsfXAo/IAmIXxd&#xa;r5hZhhIueNHk+wMOWaegUGzmEz121aCM/8K+wRp/TjD+h9nbZruD0KNWrrPtlSM7&#xa;qXMiwgCat+4MZt0NNbhooKFHWTvBtunSoxixEkKlGDMHLC6KYl2gs96MswM4tGZd&#xa;sq7JG4l7Oq2ij6+GVOJ1VtTIDqcKbqZGih/c/OMRDnOW1Y2Zoxn/pe4KZ334JgFq&#xa;I6Ru9JU8yhpH5+7v3Q6WwI2y4epJhRupDqeMlOG/2xY3RxNxyDOLHlsYb70sD5HZ&#xa;XCSQ38pO0EB+8q+7VwIDAQABoyQwIjATBgNVHSUEDDAKBggrBgEFBQcDATALBgNV&#xa;HQ8EBAMCBDAwDQYJKoZIhvcNAQELBQADggEBAEtrilOFExEH9klk9Dm/etB9AfY0&#xa;bD9/0duPC9M9PEKzkkFohs9ugISWsIdwo2bMGSAKlycZjfDz2km6BALPN7v1GqpZ&#xa;rAQnb++8E3bTFUU6IuMXInXp+fKvWVCvOXS97wnEKNpQ0mrrl1TaCKYiiwePfHGt&#xa;GfH0kapnbDXW+yJgsMjO0jLxf/x8atNd17piYmL8xQoYdk8su0Bkuf7cmJVoOWVK&#xa;xf3No5pxSfCc5yypmKT7IDISkFBtmHovYEAoGXUWOcJPCnIEw7bxjHOWQj3icFQi&#xa;IaHRM0SP2bPkYmodt2cSYCHCv82SQN7Etl21juzMAaj8HExxaP8uVnr/RXQ=&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+					</script><script id="ssl-date" output="2020-08-16T18:45:53+00:00; +8m55s from scanner time."><elem key="delta">535.0</elem>
+					<elem key="date">2020-08-16T18:45:53+00:00</elem>
+			</script></port>
+			<port protocol="tcp" portid="5985"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="http" product="Microsoft HTTPAPI httpd" version="2.0" extrainfo="SSDP/UPnP" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service><script id="http-server-header" output="Microsoft-HTTPAPI/2.0"><elem>Microsoft-HTTPAPI/2.0</elem>
+					</script><script id="http-title" output="Not Found"><elem key="title">Not Found</elem>
+			</script></port>
+			<port protocol="tcp" portid="9389"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="mc-nmf" product=".NET Message Framing" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+			<port protocol="tcp" portid="49666"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+			<port protocol="tcp" portid="49667"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+			<port protocol="tcp" portid="49674"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="ncacn_http" product="Microsoft Windows RPC over HTTP" version="1.0" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+			<port protocol="tcp" portid="49675"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+			<port protocol="tcp" portid="49681"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+			<port protocol="tcp" portid="49698"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+			<port protocol="tcp" portid="49745"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+		</ports>
+		<os><portused state="open" proto="tcp" portid="53"/>
+			<osmatch name="Microsoft Windows Server 2016" accuracy="91" line="75728">
+				<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2016" accuracy="91"><cpe>cpe:/o:microsoft:windows_server_2016</cpe></osclass>
+			</osmatch>
+			<osmatch name="Microsoft Windows Server 2012" accuracy="85" line="75072">
+				<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2012" accuracy="85"><cpe>cpe:/o:microsoft:windows_server_2012</cpe></osclass>
+			</osmatch>
+			<osmatch name="Microsoft Windows Server 2012 or Windows Server 2012 R2" accuracy="85" line="75205">
+				<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2012" accuracy="85"><cpe>cpe:/o:microsoft:windows_server_2012:r2</cpe></osclass>
+			</osmatch>
+			<osmatch name="Microsoft Windows Server 2012 R2" accuracy="85" line="75243">
+				<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2012" accuracy="85"><cpe>cpe:/o:microsoft:windows_server_2012:r2</cpe></osclass>
+			</osmatch>
+			<osmatch name="Microsoft Windows Server 2008 R2" accuracy="85" line="74118">
+				<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2008" accuracy="85"><cpe>cpe:/o:microsoft:windows_server_2008:r2</cpe></osclass>
+			</osmatch>
+			<osmatch name="Microsoft Windows 10 1607" accuracy="85" line="69286">
+				<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="10" accuracy="85"><cpe>cpe:/o:microsoft:windows_10:1607</cpe></osclass>
+			</osmatch>
+		</os>
+		<uptime seconds="7214" lastboot="Sun Aug 16 12:39:44 2020"/>
+		<distance value="2"/>
+		<tcpsequence index="258" difficulty="Good luck!" values="21A35896,1E3B1B61,C87317DC,DED385F8,2222E8D2,54003A5B"/>
+		<ipidsequence class="Incremental" values="3D2D,3D2E,3D2F,3D30,3D31,3D32"/>
+		<tcptssequence class="1000HZ" values="6A7BBE,6A7C2E,6A7C94,6A7CF8,6A7D63,6A7DC6"/>
+		<hostscript><script id="clock-skew" output="mean: 1h32m55s, deviation: 3h07m52s, median: 8m54s"><elem key="stddev">11272</elem>
+				<elem key="median">534</elem>
+				<elem key="count">5</elem>
+				<elem key="mean">5575</elem>
+				</script><script id="smb-os-discovery" output="&#xa;  OS: Windows Server 2016 Standard 14393 (Windows Server 2016 Standard 6.3)&#xa;  Computer name: MULTIMASTER&#xa;  NetBIOS computer name: MULTIMASTER\x00&#xa;  Domain name: MEGACORP.LOCAL&#xa;  Forest name: MEGACORP.LOCAL&#xa;  FQDN: MULTIMASTER.MEGACORP.LOCAL&#xa;  System time: 2020-08-16T11:45:17-07:00&#xa;"><elem key="os">Windows Server 2016 Standard 14393</elem>
+				<elem key="lanmanager">Windows Server 2016 Standard 6.3</elem>
+				<elem key="server">MULTIMASTER\x00</elem>
+				<elem key="date">2020-08-16T11:45:17-07:00</elem>
+				<elem key="fqdn">MULTIMASTER.MEGACORP.LOCAL</elem>
+				<elem key="domain_dns">MEGACORP.LOCAL</elem>
+				<elem key="forest_dns">MEGACORP.LOCAL</elem>
+				<elem key="workgroup">MEGACORP\x00</elem>
+				</script><script id="smb-security-mode" output="&#xa;  account_used: &lt;blank&gt;&#xa;  authentication_level: user&#xa;  challenge_response: supported&#xa;  message_signing: required"><elem key="account_used">&lt;blank&gt;</elem>
+				<elem key="authentication_level">user</elem>
+				<elem key="challenge_response">supported</elem>
+				<elem key="message_signing">required</elem>
+					</script><script id="smb2-security-mode" output="&#xa;  2.02: &#xa;    Message signing enabled and required"><table key="2.02">
+					<elem>Message signing enabled and required</elem>
+				</table>
+				</script><script id="smb2-time" output="&#xa;  date: 2020-08-16T18:45:14&#xa;  start_date: 2020-08-16T16:49:00"><elem key="date">2020-08-16T18:45:14</elem>
+				<elem key="start_date">2020-08-16T16:49:00</elem>
+			</script></hostscript><trace port="80" proto="tcp">
+			<hop ttl="1" ipaddr="10.10.14.1" rtt="24.63"/>
+			<hop ttl="2" ipaddr="10.10.10.179" rtt="22.01"/>
+		</trace>
+		<times srtt="23272" rttvar="1653" to="100000"/>
+	</host>
+	<host starttime="1597602614" endtime="1597603198"><status state="up" reason="echo-reply" reason_ttl="127"/>
+		<address addr="10.10.10.180" addrtype="ipv4"/>
+		<hostnames>
+		</hostnames>
+		<ports><extraports state="closed" count="65520">
+				<extrareasons reason="resets" count="65520"/>
+			</extraports>
+			<port protocol="tcp" portid="21"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="ftp" product="Microsoft ftpd" ostype="Windows" method="probed" conf="10"><cpe>cpe:/a:microsoft:ftp_service</cpe><cpe>cpe:/o:microsoft:windows</cpe></service><script id="ftp-anon" output="Anonymous FTP login allowed (FTP code 230)"/><script id="ftp-syst" output="&#xa;  SYST: Windows_NT"><elem key="SYST">Windows_NT</elem>
+			</script></port>
+			<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="http" product="Microsoft HTTPAPI httpd" version="2.0" extrainfo="SSDP/UPnP" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service><script id="http-methods" output="&#xa;  Supported Methods: GET HEAD POST OPTIONS"><table key="Supported Methods">
+						<elem>GET</elem>
+						<elem>HEAD</elem>
+						<elem>POST</elem>
+						<elem>OPTIONS</elem>
+					</table>
+					</script><script id="http-title" output="Home - Acme Widgets"><elem key="title">Home - Acme Widgets</elem>
+			</script></port>
+			<port protocol="tcp" portid="111"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="rpcbind" version="2-4" extrainfo="RPC #100000" method="probed" conf="10"/><script id="rpcinfo" output="&#xa;  program version    port/proto  service&#xa;  100000  2,3,4        111/tcp   rpcbind&#xa;  100000  2,3,4        111/tcp6  rpcbind&#xa;  100000  2,3,4        111/udp   rpcbind&#xa;  100000  2,3,4        111/udp6  rpcbind&#xa;  100003  2,3         2049/udp   nfs&#xa;  100003  2,3         2049/udp6  nfs&#xa;  100003  2,3,4       2049/tcp   nfs&#xa;  100003  2,3,4       2049/tcp6  nfs&#xa;  100005  1,2,3       2049/tcp   mountd&#xa;  100005  1,2,3       2049/tcp6  mountd&#xa;  100005  1,2,3       2049/udp   mountd&#xa;  100005  1,2,3       2049/udp6  mountd&#xa;  100021  1,2,3,4     2049/tcp   nlockmgr&#xa;  100021  1,2,3,4     2049/tcp6  nlockmgr&#xa;  100021  1,2,3,4     2049/udp   nlockmgr&#xa;  100021  1,2,3,4     2049/udp6  nlockmgr&#xa;  100024  1           2049/tcp   status&#xa;  100024  1           2049/tcp6  status&#xa;  100024  1           2049/udp   status&#xa;  100024  1           2049/udp6  status&#xa;"><table key="100003">
+						<table key="udp">
+							<elem key="port">2049</elem>
+							<table key="version">
+								<elem>2</elem>
+								<elem>3</elem>
+							</table>
+							<elem key="addr">0.0.0.0</elem>
+							<elem key="owner">superuser</elem>
+						</table>
+						<table key="tcp">
+							<elem key="port">2049</elem>
+							<table key="version">
+								<elem>2</elem>
+								<elem>3</elem>
+								<elem>4</elem>
+							</table>
+							<elem key="addr">0.0.0.0</elem>
+							<elem key="owner">superuser</elem>
+						</table>
+						<table key="tcp6">
+							<elem key="port">2049</elem>
+							<table key="version">
+								<elem>2</elem>
+								<elem>3</elem>
+								<elem>4</elem>
+							</table>
+							<elem key="addr">::</elem>
+							<elem key="owner">superuser</elem>
+						</table>
+						<table key="udp6">
+							<elem key="port">2049</elem>
+							<table key="version">
+								<elem>2</elem>
+								<elem>3</elem>
+							</table>
+							<elem key="addr">::</elem>
+							<elem key="owner">superuser</elem>
+						</table>
+					</table>
+					<table key="100024">
+						<table key="udp">
+							<elem key="port">2049</elem>
+							<table key="version">
+								<elem>1</elem>
+							</table>
+							<elem key="addr">0.0.0.0</elem>
+							<elem key="owner">superuser</elem>
+						</table>
+						<table key="tcp">
+							<elem key="port">2049</elem>
+							<table key="version">
+								<elem>1</elem>
+							</table>
+							<elem key="addr">0.0.0.0</elem>
+							<elem key="owner">superuser</elem>
+						</table>
+						<table key="tcp6">
+							<elem key="port">2049</elem>
+							<table key="version">
+								<elem>1</elem>
+							</table>
+							<elem key="addr">::</elem>
+							<elem key="owner">superuser</elem>
+						</table>
+						<table key="udp6">
+							<elem key="port">2049</elem>
+							<table key="version">
+								<elem>1</elem>
+							</table>
+							<elem key="addr">::</elem>
+							<elem key="owner">superuser</elem>
+						</table>
+					</table>
+					<table key="100000">
+						<table key="udp">
+							<elem key="port">111</elem>
+							<table key="version">
+								<elem>2</elem>
+								<elem>3</elem>
+								<elem>4</elem>
+							</table>
+							<elem key="addr">0.0.0.0</elem>
+							<elem key="owner">superuser</elem>
+						</table>
+						<table key="tcp">
+							<elem key="port">111</elem>
+							<table key="version">
+								<elem>2</elem>
+								<elem>3</elem>
+								<elem>4</elem>
+							</table>
+							<elem key="addr">0.0.0.0</elem>
+							<elem key="owner">superuser</elem>
+						</table>
+						<table key="tcp6">
+							<elem key="port">111</elem>
+							<table key="version">
+								<elem>2</elem>
+								<elem>3</elem>
+								<elem>4</elem>
+							</table>
+							<elem key="addr">::</elem>
+							<elem key="owner">superuser</elem>
+						</table>
+						<table key="udp6">
+							<elem key="port">111</elem>
+							<table key="version">
+								<elem>2</elem>
+								<elem>3</elem>
+								<elem>4</elem>
+							</table>
+							<elem key="addr">::</elem>
+							<elem key="owner">superuser</elem>
+						</table>
+					</table>
+					<table key="100005">
+						<table key="udp">
+							<elem key="port">2049</elem>
+							<table key="version">
+								<elem>1</elem>
+								<elem>2</elem>
+								<elem>3</elem>
+							</table>
+							<elem key="addr">0.0.0.0</elem>
+							<elem key="owner">superuser</elem>
+						</table>
+						<table key="tcp">
+							<elem key="port">2049</elem>
+							<table key="version">
+								<elem>1</elem>
+								<elem>2</elem>
+								<elem>3</elem>
+							</table>
+							<elem key="addr">0.0.0.0</elem>
+							<elem key="owner">superuser</elem>
+						</table>
+						<table key="tcp6">
+							<elem key="port">2049</elem>
+							<table key="version">
+								<elem>1</elem>
+								<elem>2</elem>
+								<elem>3</elem>
+							</table>
+							<elem key="addr">::</elem>
+							<elem key="owner">superuser</elem>
+						</table>
+						<table key="udp6">
+							<elem key="port">2049</elem>
+							<table key="version">
+								<elem>1</elem>
+								<elem>2</elem>
+								<elem>3</elem>
+							</table>
+							<elem key="addr">::</elem>
+							<elem key="owner">superuser</elem>
+						</table>
+					</table>
+					<table key="100021">
+						<table key="udp">
+							<elem key="port">2049</elem>
+							<table key="version">
+								<elem>1</elem>
+								<elem>2</elem>
+								<elem>3</elem>
+								<elem>4</elem>
+							</table>
+							<elem key="addr">0.0.0.0</elem>
+							<elem key="owner">superuser</elem>
+						</table>
+						<table key="tcp">
+							<elem key="port">2049</elem>
+							<table key="version">
+								<elem>1</elem>
+								<elem>2</elem>
+								<elem>3</elem>
+								<elem>4</elem>
+							</table>
+							<elem key="addr">0.0.0.0</elem>
+							<elem key="owner">superuser</elem>
+						</table>
+						<table key="tcp6">
+							<elem key="port">2049</elem>
+							<table key="version">
+								<elem>1</elem>
+								<elem>2</elem>
+								<elem>3</elem>
+								<elem>4</elem>
+							</table>
+							<elem key="addr">::</elem>
+							<elem key="owner">superuser</elem>
+						</table>
+						<table key="udp6">
+							<elem key="port">2049</elem>
+							<table key="version">
+								<elem>1</elem>
+								<elem>2</elem>
+								<elem>3</elem>
+								<elem>4</elem>
+							</table>
+							<elem key="addr">::</elem>
+							<elem key="owner">superuser</elem>
+						</table>
+					</table>
+			</script></port>
+			<port protocol="tcp" portid="135"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+			<port protocol="tcp" portid="139"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="netbios-ssn" product="Microsoft Windows netbios-ssn" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+			<port protocol="tcp" portid="445"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="microsoft-ds" method="table" conf="3"/></port>
+			<port protocol="tcp" portid="2049"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="mountd" version="1-3" extrainfo="RPC #100005" method="probed" conf="10"/></port>
+			<port protocol="tcp" portid="5985"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="http" product="Microsoft HTTPAPI httpd" version="2.0" extrainfo="SSDP/UPnP" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service><script id="http-server-header" output="Microsoft-HTTPAPI/2.0"><elem>Microsoft-HTTPAPI/2.0</elem>
+					</script><script id="http-title" output="Not Found"><elem key="title">Not Found</elem>
+			</script></port>
+			<port protocol="tcp" portid="47001"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="http" product="Microsoft HTTPAPI httpd" version="2.0" extrainfo="SSDP/UPnP" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service><script id="http-server-header" output="Microsoft-HTTPAPI/2.0"><elem>Microsoft-HTTPAPI/2.0</elem>
+					</script><script id="http-title" output="Not Found"><elem key="title">Not Found</elem>
+			</script></port>
+			<port protocol="tcp" portid="49664"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+			<port protocol="tcp" portid="49665"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+			<port protocol="tcp" portid="49666"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+			<port protocol="tcp" portid="49667"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+			<port protocol="tcp" portid="49678"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+			<port protocol="tcp" portid="49679"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+			<port protocol="tcp" portid="49680"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+		</ports>
+		<os><portused state="open" proto="tcp" portid="21"/>
+			<portused state="closed" proto="tcp" portid="1"/>
+			<portused state="closed" proto="udp" portid="42774"/>
+			<osmatch name="Microsoft Windows Server 2012" accuracy="93" line="75054">
+				<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2012" accuracy="93"><cpe>cpe:/o:microsoft:windows_server_2012</cpe></osclass>
+			</osmatch>
+			<osmatch name="Microsoft Windows Vista SP1" accuracy="93" line="79652">
+				<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="Vista" accuracy="93"><cpe>cpe:/o:microsoft:windows_vista::sp1</cpe></osclass>
+			</osmatch>
+			<osmatch name="Microsoft Windows Longhorn" accuracy="91" line="78352">
+				<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="Longhorn" accuracy="91"><cpe>cpe:/o:microsoft:windows</cpe></osclass>
+			</osmatch>
+			<osmatch name="Microsoft Windows Server 2012 R2" accuracy="91" line="75405">
+				<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2012" accuracy="91"><cpe>cpe:/o:microsoft:windows_server_2012:r2</cpe></osclass>
+			</osmatch>
+			<osmatch name="Microsoft Windows Server 2012 R2 Update 1" accuracy="91" line="75621">
+				<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2012" accuracy="91"><cpe>cpe:/o:microsoft:windows_server_2012:r2</cpe></osclass>
+			</osmatch>
+			<osmatch name="Microsoft Windows Server 2016 build 10586 - 14393" accuracy="91" line="75783">
+				<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2016" accuracy="91"><cpe>cpe:/o:microsoft:windows_server_2016</cpe></osclass>
+			</osmatch>
+			<osmatch name="Microsoft Windows 7, Windows Server 2012, or Windows 8.1 Update 1" accuracy="91" line="77414">
+				<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="7" accuracy="91"><cpe>cpe:/o:microsoft:windows_7:::ultimate</cpe></osclass>
+				<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2012" accuracy="91"><cpe>cpe:/o:microsoft:windows_2012</cpe></osclass>
+				<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="8.1" accuracy="91"><cpe>cpe:/o:microsoft:windows_8.1</cpe></osclass>
+			</osmatch>
+			<osmatch name="Microsoft Windows Server 2008 R2" accuracy="90" line="74406">
+				<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2008" accuracy="90"><cpe>cpe:/o:microsoft:windows_server_2008:r2</cpe></osclass>
+			</osmatch>
+			<osmatch name="Microsoft Windows Server 2012 or Server 2012 R2" accuracy="90" line="75164">
+				<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2012" accuracy="90"><cpe>cpe:/o:microsoft:windows_server_2012</cpe><cpe>cpe:/o:microsoft:windows_server_2012:r2</cpe></osclass>
+			</osmatch>
+			<osmatch name="Microsoft Windows Server 2016" accuracy="90" line="75692">
+				<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2016" accuracy="90"><cpe>cpe:/o:microsoft:windows_server_2016</cpe></osclass>
+			</osmatch>
+			<osfingerprint fingerprint="OS:SCAN(V=7.80%E=4%D=8/16%OT=21%CT=1%CU=42774%PV=Y%DS=2%DC=T%G=Y%TM=5F397D7&#xa;OS:E%P=x86_64-pc-linux-gnu)SEQ(SP=FC%GCD=1%ISR=10F%TI=I%CI=I%II=I%SS=S%TS=U&#xa;OS:)OPS(O1=M54DNW8NNS%O2=M54DNW8NNS%O3=M54DNW8%O4=M54DNW8NNS%O5=M54DNW8NNS%&#xa;OS:O6=M54DNNS)WIN(W1=FFFF%W2=FFFF%W3=FFFF%W4=FFFF%W5=FFFF%W6=FF70)ECN(R=Y%D&#xa;OS:F=Y%T=80%W=FFFF%O=M54DNW8NNS%CC=Y%Q=)T1(R=Y%DF=Y%T=80%S=O%A=S+%F=AS%RD=0&#xa;OS:%Q=)T2(R=Y%DF=Y%T=80%W=0%S=Z%A=S%F=AR%O=%RD=0%Q=)T3(R=Y%DF=Y%T=80%W=0%S=&#xa;OS:Z%A=O%F=AR%O=%RD=0%Q=)T4(R=Y%DF=Y%T=80%W=0%S=A%A=O%F=R%O=%RD=0%Q=)T5(R=Y&#xa;OS:%DF=Y%T=80%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=Y%T=80%W=0%S=A%A=O%F=R&#xa;OS:%O=%RD=0%Q=)T7(R=Y%DF=Y%T=80%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)U1(R=Y%DF=N%T=&#xa;OS:80%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)IE(R=Y%DFI=N%T=80%CD=Z&#xa;OS:)&#xa;"/>
+		</os>
+		<distance value="2"/>
+		<tcpsequence index="252" difficulty="Good luck!" values="5FA48251,F5CA1A17,81B97BBF,CFE8A524,6BB99F52,C281BB9F"/>
+		<ipidsequence class="Incremental" values="C8B1,C8B2,C8B3,C8B4,C8B5,C8B6"/>
+		<tcptssequence class="none returned (unsupported)"/>
+		<hostscript><script id="clock-skew" output="1m55s"><elem key="stddev">0</elem>
+				<elem key="median">115</elem>
+				<elem key="count">1</elem>
+				<elem key="mean">115</elem>
+					</script><script id="smb2-security-mode" output="&#xa;  2.02: &#xa;    Message signing enabled but not required"><table key="2.02">
+					<elem>Message signing enabled but not required</elem>
+				</table>
+				</script><script id="smb2-time" output="&#xa;  date: 2020-08-16T18:38:27&#xa;  start_date: N/A"><elem key="date">2020-08-16T18:38:27</elem>
+				<elem key="start_date">N/A</elem>
+			</script></hostscript><trace port="5900" proto="tcp">
+			<hop ttl="1" ipaddr="10.10.14.1" rtt="24.63"/>
+			<hop ttl="2" ipaddr="10.10.10.180" rtt="20.55"/>
+		</trace>
+		<times srtt="22408" rttvar="2281" to="100000"/>
+	</host>
+	<host starttime="1597602614" endtime="1597603198"><status state="up" reason="echo-reply" reason_ttl="63"/>
+		<address addr="10.10.10.185" addrtype="ipv4"/>
+		<hostnames>
+		</hostnames>
+		<ports><extraports state="closed" count="65534">
+				<extrareasons reason="resets" count="65534"/>
+			</extraports>
+			<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="ssh" product="OpenSSH" version="7.6p1 Ubuntu 4ubuntu0.3" extrainfo="Ubuntu Linux; protocol 2.0" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:7.6p1</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service><script id="ssh-hostkey" output="&#xa;  2048 06:d4:89:bf:51:f7:fc:0c:f9:08:5e:97:63:64:8d:ca (RSA)&#xa;  256 11:a6:92:98:ce:35:40:c7:29:09:4f:6c:2d:74:aa:66 (ECDSA)&#xa;  256 71:05:99:1f:a8:1b:14:d6:03:85:53:f8:78:8e:cb:88 (ED25519)"><table>
+						<elem key="key">AAAAB3NzaC1yc2EAAAADAQABAAABAQClcZO7AyXva0myXqRYz5xgxJ8ljSW1c6xX0vzHxP/Qy024qtSuDeQIRZGYsIR+kyje39aNw6HHxdz50XSBSEcauPLDWbIYLUMM+a0smh7/pRjfA+vqHxEp7e5l9H7Nbb1dzQesANxa1glKsEmKi1N8Yg0QHX0/FciFt1rdES9Y4b3I3gse2mSAfdNWn4ApnGnpy1tUbanZYdRtpvufqPWjzxUkFEnFIPrslKZoiQ+MLnp77DXfIm3PGjdhui0PBlkebTGbgo4+U44fniEweNJSkiaZW/CuKte0j/buSlBlnagzDl0meeT8EpBOPjk+F0v6Yr7heTuAZn75pO3l5RHX</elem>
+						<elem key="bits">2048</elem>
+						<elem key="fingerprint">06d489bf51f7fc0cf9085e9763648dca</elem>
+						<elem key="type">ssh-rsa</elem>
+					</table>
+					<table>
+						<elem key="key">AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBOVyH7ButfnaTRJb0CdXzeCYFPEmm6nkSUd4d52dW6XybW9XjBanHE/FM4kZ7bJKFEOaLzF1lDizNQgiffGWWLQ=</elem>
+						<elem key="bits">256</elem>
+						<elem key="fingerprint">11a69298ce3540c729094f6c2d74aa66</elem>
+						<elem key="type">ecdsa-sha2-nistp256</elem>
+					</table>
+					<table>
+						<elem key="key">AAAAC3NzaC1lZDI1NTE5AAAAIE0dM4nfekm9dJWdTux9TqCyCGtW5rbmHfh/4v3NtTU1</elem>
+						<elem key="bits">256</elem>
+						<elem key="fingerprint">7105991fa81b14d6038553f8788ecb88</elem>
+						<elem key="type">ssh-ed25519</elem>
+					</table>
+			</script></port>
+			<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http" product="Apache httpd" version="2.4.29" extrainfo="(Ubuntu)" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.4.29</cpe></service><script id="http-methods" output="&#xa;  Supported Methods: GET HEAD POST OPTIONS"><table key="Supported Methods">
+						<elem>GET</elem>
+						<elem>HEAD</elem>
+						<elem>POST</elem>
+						<elem>OPTIONS</elem>
+					</table>
+					</script><script id="http-server-header" output="Apache/2.4.29 (Ubuntu)"><elem>Apache/2.4.29 (Ubuntu)</elem>
+					</script><script id="http-title" output="Magic Portfolio"><elem key="title">Magic Portfolio</elem>
+			</script></port>
+		</ports>
+		<os><portused state="open" proto="tcp" portid="22"/>
+			<portused state="closed" proto="tcp" portid="1"/>
+			<portused state="closed" proto="udp" portid="41625"/>
+			<osmatch name="Linux 2.6.32" accuracy="95" line="55463">
+				<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="95"><cpe>cpe:/o:linux:linux_kernel:2.6.32</cpe></osclass>
+			</osmatch>
+			<osmatch name="Linux 3.1" accuracy="95" line="62708">
+				<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="95"><cpe>cpe:/o:linux:linux_kernel:3.1</cpe></osclass>
+			</osmatch>
+			<osmatch name="Linux 3.2" accuracy="95" line="64455">
+				<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="95"><cpe>cpe:/o:linux:linux_kernel:3.2</cpe></osclass>
+			</osmatch>
+			<osmatch name="AXIS 210A or 211 Network Camera (Linux 2.6.17)" accuracy="94" line="61606">
+				<osclass type="webcam" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="94"><cpe>cpe:/o:linux:linux_kernel:2.6.17</cpe></osclass>
+				<osclass type="webcam" vendor="AXIS" osfamily="embedded" accuracy="94"><cpe>cpe:/h:axis:210a_network_camera</cpe><cpe>cpe:/h:axis:211_network_camera</cpe></osclass>
+			</osmatch>
+			<osmatch name="ASUS RT-N56U WAP (Linux 3.4)" accuracy="93" line="8344">
+				<osclass type="WAP" vendor="Asus" osfamily="embedded" accuracy="93"><cpe>cpe:/h:asus:rt-n56u</cpe></osclass>
+				<osclass type="WAP" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="93"><cpe>cpe:/o:linux:linux_kernel:3.4</cpe></osclass>
+			</osmatch>
+			<osmatch name="Linux 3.16" accuracy="93" line="63962">
+				<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="93"><cpe>cpe:/o:linux:linux_kernel:3.16</cpe></osclass>
+			</osmatch>
+			<osmatch name="Adtran 424RG FTTH gateway" accuracy="92" line="1579">
+				<osclass type="specialized" vendor="Adtran" osfamily="embedded" accuracy="92"><cpe>cpe:/h:adtran:424rg</cpe></osclass>
+			</osmatch>
+			<osmatch name="Linux 2.6.39 - 3.2" accuracy="92" line="58074">
+				<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="92"><cpe>cpe:/o:linux:linux_kernel:2.6</cpe></osclass>
+				<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="92"><cpe>cpe:/o:linux:linux_kernel:3</cpe></osclass>
+			</osmatch>
+			<osmatch name="Linux 3.1 - 3.2" accuracy="92" line="62728">
+				<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="92"><cpe>cpe:/o:linux:linux_kernel:3</cpe></osclass>
+			</osmatch>
+			<osmatch name="Linux 3.11" accuracy="92" line="63314">
+				<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="92"><cpe>cpe:/o:linux:linux_kernel:3.11</cpe></osclass>
+			</osmatch>
+			<osfingerprint fingerprint="OS:SCAN(V=7.80%E=4%D=8/16%OT=22%CT=1%CU=41625%PV=Y%DS=2%DC=T%G=Y%TM=5F397D7&#xa;OS:E%P=x86_64-pc-linux-gnu)SEQ(SP=104%GCD=1%ISR=107%TI=Z%CI=Z%II=I%TS=A)OPS&#xa;OS:(O1=M54DST11NW7%O2=M54DST11NW7%O3=M54DNNT11NW7%O4=M54DST11NW7%O5=M54DST1&#xa;OS:1NW7%O6=M54DST11)WIN(W1=FE88%W2=FE88%W3=FE88%W4=FE88%W5=FE88%W6=FE88)ECN&#xa;OS:(R=Y%DF=Y%T=40%W=FAF0%O=M54DNNSNW7%CC=Y%Q=)T1(R=Y%DF=Y%T=40%S=O%A=S+%F=A&#xa;OS:S%RD=0%Q=)T2(R=N)T3(R=N)T4(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T5(R&#xa;OS:=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F&#xa;OS:=R%O=%RD=0%Q=)T7(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)U1(R=Y%DF=N%&#xa;OS:T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)IE(R=Y%DFI=N%T=40%CD&#xa;OS:=S)&#xa;"/>
+		</os>
+		<uptime seconds="1564331" lastboot="Wed Jul 29 12:07:47 2020"/>
+		<distance value="2"/>
+		<tcpsequence index="260" difficulty="Good luck!" values="10341A7D,28025CC2,88D94C73,488FFE9A,47F12C38,88BF65D8"/>
+		<ipidsequence class="All zeros" values="0,0,0,0,0,0"/>
+		<tcptssequence class="1000HZ" values="5D3A5CF6,5D3A5D62,5D3A5DC7,5D3A5E3C,5D3A5E9F,5D3A5F03"/>
+		<trace port="5900" proto="tcp">
+			<hop ttl="1" ipaddr="10.10.14.1" rtt="24.63"/>
+			<hop ttl="2" ipaddr="10.10.10.185" rtt="20.32"/>
+		</trace>
+		<times srtt="22341" rttvar="2274" to="100000"/>
+	</host>
+	<host starttime="1597602614" endtime="1597603198"><status state="up" reason="echo-reply" reason_ttl="63"/>
+		<address addr="10.10.10.186" addrtype="ipv4"/>
+		<hostnames>
+		</hostnames>
+		<ports><extraports state="closed" count="65534">
+				<extrareasons reason="resets" count="65534"/>
+			</extraports>
+			<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="ssh" product="OpenSSH" version="7.6p1 Ubuntu 4ubuntu0.3" extrainfo="Ubuntu Linux; protocol 2.0" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:7.6p1</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service><script id="ssh-hostkey" output="&#xa;  2048 fb:b0:61:82:39:50:4b:21:a8:62:98:4c:9c:38:82:70 (RSA)&#xa;  256 ee:bb:4b:72:63:17:10:ee:08:ff:e5:86:71:fe:8f:80 (ECDSA)&#xa;  256 80:a6:c2:73:41:f0:35:4e:5f:61:a7:6a:50:ea:b8:2e (ED25519)"><table>
+						<elem key="key">AAAAB3NzaC1yc2EAAAADAQABAAABAQDAhDT34CIPsYTsmKvg6TepNSC8Qly/KBzvto2U2dc5bWLnOTeCHQrlzT0nk/GHBGsvCVi9JJmSw6BHeQ0sllrO4jvQpW/jQuY65cyOmNsXZcXvLXKk/M9rYws+8EOWrzKWJRIyIcD1+NdXKia8oYJ8GtTb8MAFff63dPrCD3qJIWgE0BQ00Id2CebD8Ffml75qXoufBpNQagMjorURWnq5W9lUpCSuqtLYAgasiW6/tlfBb80PFlmltDmshCJ+WsfZ0v2PK2eDveEM4PvlLyFLcGSJcshgGUA/jbDefwoon5uqgKduuS/RZJxf5PqBXkFIem9lsRl9SJCQLqKnQdh3</elem>
+						<elem key="bits">2048</elem>
+						<elem key="fingerprint">fbb0618239504b21a862984c9c388270</elem>
+						<elem key="type">ssh-rsa</elem>
+					</table>
+					<table>
+						<elem key="key">AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBOL3mI404EpOFWUunEsaZUSo5I91lYin8r4Tt5HbcKkP1cEjnLRfpWP3HLYZbikwoZG17SmA3cwn/BPUslPpPWI=</elem>
+						<elem key="bits">256</elem>
+						<elem key="fingerprint">eebb4b72631710ee08ffe58671fe8f80</elem>
+						<elem key="type">ecdsa-sha2-nistp256</elem>
+					</table>
+					<table>
+						<elem key="key">AAAAC3NzaC1lZDI1NTE5AAAAIC3sX8n1GsA1Ps9e3OZmBVSkbr1tv7B/25+Njhuz9Z76</elem>
+						<elem key="bits">256</elem>
+						<elem key="fingerprint">80a6c27341f0354e5f61a76a50eab82e</elem>
+						<elem key="type">ssh-ed25519</elem>
+					</table>
+			</script></port>
+			<port protocol="tcp" portid="9001"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http" product="Apache httpd" version="2.4.29" extrainfo="(Ubuntu)" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.4.29</cpe></service><script id="http-methods" output="&#xa;  Supported Methods: GET HEAD POST"><table key="Supported Methods">
+						<elem>GET</elem>
+						<elem>HEAD</elem>
+						<elem>POST</elem>
+					</table>
+					</script><script id="http-server-header" output="Apache/2.4.29 (Ubuntu)"><elem>Apache/2.4.29 (Ubuntu)</elem>
+					</script><script id="http-title" output="Quick | Broadband Services"><elem key="title">Quick | Broadband Services</elem>
+			</script></port>
+		</ports>
+		<os><portused state="open" proto="tcp" portid="22"/>
+			<portused state="closed" proto="tcp" portid="1"/>
+			<portused state="closed" proto="udp" portid="30132"/>
+			<osmatch name="Linux 2.6.32" accuracy="95" line="55463">
+				<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="95"><cpe>cpe:/o:linux:linux_kernel:2.6.32</cpe></osclass>
+			</osmatch>
+			<osmatch name="Linux 3.1" accuracy="95" line="62708">
+				<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="95"><cpe>cpe:/o:linux:linux_kernel:3.1</cpe></osclass>
+			</osmatch>
+			<osmatch name="Linux 3.2" accuracy="95" line="64455">
+				<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="95"><cpe>cpe:/o:linux:linux_kernel:3.2</cpe></osclass>
+			</osmatch>
+			<osmatch name="AXIS 210A or 211 Network Camera (Linux 2.6.17)" accuracy="94" line="61606">
+				<osclass type="webcam" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="94"><cpe>cpe:/o:linux:linux_kernel:2.6.17</cpe></osclass>
+				<osclass type="webcam" vendor="AXIS" osfamily="embedded" accuracy="94"><cpe>cpe:/h:axis:210a_network_camera</cpe><cpe>cpe:/h:axis:211_network_camera</cpe></osclass>
+			</osmatch>
+			<osmatch name="ASUS RT-N56U WAP (Linux 3.4)" accuracy="93" line="8344">
+				<osclass type="WAP" vendor="Asus" osfamily="embedded" accuracy="93"><cpe>cpe:/h:asus:rt-n56u</cpe></osclass>
+				<osclass type="WAP" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="93"><cpe>cpe:/o:linux:linux_kernel:3.4</cpe></osclass>
+			</osmatch>
+			<osmatch name="Linux 3.16" accuracy="93" line="63962">
+				<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="93"><cpe>cpe:/o:linux:linux_kernel:3.16</cpe></osclass>
+			</osmatch>
+			<osmatch name="Adtran 424RG FTTH gateway" accuracy="92" line="1579">
+				<osclass type="specialized" vendor="Adtran" osfamily="embedded" accuracy="92"><cpe>cpe:/h:adtran:424rg</cpe></osclass>
+			</osmatch>
+			<osmatch name="Linux 2.6.39 - 3.2" accuracy="92" line="58074">
+				<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="92"><cpe>cpe:/o:linux:linux_kernel:2.6</cpe></osclass>
+				<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="92"><cpe>cpe:/o:linux:linux_kernel:3</cpe></osclass>
+			</osmatch>
+			<osmatch name="Linux 3.1 - 3.2" accuracy="92" line="62728">
+				<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="92"><cpe>cpe:/o:linux:linux_kernel:3</cpe></osclass>
+			</osmatch>
+			<osmatch name="Linux 3.11" accuracy="92" line="63314">
+				<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="92"><cpe>cpe:/o:linux:linux_kernel:3.11</cpe></osclass>
+			</osmatch>
+			<osfingerprint fingerprint="OS:SCAN(V=7.80%E=4%D=8/16%OT=22%CT=1%CU=30132%PV=Y%DS=2%DC=T%G=Y%TM=5F397D7&#xa;OS:E%P=x86_64-pc-linux-gnu)SEQ(SP=103%GCD=1%ISR=107%TI=Z%CI=Z%II=I%TS=A)OPS&#xa;OS:(O1=M54DST11NW7%O2=M54DST11NW7%O3=M54DNNT11NW7%O4=M54DST11NW7%O5=M54DST1&#xa;OS:1NW7%O6=M54DST11)WIN(W1=FE88%W2=FE88%W3=FE88%W4=FE88%W5=FE88%W6=FE88)ECN&#xa;OS:(R=Y%DF=Y%T=40%W=FAF0%O=M54DNNSNW7%CC=Y%Q=)T1(R=Y%DF=Y%T=40%S=O%A=S+%F=A&#xa;OS:S%RD=0%Q=)T2(R=N)T3(R=N)T4(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T5(R&#xa;OS:=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F&#xa;OS:=R%O=%RD=0%Q=)T7(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)U1(R=Y%DF=N%&#xa;OS:T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)IE(R=Y%DFI=N%T=40%CD&#xa;OS:=S)&#xa;"/>
+		</os>
+		<uptime seconds="1930621" lastboot="Sat Jul 25 06:22:57 2020"/>
+		<distance value="2"/>
+		<tcpsequence index="258" difficulty="Good luck!" values="D17004D8,70650D3A,911B8645,865797EC,57FFA1F5,1EC7A16C"/>
+		<ipidsequence class="All zeros" values="0,0,0,0,0,0"/>
+		<tcptssequence class="1000HZ" values="730F80E2,730F814E,730F81B3,730F8228,730F828B,730F82EF"/>
+		<trace port="5900" proto="tcp">
+			<hop ttl="1" ipaddr="10.10.14.1" rtt="24.63"/>
+			<hop ttl="2" ipaddr="10.10.10.186" rtt="20.12"/>
+		</trace>
+		<times srtt="22914" rttvar="2849" to="100000"/>
+	</host>
+	<host starttime="1597602614" endtime="1597603198"><status state="up" reason="echo-reply" reason_ttl="63"/>
+		<address addr="10.10.10.187" addrtype="ipv4"/>
+		<hostnames>
+		</hostnames>
+		<ports><extraports state="closed" count="65533">
+				<extrareasons reason="resets" count="65533"/>
+			</extraports>
+			<port protocol="tcp" portid="21"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="ftp" product="vsftpd" version="3.0.3" ostype="Unix" method="probed" conf="10"><cpe>cpe:/a:vsftpd:vsftpd:3.0.3</cpe></service></port>
+			<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="ssh" product="OpenSSH" version="7.4p1 Debian 10+deb9u7" extrainfo="protocol 2.0" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:7.4p1</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service><script id="ssh-hostkey" output="&#xa;  2048 4a:71:e9:21:63:69:9d:cb:dd:84:02:1a:23:97:e1:b9 (RSA)&#xa;  256 c5:95:b6:21:4d:46:a4:25:55:7a:87:3e:19:a8:e7:02 (ECDSA)&#xa;  256 d0:2d:dd:d0:5c:42:f8:7b:31:5a:be:57:c4:a9:a7:56 (ED25519)"><table>
+						<elem key="key">AAAAB3NzaC1yc2EAAAADAQABAAABAQDaQHjxkc8zeXPgI5C7066uFJaB6EjvTGDEwbfl0cwM95npP9G8icv1F/YQgKxqqcGzl+pVaAybRnQxiZkrZHbnJlMzUzNTxxI5cy+7W0dRZN4VH4YjkXFrZRw6dx/5L1wP4qLtdQ0tLHmgzwJZO+111mrAGXMt0G+SCnQ30U7vp95EtIC0gbiGDx0dDVgMeg43+LkzWG+Nj+mQ5KCQBjDLFaZXwCp5Pqfrpf3AmERjoFHIE8Df4QO3lKT9Ov1HWcnfFuqSH/pl5+m83ecQGS1uxAaokNfn9Nkg12dZP1JSk+Tt28VrpOZDKhVvAQhXWONMTyuRJmVg/hnrSfxTwbM9</elem>
+						<elem key="bits">2048</elem>
+						<elem key="fingerprint">4a71e92163699dcbdd84021a2397e1b9</elem>
+						<elem key="type">ssh-rsa</elem>
+					</table>
+					<table>
+						<elem key="key">AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBNHgxoAB6NHTQnBo+/MqdfMsEet9jVzP94okTOAWWMpWkWkT+X4EEWRzlxZKwb/dnt99LS8WNZkR0P9HQxMcIII=</elem>
+						<elem key="bits">256</elem>
+						<elem key="fingerprint">c595b6214d46a425557a873e19a8e702</elem>
+						<elem key="type">ecdsa-sha2-nistp256</elem>
+					</table>
+					<table>
+						<elem key="key">AAAAC3NzaC1lZDI1NTE5AAAAIBqp21lADoWZ+184z0m9zCpORbmmngq+h498H9JVf7kP</elem>
+						<elem key="bits">256</elem>
+						<elem key="fingerprint">d02dddd05c42f87b315abe57c4a9a756</elem>
+						<elem key="type">ssh-ed25519</elem>
+					</table>
+			</script></port>
+			<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http" product="Apache httpd" version="2.4.25" extrainfo="(Debian)" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.4.25</cpe></service><script id="http-methods" output="&#xa;  Supported Methods: GET HEAD POST OPTIONS"><table key="Supported Methods">
+						<elem>GET</elem>
+						<elem>HEAD</elem>
+						<elem>POST</elem>
+						<elem>OPTIONS</elem>
+					</table>
+					</script><script id="http-robots.txt" output="1 disallowed entry &#xa;/admin-dir"/><script id="http-server-header" output="Apache/2.4.25 (Debian)"><elem>Apache/2.4.25 (Debian)</elem>
+					</script><script id="http-title" output="Admirer"><elem key="title">Admirer</elem>
+			</script></port>
+		</ports>
+		<os><portused state="open" proto="tcp" portid="21"/>
+			<portused state="closed" proto="tcp" portid="1"/>
+			<portused state="closed" proto="udp" portid="42616"/>
+			<osmatch name="Linux 3.2 - 4.9" accuracy="95" line="65105">
+				<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="95"><cpe>cpe:/o:linux:linux_kernel:3</cpe></osclass>
+				<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="4.X" accuracy="95"><cpe>cpe:/o:linux:linux_kernel:4</cpe></osclass>
+			</osmatch>
+			<osmatch name="Linux 3.1" accuracy="95" line="62708">
+				<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="95"><cpe>cpe:/o:linux:linux_kernel:3.1</cpe></osclass>
+			</osmatch>
+			<osmatch name="Linux 3.2" accuracy="95" line="64455">
+				<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="95"><cpe>cpe:/o:linux:linux_kernel:3.2</cpe></osclass>
+			</osmatch>
+			<osmatch name="AXIS 210A or 211 Network Camera (Linux 2.6.17)" accuracy="94" line="61606">
+				<osclass type="webcam" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="94"><cpe>cpe:/o:linux:linux_kernel:2.6.17</cpe></osclass>
+				<osclass type="webcam" vendor="AXIS" osfamily="embedded" accuracy="94"><cpe>cpe:/h:axis:210a_network_camera</cpe><cpe>cpe:/h:axis:211_network_camera</cpe></osclass>
+			</osmatch>
+			<osmatch name="Linux 3.12" accuracy="94" line="63436">
+				<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="94"><cpe>cpe:/o:linux:linux_kernel:3.12</cpe></osclass>
+			</osmatch>
+			<osmatch name="Linux 3.13" accuracy="94" line="63553">
+				<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="94"><cpe>cpe:/o:linux:linux_kernel:3.13</cpe></osclass>
+			</osmatch>
+			<osmatch name="Linux 3.16" accuracy="94" line="63944">
+				<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="94"><cpe>cpe:/o:linux:linux_kernel:3.16</cpe></osclass>
+			</osmatch>
+			<osmatch name="Linux 3.18" accuracy="94" line="64238">
+				<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="94"><cpe>cpe:/o:linux:linux_kernel:3.18</cpe></osclass>
+			</osmatch>
+			<osmatch name="Linux 3.8 - 3.11" accuracy="94" line="66079">
+				<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="94"><cpe>cpe:/o:linux:linux_kernel:3</cpe></osclass>
+			</osmatch>
+			<osmatch name="Linux 4.8" accuracy="94" line="67659">
+				<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="4.X" accuracy="94"><cpe>cpe:/o:linux:linux_kernel:4.8</cpe></osclass>
+			</osmatch>
+			<osfingerprint fingerprint="OS:SCAN(V=7.80%E=4%D=8/16%OT=21%CT=1%CU=42616%PV=Y%DS=2%DC=T%G=Y%TM=5F397D7&#xa;OS:E%P=x86_64-pc-linux-gnu)SEQ(SP=101%GCD=1%ISR=109%TI=Z%CI=Z%II=I%TS=8)OPS&#xa;OS:(O1=M54DST11NW7%O2=M54DST11NW7%O3=M54DNNT11NW7%O4=M54DST11NW7%O5=M54DST1&#xa;OS:1NW7%O6=M54DST11)WIN(W1=7120%W2=7120%W3=7120%W4=7120%W5=7120%W6=7120)ECN&#xa;OS:(R=Y%DF=Y%T=40%W=7210%O=M54DNNSNW7%CC=Y%Q=)T1(R=Y%DF=Y%T=40%S=O%A=S+%F=A&#xa;OS:S%RD=0%Q=)T2(R=N)T3(R=N)T4(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T5(R&#xa;OS:=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F&#xa;OS:=R%O=%RD=0%Q=)T7(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)U1(R=Y%DF=N%&#xa;OS:T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)IE(R=Y%DFI=N%T=40%CD&#xa;OS:=S)&#xa;"/>
+		</os>
+		<uptime seconds="29365" lastboot="Sun Aug 16 06:30:33 2020"/>
+		<distance value="2"/>
+		<tcpsequence index="256" difficulty="Good luck!" values="8A4F9B60,2206F1F4,519CC325,78615127,A6E4C5D3,7AD01536"/>
+		<ipidsequence class="All zeros" values="0,0,0,0,0,0"/>
+		<tcptssequence class="other" values="700BFD,700C18,700C31,700C4E,700C67,700C81"/>
+		<trace port="5900" proto="tcp">
+			<hop ttl="1" ipaddr="10.10.14.1" rtt="24.63"/>
+			<hop ttl="2" ipaddr="10.10.10.187" rtt="19.94"/>
+		</trace>
+		<times srtt="23041" rttvar="3002" to="100000"/>
+	</host>
+	<host starttime="1597602614" endtime="1597603198"><status state="up" reason="echo-reply" reason_ttl="63"/>
+		<address addr="10.10.10.188" addrtype="ipv4"/>
+		<hostnames>
+		</hostnames>
+		<ports><extraports state="closed" count="65534">
+				<extrareasons reason="resets" count="65534"/>
+			</extraports>
+			<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="ssh" product="OpenSSH" version="7.6p1 Ubuntu 4ubuntu0.3" extrainfo="Ubuntu Linux; protocol 2.0" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:7.6p1</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service><script id="ssh-hostkey" output="&#xa;  2048 a9:2d:b2:a0:c4:57:e7:7c:35:2d:45:4d:db:80:8c:f1 (RSA)&#xa;  256 bc:e4:16:3d:2a:59:a1:3a:6a:09:28:dd:36:10:38:08 (ECDSA)&#xa;  256 57:d5:47:ee:07:ca:3a:c0:fd:9b:a8:7f:6b:4c:9d:7c (ED25519)"><table>
+						<elem key="key">AAAAB3NzaC1yc2EAAAADAQABAAABAQCb3lyySrN6q6RWe0mdRQOvx8TgDiFAVhicR1h3UlBANr7ElILe7ex89jpzZSkhrYgCF7iArq7PFSX+VY52jRupsYJp7V2XLY9TZOq6F7u6eqsRA60UVeqkh+WnTE1D1GtQSDM2693/1AAFcEMhcwp/Z7nscp+PY1npxEEP6HoCHnf4h4p8RccQuk4AdUDWZo7WlT4fpW1oJCDbt+AOU5ylGUW56n4uSUG8YQVP5WqSspr6IY/GssEw3pGvRLnoJfHjARoT93Fr0u+eSs8zWhpHRWkTEWGhWIt9pPI/pAx2eAeeS0L5knZrHppoOjhR/Io+m0i1kF1MthV+qYjDjscf</elem>
+						<elem key="bits">2048</elem>
+						<elem key="fingerprint">a92db2a0c457e77c352d454ddb808cf1</elem>
+						<elem key="type">ssh-rsa</elem>
+					</table>
+					<table>
+						<elem key="key">AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBFAHWTqc7a2Az0RjFRBeGhfQkpQrBmEcMntikVFn2frnNPZklPdV7RCy2VW7Ae+LnyJU4Nq2LYqp2zfps+BZ3H4=</elem>
+						<elem key="bits">256</elem>
+						<elem key="fingerprint">bce4163d2a59a13a6a0928dd36103808</elem>
+						<elem key="type">ecdsa-sha2-nistp256</elem>
+					</table>
+					<table>
+						<elem key="key">AAAAC3NzaC1lZDI1NTE5AAAAIMnbsx7/pCTUKU7WwHrL/d0YS9c99tRraIPvg5zrRpiF</elem>
+						<elem key="bits">256</elem>
+						<elem key="fingerprint">57d547ee07ca3ac0fd9ba87f6b4c9d7c</elem>
+						<elem key="type">ssh-ed25519</elem>
+					</table>
+			</script></port>
+			<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http" product="Apache httpd" version="2.4.29" extrainfo="(Ubuntu)" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.4.29</cpe></service><script id="http-methods" output="&#xa;  Supported Methods: HEAD GET POST OPTIONS"><table key="Supported Methods">
+						<elem>HEAD</elem>
+						<elem>GET</elem>
+						<elem>POST</elem>
+						<elem>OPTIONS</elem>
+					</table>
+					</script><script id="http-server-header" output="Apache/2.4.29 (Ubuntu)"><elem>Apache/2.4.29 (Ubuntu)</elem>
+					</script><script id="http-title" output="Cache"><elem key="title">Cache</elem>
+			</script></port>
+		</ports>
+		<os><portused state="open" proto="tcp" portid="22"/>
+			<portused state="closed" proto="tcp" portid="1"/>
+			<portused state="closed" proto="udp" portid="38327"/>
+			<osmatch name="Linux 2.6.32" accuracy="95" line="55463">
+				<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="95"><cpe>cpe:/o:linux:linux_kernel:2.6.32</cpe></osclass>
+			</osmatch>
+			<osmatch name="Linux 3.1" accuracy="95" line="62708">
+				<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="95"><cpe>cpe:/o:linux:linux_kernel:3.1</cpe></osclass>
+			</osmatch>
+			<osmatch name="Linux 3.2" accuracy="95" line="64455">
+				<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="95"><cpe>cpe:/o:linux:linux_kernel:3.2</cpe></osclass>
+			</osmatch>
+			<osmatch name="AXIS 210A or 211 Network Camera (Linux 2.6.17)" accuracy="94" line="61606">
+				<osclass type="webcam" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="94"><cpe>cpe:/o:linux:linux_kernel:2.6.17</cpe></osclass>
+				<osclass type="webcam" vendor="AXIS" osfamily="embedded" accuracy="94"><cpe>cpe:/h:axis:210a_network_camera</cpe><cpe>cpe:/h:axis:211_network_camera</cpe></osclass>
+			</osmatch>
+			<osmatch name="ASUS RT-N56U WAP (Linux 3.4)" accuracy="93" line="8344">
+				<osclass type="WAP" vendor="Asus" osfamily="embedded" accuracy="93"><cpe>cpe:/h:asus:rt-n56u</cpe></osclass>
+				<osclass type="WAP" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="93"><cpe>cpe:/o:linux:linux_kernel:3.4</cpe></osclass>
+			</osmatch>
+			<osmatch name="Linux 3.16" accuracy="93" line="63962">
+				<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="93"><cpe>cpe:/o:linux:linux_kernel:3.16</cpe></osclass>
+			</osmatch>
+			<osmatch name="Linux 2.6.39 - 3.2" accuracy="92" line="58074">
+				<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="92"><cpe>cpe:/o:linux:linux_kernel:2.6</cpe></osclass>
+				<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="92"><cpe>cpe:/o:linux:linux_kernel:3</cpe></osclass>
+			</osmatch>
+			<osmatch name="Linux 3.1 - 3.2" accuracy="92" line="62728">
+				<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="92"><cpe>cpe:/o:linux:linux_kernel:3</cpe></osclass>
+			</osmatch>
+			<osmatch name="Linux 3.2 - 4.9" accuracy="92" line="65105">
+				<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="92"><cpe>cpe:/o:linux:linux_kernel:3</cpe></osclass>
+				<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="4.X" accuracy="92"><cpe>cpe:/o:linux:linux_kernel:4</cpe></osclass>
+			</osmatch>
+			<osmatch name="Linux 3.7 - 3.10" accuracy="92" line="65736">
+				<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="92"><cpe>cpe:/o:linux:linux_kernel:3</cpe></osclass>
+			</osmatch>
+			<osfingerprint fingerprint="OS:SCAN(V=7.80%E=4%D=8/16%OT=22%CT=1%CU=38327%PV=Y%DS=2%DC=T%G=Y%TM=5F397D7&#xa;OS:E%P=x86_64-pc-linux-gnu)SEQ(SP=106%GCD=1%ISR=10C%TI=Z%CI=Z%II=I%TS=A)OPS&#xa;OS:(O1=M54DST11NW7%O2=M54DST11NW7%O3=M54DNNT11NW7%O4=M54DST11NW7%O5=M54DST1&#xa;OS:1NW7%O6=M54DST11)WIN(W1=FE88%W2=FE88%W3=FE88%W4=FE88%W5=FE88%W6=FE88)ECN&#xa;OS:(R=Y%DF=Y%T=40%W=FAF0%O=M54DNNSNW7%CC=Y%Q=)T1(R=Y%DF=Y%T=40%S=O%A=S+%F=A&#xa;OS:S%RD=0%Q=)T2(R=N)T3(R=N)T4(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T5(R&#xa;OS:=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F&#xa;OS:=R%O=%RD=0%Q=)T7(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)U1(R=Y%DF=N%&#xa;OS:T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)IE(R=Y%DFI=N%T=40%CD&#xa;OS:=S)&#xa;"/>
+		</os>
+		<uptime seconds="222920" lastboot="Fri Aug 14 00:44:38 2020"/>
+		<distance value="2"/>
+		<tcpsequence index="262" difficulty="Good luck!" values="2EADC13A,DF7EE0BE,6048CEBC,D0913910,F1AE59E0,A176E45"/>
+		<ipidsequence class="All zeros" values="0,0,0,0,0,0"/>
+		<tcptssequence class="1000HZ" values="D460BFB,D460C61,D460CC6,D460D3A,D460D9D,D460E06"/>
+		<trace port="5900" proto="tcp">
+			<hop ttl="1" ipaddr="10.10.14.1" rtt="24.63"/>
+			<hop ttl="2" ipaddr="10.10.10.188" rtt="26.05"/>
+		</trace>
+		<times srtt="23042" rttvar="2938" to="100000"/>
+	</host>
+	<host starttime="1597602614" endtime="1597603198"><status state="up" reason="echo-reply" reason_ttl="63"/>
+		<address addr="10.10.10.189" addrtype="ipv4"/>
+		<hostnames>
+		</hostnames>
+		<ports><extraports state="closed" count="65533">
+				<extrareasons reason="resets" count="65533"/>
+			</extraports>
+			<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="ssh" product="OpenSSH" version="8.2p1 Ubuntu 4" extrainfo="Ubuntu Linux; protocol 2.0" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:8.2p1</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service></port>
+			<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="62"/><service name="http" product="nginx" version="1.17.6" method="probed" conf="10"><cpe>cpe:/a:igor_sysoev:nginx:1.17.6</cpe></service><script id="http-methods" output="&#xa;  Supported Methods: GET HEAD"><table key="Supported Methods">
+						<elem>GET</elem>
+						<elem>HEAD</elem>
+					</table>
+					</script><script id="http-server-header" output="nginx/1.17.6"><elem>nginx/1.17.6</elem>
+					</script><script id="http-title" output="Travel.HTB"><elem key="title">Travel.HTB</elem>
+			</script></port>
+			<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="62"/><service name="http" product="nginx" version="1.17.6" tunnel="ssl" method="probed" conf="10"><cpe>cpe:/a:igor_sysoev:nginx:1.17.6</cpe></service><script id="http-methods" output="&#xa;  Supported Methods: GET HEAD"><table key="Supported Methods">
+						<elem>GET</elem>
+						<elem>HEAD</elem>
+					</table>
+					</script><script id="http-server-header" output="nginx/1.17.6"><elem>nginx/1.17.6</elem>
+					</script><script id="http-title" output="Travel.HTB - SSL coming soon."><elem key="title">Travel.HTB - SSL coming soon.</elem>
+						</script><script id="ssl-cert" output="Subject: commonName=www.travel.htb/organizationName=Travel.HTB/countryName=UK&#xa;Subject Alternative Name: DNS:www.travel.htb, DNS:blog.travel.htb, DNS:blog-dev.travel.htb&#xa;Issuer: commonName=www.travel.htb/organizationName=Travel.HTB/countryName=UK&#xa;Public Key type: rsa&#xa;Public Key bits: 2048&#xa;Signature Algorithm: sha256WithRSAEncryption&#xa;Not valid before: 2020-04-23T19:24:29&#xa;Not valid after:  2030-04-21T19:24:29&#xa;MD5:   ef0a a4c1 fbad 1ac4 d160 58e3 beac 9698&#xa;SHA-1: 0170 7c30 db3e 2a93 cda7 7bbe 8a8b 7777 5bcd 0498"><table key="subject">
+						<elem key="localityName">London</elem>
+						<elem key="organizationName">Travel.HTB</elem>
+						<elem key="countryName">UK</elem>
+						<elem key="commonName">www.travel.htb</elem>
+					</table>
+					<table key="issuer">
+						<elem key="localityName">London</elem>
+						<elem key="organizationName">Travel.HTB</elem>
+						<elem key="countryName">UK</elem>
+						<elem key="commonName">www.travel.htb</elem>
+					</table>
+					<table key="pubkey">
+						<elem key="bits">2048</elem>
+						<elem key="exponent">userdata: 0x560bf467bfa8</elem>
+						<elem key="modulus">userdata: 0x560bf39c2578</elem>
+						<elem key="type">rsa</elem>
+					</table>
+					<table key="extensions">
+						<table>
+							<elem key="name">X509v3 Subject Alternative Name</elem>
+							<elem key="value">DNS:www.travel.htb, DNS:blog.travel.htb, DNS:blog-dev.travel.htb</elem>
+						</table>
+					</table>
+					<elem key="sig_algo">sha256WithRSAEncryption</elem>
+					<table key="validity">
+						<elem key="notBefore">2020-04-23T19:24:29</elem>
+						<elem key="notAfter">2030-04-21T19:24:29</elem>
+					</table>
+					<elem key="md5">ef0aa4c1fbad1ac4d16058e3beac9698</elem>
+					<elem key="sha1">01707c30db3e2a93cda77bbe8a8b77775bcd0498</elem>
+					<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIDaTCCAlGgAwIBAgIUCVtOR+HI2VGnWpCcIexOKkdfW6EwDQYJKoZIhvcNAQEL&#xa;BQAwTDELMAkGA1UEBhMCVUsxDzANBgNVBAcMBkxvbmRvbjETMBEGA1UECgwKVHJh&#xa;dmVsLkhUQjEXMBUGA1UEAwwOd3d3LnRyYXZlbC5odGIwHhcNMjAwNDIzMTkyNDI5&#xa;WhcNMzAwNDIxMTkyNDI5WjBMMQswCQYDVQQGEwJVSzEPMA0GA1UEBwwGTG9uZG9u&#xa;MRMwEQYDVQQKDApUcmF2ZWwuSFRCMRcwFQYDVQQDDA53d3cudHJhdmVsLmh0YjCC&#xa;ASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBANngVuDtQWdsYXq3aJoHohT9&#xa;g1+H91furbuP8ofkwxdyyk84DsL+FbqTPi1mRqCzc9r5kmMOwXnk95Ah3/k5TKlg&#xa;Au9EmAKMtPryO7Mw0jhqmzmVEDBd2kI3zpbvd/UfYcSCY8QRs8qW6A3LJzRno6nC&#xa;gNh5IjF86IU4CtGRs68isoKhR5ziCg7KJFSS7HJZDXje87d0tN6UrSgfdv1N4wVd&#xa;AbOtYUCZqwZjUpJB2HKSSgrUi7yusvjgwry9Zctui+T0RTMAermAGBJKPlewgRlf&#xa;6JXdVlSR+M0ejBINOsnBWEtB9Al2utOFR3Kz0nfLuue3N445CzjenogpaVEEKukC&#xa;AwEAAaNDMEEwPwYDVR0RBDgwNoIOd3d3LnRyYXZlbC5odGKCD2Jsb2cudHJhdmVs&#xa;Lmh0YoITYmxvZy1kZXYudHJhdmVsLmh0YjANBgkqhkiG9w0BAQsFAAOCAQEAaxTe&#xa;o4uS0zyUItle179Ik8nKmHNpP23SsRKxaXINvqjKGDPobSE8A2D2/B+tN7CAYmkm&#xa;V6+Z+Vpp7OcOTuVc6utAWovYdH1da1J1a59i42a7Ni+IxCTy3dOJUBggG7RgDf8f&#xa;n/Ug/pPePACy9Bcc1GvhCAhCc8YG8KTShVoF+Pd44OZDgzbm41hLuIm6OKc7fm97&#xa;5hu0VnVvzFlAD9X98DbqZDQItUFqH3/ma5vJzMOwoB+2R40aW4YUHaFtUsDeWYCg&#xa;hU5NoWd+DeWVDbTJcTJH5JCONq44+HTV4dUxoyjdqyQLAR2YuqIFbKF0ohixz6n1&#xa;9/2fFKw7v7U/VFDpwA==&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+			</script></port>
+		</ports>
+		<os><portused state="open" proto="tcp" portid="22"/>
+			<portused state="closed" proto="tcp" portid="1"/>
+			<portused state="closed" proto="udp" portid="34116"/>
+			<osmatch name="Linux 3.7" accuracy="96" line="65640">
+				<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="96"><cpe>cpe:/o:linux:linux_kernel:3.7</cpe></osclass>
+			</osmatch>
+			<osmatch name="Linux 2.6.18 - 2.6.22" accuracy="96" line="49721">
+				<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="96"><cpe>cpe:/o:linux:linux_kernel:2.6</cpe></osclass>
+			</osmatch>
+			<osmatch name="Linux 3.2.0" accuracy="96" line="65125">
+				<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="96"><cpe>cpe:/o:linux:linux_kernel:3.2.0</cpe></osclass>
+			</osmatch>
+			<osmatch name="Linux 2.6.18" accuracy="96" line="49178">
+				<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="96"><cpe>cpe:/o:linux:linux_kernel:2.6.18</cpe></osclass>
+			</osmatch>
+			<osmatch name="Tomato 1.27 - 1.28 (Linux 2.4.20)" accuracy="96" line="46644">
+				<osclass type="WAP" vendor="Linux" osfamily="Linux" osgen="2.4.X" accuracy="96"><cpe>cpe:/o:linux:linux_kernel:2.4.20</cpe></osclass>
+			</osmatch>
+			<osmatch name="Tomato 1.28 (Linux 2.4.20)" accuracy="95" line="46662">
+				<osclass type="WAP" vendor="Linux" osfamily="Linux" osgen="2.4.X" accuracy="95"><cpe>cpe:/o:linux:linux_kernel:2.4.20</cpe></osclass>
+			</osmatch>
+			<osmatch name="MikroTik RouterOS 6.15 (Linux 3.3.5)" accuracy="94" line="85317">
+				<osclass type="router" vendor="MikroTik" osfamily="RouterOS" osgen="6.X" accuracy="94"><cpe>cpe:/o:mikrotik:routeros:6.15</cpe></osclass>
+			</osmatch>
+			<osmatch name="ZoneAlarm Z100G WAP" accuracy="94" line="106747">
+				<osclass type="WAP" vendor="ZoneAlarm" osfamily="embedded" accuracy="94"><cpe>cpe:/h:zonealarm:z100g</cpe></osclass>
+			</osmatch>
+			<osmatch name="Linux 4.8" accuracy="93" line="67677">
+				<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="4.X" accuracy="93"><cpe>cpe:/o:linux:linux_kernel:4.8</cpe></osclass>
+			</osmatch>
+			<osmatch name="HP Onboard Administrator 4.12 - 4.40" accuracy="92" line="36590">
+				<osclass type="remote management" vendor="HP" osfamily="Onboard Administrator" osgen="4.X" accuracy="92"><cpe>cpe:/a:hp:onboard_administrator:4</cpe></osclass>
+			</osmatch>
+			<osfingerprint fingerprint="OS:SCAN(V=7.80%E=4%D=8/16%OT=22%CT=1%CU=34116%PV=Y%DS=2%DC=T%G=Y%TM=5F397D7&#xa;OS:E%P=x86_64-pc-linux-gnu)SEQ(SP=101%GCD=1%ISR=10F%TI=Z%CI=Z%II=I%TS=A)ECN&#xa;OS:(R=N)T1(R=Y%DF=Y%T=40%S=O%A=S+%F=AS%RD=0%Q=)T2(R=N)T3(R=N)T4(R=N)T5(R=Y%&#xa;OS:DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%&#xa;OS:O=%RD=0%Q=)T7(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)U1(R=Y%DF=N%T=4&#xa;OS:0%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)U1(R=N)IE(R=Y%DFI=N%T=4&#xa;OS:0%CD=S)&#xa;"/>
+		</os>
+		<uptime seconds="809615" lastboot="Fri Aug  7 05:46:23 2020"/>
+		<distance value="2"/>
+		<tcpsequence index="256" difficulty="Good luck!" values="5EE48230,DEA8A44D,3CAB9983,8DAF37C5"/>
+		<ipidsequence class="All zeros" values="0,0,0,0"/>
+		<tcptssequence class="1000HZ" values="303E4CBB,303E4D21,303E4D86,303E4DFA"/>
+		<trace port="5900" proto="tcp">
+			<hop ttl="1" ipaddr="10.10.14.1" rtt="24.63"/>
+			<hop ttl="2" ipaddr="10.10.10.189" rtt="25.72"/>
+		</trace>
+		<times srtt="24518" rttvar="2857" to="100000"/>
+	</host>
+	<host starttime="1597602614" endtime="1597603198"><status state="up" reason="echo-reply" reason_ttl="63"/>
+		<address addr="10.10.10.190" addrtype="ipv4"/>
+		<hostnames>
+		</hostnames>
+		<ports><extraports state="filtered" count="65526">
+				<extrareasons reason="no-responses" count="65526"/>
+			</extraports>
+			<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="ssh" product="OpenSSH" version="8.0p1 Ubuntu 6build1" extrainfo="Ubuntu Linux; protocol 2.0" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:8.0p1</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service><script id="ssh-hostkey" output="&#xa;  3072 7e:ca:81:78:ec:27:8f:50:60:db:79:cf:97:f7:05:c0 (RSA)&#xa;  256 e0:d7:c7:9f:f2:7f:64:0d:40:29:18:e1:a1:a0:37:5e (ECDSA)&#xa;  256 9f:b2:4c:5c:de:44:09:14:ce:4f:57:62:0b:f9:71:81 (ED25519)"><table>
+						<elem key="key">AAAAB3NzaC1yc2EAAAADAQABAAABgQC+26FYTMTDenoQmC2JMaFK9rwTSkDZY6HNs/rUUr7FwkwdkL6yoCl5+3z368P3vQMo/hJw5r8kHQqhkNuN0BDVGENPNFjmYYBBpY3eLAeaAVQHrKRM0MhrjMI3+AtrU8XhJvuz/oSA+exXs4raCJp9NOuyGB2sNMAGDCKaFUztdXGpe99dYLlSRZ7X5pTr8TGH2C9IFJGdszIz9AIkEvFWwtvOg/i47EUBHInNkLwE2gm+ltyBKZ3HDR5sxxmIJ9lx5+yVe16g1/YtwhilpT8W/Rvv1hUnsRrmzjcvLFg/15acL3/rZ64CcFQ0RmDqy6wjRIJKiq/21UiOGQM9R0qF8JgwgNgXKgU6d939Wq2d17F8qeg9N9MtV2DhsYmKuX7zp3oLpdpbuSzLBm6KLjU1+YNWB/OrQGKCxDYMY0koEk7c1OkAmZwcaK/+srNelmbInYOzC0Ej79qYuvntBhyxHb9cqS84NcRIVelkuAYu2uETZHEXzFjQYwMi7JCxZ3U=</elem>
+						<elem key="bits">3072</elem>
+						<elem key="fingerprint">7eca8178ec278f5060db79cf97f705c0</elem>
+						<elem key="type">ssh-rsa</elem>
+					</table>
+					<table>
+						<elem key="key">AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBNvuKmVPE2lFapN24cDLqbhbANGAwsoxishZfbUw10+DwP0IOFijEaFp3ARJvL+4F4DYTrORy/PybV1EnDt2mm8=</elem>
+						<elem key="bits">256</elem>
+						<elem key="fingerprint">e0d7c79ff27f640d402918e1a1a0375e</elem>
+						<elem key="type">ecdsa-sha2-nistp256</elem>
+					</table>
+					<table>
+						<elem key="key">AAAAC3NzaC1lZDI1NTE5AAAAIKBlgQxRYUPRb4HLiMO/Ju6qc4vwB+s2R+C2dzZ3rhmN</elem>
+						<elem key="bits">256</elem>
+						<elem key="fingerprint">9fb24c5cde440914ce4f57620bf97181</elem>
+						<elem key="type">ssh-ed25519</elem>
+					</table>
+			</script></port>
+			<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http" product="Apache httpd" version="2.4.41" extrainfo="(Ubuntu)" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.4.41</cpe></service><script id="http-favicon" output="Unknown favicon MD5: D41D8CD98F00B204E9800998ECF8427E"/><script id="http-methods" output="&#xa;  Supported Methods: GET HEAD OPTIONS"><table key="Supported Methods">
+						<elem>GET</elem>
+						<elem>HEAD</elem>
+						<elem>OPTIONS</elem>
+					</table>
+					</script><script id="http-server-header" output="Apache/2.4.41 (Ubuntu)"><elem>Apache/2.4.41 (Ubuntu)</elem>
+					</script><script id="http-title" output="Dyplesher"><elem key="title">Dyplesher</elem>
+			</script></port>
+			<port protocol="tcp" portid="3000"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="ppp" servicefp="SF-Port3000-TCP:V=7.80%I=7%D=8/16%Time=5F397BF0%P=x86_64-pc-linux-gnu%r(GenericLines,67,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:\x20text/plain;\x20charset=utf-8\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Request&quot;)%r(GetRequest,2063,&quot;HTTP/1\.0\x20200\x20OK\r\nContent-Type:\x20text/html;\x20charset=UTF-8\r\nSet-Cookie:\x20lang=en-US;\x20Path=/;\x20Max-Age=2147483647\r\nSet-Cookie:\x20i_like_gogs=e1364065c6e4cb9a;\x20Path=/;\x20HttpOnly\r\nSet-Cookie:\x20_csrf=5a_V15zJSYT6TtryYKXR9lVoi6Q6MTU5NzYwMjkxNTg4NTQxNTEwNA%3D%3D;\x20Path=/;\x20Expires=Mon,\x2017\x20Aug\x202020\x2018:35:15\x20GMT;\x20HttpOnly\r\nDate:\x20Sun,\x2016\x20Aug\x202020\x2018:35:15\x20GMT\r\n\r\n&lt;!DOCTYPE\x20html&gt;\n&lt;html&gt;\n&lt;head\x20data-suburl=\&quot;\&quot;&gt;\n\t&lt;meta\x20http-equiv=\&quot;Content-Type\&quot;\x20content=\&quot;text/html;\x20charset=UTF-8\&quot;\x20/&gt;\n\t&lt;meta\x20http-equiv=\&quot;X-UA-Compatible\&quot;\x20content=\&quot;IE=edge\&quot;/&gt;\n\t\n\t\t&lt;meta\x20name=\&quot;author\&quot;\x20content=\&quot;Gogs\&quot;\x20/&gt;\n\t\t&lt;meta\x20name=\&quot;description\&quot;\x20content=\&quot;Gogs\x20is\x20a\x20painless\x20self-hosted\x20Git\x20service\&quot;\x20/&gt;\n\t\t&lt;meta\x20name=\&quot;keywords\&quot;\x20content=\&quot;go,\x20git,\x20self-hosted,\x20gogs\&quot;&gt;\n\t\n\t&lt;meta\x20name=\&quot;referrer\&quot;\x20content=\&quot;no-referrer\&quot;\x20/&gt;\n\t&lt;meta\x20name=\&quot;_csrf\&quot;\x20content=\&quot;5a_V15zJSYT6TtryYKXR9lVoi6Q6MTU5NzYwMjkxNTg4NTQxNTEwNA==\&quot;\x20/&gt;\n\t&lt;meta\x20name=\&quot;_suburl\&quot;\x20content=\&quot;\&quot;\x20/&gt;\n\t\n\t\n\t\n\t\t&lt;meta\x20proper&quot;)%r(Help,67,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:\x20text/plain;\x20charset=utf-8\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Request&quot;)%r(HTTPOptions,189F,&quot;HTTP/1\.0\x20404\x20Not\x20Found\r\nContent-Type:\x20text/html;\x20charset=UTF-8\r\nSet-Cookie:\x20lang=en-US;\x20Path=/;\x20Max-Age=2147483647\r\nSet-Cookie:\x20i_like_gogs=92ac5cd6d040ba19;\x20Path=/;\x20HttpOnly\r\nSet-Cookie:\x20_csrf=SksMUX_eM3Y4NnFedkkDf8VCfmY6MTU5NzYwMjkyMTAwNjgzMTIzMg%3D%3D;\x20Path=/;\x20Expires=Mon,\x2017\x20Aug\x202020\x2018:35:21\x20GMT;\x20HttpOnly\r\nDate:\x20Sun,\x2016\x20Aug\x202020\x2018:35:21\x20GMT\r\n\r\n&lt;!DOCTYPE\x20html&gt;\n&lt;html&gt;\n&lt;head\x20data-suburl=\&quot;\&quot;&gt;\n\t&lt;meta\x20http-equiv=\&quot;Content-Type\&quot;\x20content=\&quot;text/html;\x20charset=UTF-8\&quot;\x20/&gt;\n\t&lt;meta\x20http-equiv=\&quot;X-UA-Compatible\&quot;\x20content=\&quot;IE=edge\&quot;/&gt;\n\t\n\t\t&lt;meta\x20name=\&quot;author\&quot;\x20content=\&quot;Gogs\&quot;\x20/&gt;\n\t\t&lt;meta\x20name=\&quot;description\&quot;\x20content=\&quot;Gogs\x20is\x20a\x20painless\x20self-hosted\x20Git\x20service\&quot;\x20/&gt;\n\t\t&lt;meta\x20name=\&quot;keywords\&quot;\x20content=\&quot;go,\x20git,\x20self-hosted,\x20gogs\&quot;&gt;\n\t\n\t&lt;meta\x20name=\&quot;referrer\&quot;\x20content=\&quot;no-referrer\&quot;\x20/&gt;\n\t&lt;meta\x20name=\&quot;_csrf\&quot;\x20content=\&quot;SksMUX_eM3Y4NnFedkkDf8VCfmY6MTU5NzYwMjkyMTAwNjgzMTIzMg==\&quot;\x20/&gt;\n\t&lt;meta\x20name=\&quot;_suburl\&quot;\x20content=\&quot;\&quot;\x20/&gt;\n\t\n\t\n\t\n\t\t&lt;meta&quot;);" method="table" conf="3"/><script id="fingerprint-strings" output="&#xa;  GenericLines, Help: &#xa;    HTTP/1.1 400 Bad Request&#xa;    Content-Type: text/plain; charset=utf-8&#xa;    Connection: close&#xa;    Request&#xa;  GetRequest: &#xa;    HTTP/1.0 200 OK&#xa;    Content-Type: text/html; charset=UTF-8&#xa;    Set-Cookie: lang=en-US; Path=/; Max-Age=2147483647&#xa;    Set-Cookie: i_like_gogs=e1364065c6e4cb9a; Path=/; HttpOnly&#xa;    Set-Cookie: _csrf=5a_V15zJSYT6TtryYKXR9lVoi6Q6MTU5NzYwMjkxNTg4NTQxNTEwNA%3D%3D; Path=/; Expires=Mon, 17 Aug 2020 18:35:15 GMT; HttpOnly&#xa;    Date: Sun, 16 Aug 2020 18:35:15 GMT&#xa;    &lt;!DOCTYPE html&gt;&#xa;    &lt;html&gt;&#xa;    &lt;head data-suburl=&quot;&quot;&gt;&#xa;    &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=UTF-8&quot; /&gt;&#xa;    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;/&gt;&#xa;    &lt;meta name=&quot;author&quot; content=&quot;Gogs&quot; /&gt;&#xa;    &lt;meta name=&quot;description&quot; content=&quot;Gogs is a painless self-hosted Git service&quot; /&gt;&#xa;    &lt;meta name=&quot;keywords&quot; content=&quot;go, git, self-hosted, gogs&quot;&gt;&#xa;    &lt;meta name=&quot;referrer&quot; content=&quot;no-referrer&quot; /&gt;&#xa;    &lt;meta name=&quot;_csrf&quot; content=&quot;5a_V15zJSYT6TtryYKXR9lVoi6Q6MTU5NzYwMjkxNTg4NTQxNTEwNA==&quot; /&gt;&#xa;    &lt;meta name=&quot;_suburl&quot; content=&quot;&quot; /&gt;&#xa;    &lt;meta proper&#xa;  HTTPOptions: &#xa;    HTTP/1.0 404 Not Found&#xa;    Content-Type: text/html; charset=UTF-8&#xa;    Set-Cookie: lang=en-US; Path=/; Max-Age=2147483647&#xa;    Set-Cookie: i_like_gogs=92ac5cd6d040ba19; Path=/; HttpOnly&#xa;    Set-Cookie: _csrf=SksMUX_eM3Y4NnFedkkDf8VCfmY6MTU5NzYwMjkyMTAwNjgzMTIzMg%3D%3D; Path=/; Expires=Mon, 17 Aug 2020 18:35:21 GMT; HttpOnly&#xa;    Date: Sun, 16 Aug 2020 18:35:21 GMT&#xa;    &lt;!DOCTYPE html&gt;&#xa;    &lt;html&gt;&#xa;    &lt;head data-suburl=&quot;&quot;&gt;&#xa;    &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=UTF-8&quot; /&gt;&#xa;    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;/&gt;&#xa;    &lt;meta name=&quot;author&quot; content=&quot;Gogs&quot; /&gt;&#xa;    &lt;meta name=&quot;description&quot; content=&quot;Gogs is a painless self-hosted Git service&quot; /&gt;&#xa;    &lt;meta name=&quot;keywords&quot; content=&quot;go, git, self-hosted, gogs&quot;&gt;&#xa;    &lt;meta name=&quot;referrer&quot; content=&quot;no-referrer&quot; /&gt;&#xa;    &lt;meta name=&quot;_csrf&quot; content=&quot;SksMUX_eM3Y4NnFedkkDf8VCfmY6MTU5NzYwMjkyMTAwNjgzMTIzMg==&quot; /&gt;&#xa;    &lt;meta name=&quot;_suburl&quot; content=&quot;&quot; /&gt;&#xa;    &lt;meta"><elem key="GenericLines, Help">&#xa;    HTTP/1.1 400 Bad Request&#xa;    Content-Type: text/plain; charset=utf-8&#xa;    Connection: close&#xa;    Request</elem>
+					<elem key="GetRequest">&#xa;    HTTP/1.0 200 OK&#xa;    Content-Type: text/html; charset=UTF-8&#xa;    Set-Cookie: lang=en-US; Path=/; Max-Age=2147483647&#xa;    Set-Cookie: i_like_gogs=e1364065c6e4cb9a; Path=/; HttpOnly&#xa;    Set-Cookie: _csrf=5a_V15zJSYT6TtryYKXR9lVoi6Q6MTU5NzYwMjkxNTg4NTQxNTEwNA%3D%3D; Path=/; Expires=Mon, 17 Aug 2020 18:35:15 GMT; HttpOnly&#xa;    Date: Sun, 16 Aug 2020 18:35:15 GMT&#xa;    &lt;!DOCTYPE html&gt;&#xa;    &lt;html&gt;&#xa;    &lt;head data-suburl=&quot;&quot;&gt;&#xa;    &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=UTF-8&quot; /&gt;&#xa;    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;/&gt;&#xa;    &lt;meta name=&quot;author&quot; content=&quot;Gogs&quot; /&gt;&#xa;    &lt;meta name=&quot;description&quot; content=&quot;Gogs is a painless self-hosted Git service&quot; /&gt;&#xa;    &lt;meta name=&quot;keywords&quot; content=&quot;go, git, self-hosted, gogs&quot;&gt;&#xa;    &lt;meta name=&quot;referrer&quot; content=&quot;no-referrer&quot; /&gt;&#xa;    &lt;meta name=&quot;_csrf&quot; content=&quot;5a_V15zJSYT6TtryYKXR9lVoi6Q6MTU5NzYwMjkxNTg4NTQxNTEwNA==&quot; /&gt;&#xa;    &lt;meta name=&quot;_suburl&quot; content=&quot;&quot; /&gt;&#xa;    &lt;meta proper</elem>
+					<elem key="HTTPOptions">&#xa;    HTTP/1.0 404 Not Found&#xa;    Content-Type: text/html; charset=UTF-8&#xa;    Set-Cookie: lang=en-US; Path=/; Max-Age=2147483647&#xa;    Set-Cookie: i_like_gogs=92ac5cd6d040ba19; Path=/; HttpOnly&#xa;    Set-Cookie: _csrf=SksMUX_eM3Y4NnFedkkDf8VCfmY6MTU5NzYwMjkyMTAwNjgzMTIzMg%3D%3D; Path=/; Expires=Mon, 17 Aug 2020 18:35:21 GMT; HttpOnly&#xa;    Date: Sun, 16 Aug 2020 18:35:21 GMT&#xa;    &lt;!DOCTYPE html&gt;&#xa;    &lt;html&gt;&#xa;    &lt;head data-suburl=&quot;&quot;&gt;&#xa;    &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=UTF-8&quot; /&gt;&#xa;    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;/&gt;&#xa;    &lt;meta name=&quot;author&quot; content=&quot;Gogs&quot; /&gt;&#xa;    &lt;meta name=&quot;description&quot; content=&quot;Gogs is a painless self-hosted Git service&quot; /&gt;&#xa;    &lt;meta name=&quot;keywords&quot; content=&quot;go, git, self-hosted, gogs&quot;&gt;&#xa;    &lt;meta name=&quot;referrer&quot; content=&quot;no-referrer&quot; /&gt;&#xa;    &lt;meta name=&quot;_csrf&quot; content=&quot;SksMUX_eM3Y4NnFedkkDf8VCfmY6MTU5NzYwMjkyMTAwNjgzMTIzMg==&quot; /&gt;&#xa;    &lt;meta name=&quot;_suburl&quot; content=&quot;&quot; /&gt;&#xa;    &lt;meta</elem>
+			</script></port>
+			<port protocol="tcp" portid="4369"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="epmd" product="Erlang Port Mapper Daemon" method="probed" conf="10"/><script id="epmd-info" output="&#xa;  epmd_port: 4369&#xa;  nodes: &#xa;    rabbit: 25672"><elem key="epmd_port">4369</elem>
+					<table key="nodes">
+						<elem key="rabbit">25672</elem>
+					</table>
+			</script></port>
+			<port protocol="tcp" portid="5672"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="amqp" product="RabbitMQ" version="3.7.8" extrainfo="0-9" method="probed" conf="10"/><script id="amqp-info" output="&#xa;  capabilities: &#xa;    publisher_confirms: YES&#xa;    exchange_exchange_bindings: YES&#xa;    basic.nack: YES&#xa;    consumer_cancel_notify: YES&#xa;    connection.blocked: YES&#xa;    consumer_priorities: YES&#xa;    authentication_failure_close: YES&#xa;    per_consumer_qos: YES&#xa;    direct_reply_to: YES&#xa;  cluster_name: rabbit@dyplesher&#xa;  copyright: Copyright (C) 2007-2018 Pivotal Software, Inc.&#xa;  information: Licensed under the MPL.  See http://www.rabbitmq.com/&#xa;  platform: Erlang/OTP 22.0.7&#xa;  product: RabbitMQ&#xa;  version: 3.7.8&#xa;  mechanisms: PLAIN AMQPLAIN&#xa;  locales: en_US&#xa;"/></port>
+			<port protocol="tcp" portid="11211"><state state="open" reason="syn-ack" reason_ttl="62"/><service name="memcache" method="table" conf="3"/></port>
+			<port protocol="tcp" portid="25562"><state state="open" reason="syn-ack" reason_ttl="63"/></port>
+			<port protocol="tcp" portid="25565"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="minecraft" servicefp="SF-Port25565-TCP:V=7.80%I=7%D=8/16%Time=5F397C15%P=x86_64-pc-linux-gnu%r(DNSVersionBindReqTCP,2A,&quot;\)\0&apos;{\&quot;text\&quot;:\&quot;Unsupported\x20protocol\x20version\&quot;}&quot;)%r(DNSStatusRequestTCP,2A,&quot;\)\0&apos;{\&quot;text\&quot;:\&quot;Unsupported\x20protocol\x20version\&quot;}&quot;)%r(SSLSessionReq,2A,&quot;\)\0&apos;{\&quot;text\&quot;:\&quot;Unsupported\x20protocol\x20version\&quot;}&quot;)%r(TLSSessionReq,2A,&quot;\)\0&apos;{\&quot;text\&quot;:\&quot;Unsupported\x20protocol\x20version\&quot;}&quot;)%r(LPDString,2A,&quot;\)\0&apos;{\&quot;text\&quot;:\&quot;Unsupported\x20protocol\x20version\&quot;}&quot;)%r(LDAPSearchReq,2A,&quot;\)\0&apos;{\&quot;text\&quot;:\&quot;Unsupported\x20protocol\x20version\&quot;}&quot;)%r(SIPOptions,2A,&quot;\)\0&apos;{\&quot;text\&quot;:\&quot;Unsupported\x20protocol\x20version\&quot;}&quot;)%r(NotesRPC,74,&quot;s\0q{\&quot;text\&quot;:\&quot;Unsupported\x20protocol\x20version\x200,\x20please\x20use\x20one\x20of\x20these\x20versions:\n1\.8\.x,\x201\.9\.x,\x201\.10\.x,\x201\.11\.x,\x201\.12\.x\&quot;}&quot;)%r(oracle-tns,2A,&quot;\)\0&apos;{\&quot;text\&quot;:\&quot;Unsupported\x20protocol\x20version\&quot;}&quot;)%r(ms-sql-s,2A,&quot;\)\0&apos;{\&quot;text\&quot;:\&quot;Unsupported\x20protocol\x20version\&quot;}&quot;)%r(afp,2A,&quot;\)\0&apos;{\&quot;text\&quot;:\&quot;Unsupported\x20protocol\x20version\&quot;}&quot;);" method="table" conf="3"/><script id="fingerprint-strings" output="&#xa;  DNSStatusRequestTCP, DNSVersionBindReqTCP, LDAPSearchReq, LPDString, SIPOptions, SSLSessionReq, TLSSessionReq, afp, ms-sql-s, oracle-tns: &#xa;    &apos;{&quot;text&quot;:&quot;Unsupported protocol version&quot;}&#xa;  NotesRPC: &#xa;    q{&quot;text&quot;:&quot;Unsupported protocol version 0, please use one of these versions:&#xa;    1.8.x, 1.9.x, 1.10.x, 1.11.x, 1.12.x&quot;}"><elem key="DNSStatusRequestTCP, DNSVersionBindReqTCP, LDAPSearchReq, LPDString, SIPOptions, SSLSessionReq, TLSSessionReq, afp, ms-sql-s, oracle-tns">&#xa;    &apos;{&quot;text&quot;:&quot;Unsupported protocol version&quot;}</elem>
+					<elem key="NotesRPC">&#xa;    q{&quot;text&quot;:&quot;Unsupported protocol version 0, please use one of these versions:&#xa;    1.8.x, 1.9.x, 1.10.x, 1.11.x, 1.12.x&quot;}</elem>
+			</script></port>
+			<port protocol="tcp" portid="25572"><state state="closed" reason="reset" reason_ttl="63"/></port>
+			<port protocol="tcp" portid="25672"><state state="open" reason="syn-ack" reason_ttl="63"/></port>
+		</ports>
+		<os><portused state="open" proto="tcp" portid="22"/>
+			<portused state="closed" proto="tcp" portid="25572"/>
+			<osmatch name="HP P2000 G3 NAS device" accuracy="91" line="34647">
+				<osclass type="storage-misc" vendor="HP" osfamily="embedded" accuracy="91"><cpe>cpe:/h:hp:p2000_g3</cpe></osclass>
+			</osmatch>
+			<osmatch name="Linux 2.6.32" accuracy="90" line="55463">
+				<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="90"><cpe>cpe:/o:linux:linux_kernel:2.6.32</cpe></osclass>
+			</osmatch>
+			<osmatch name="Infomir MAG-250 set-top box" accuracy="90" line="59437">
+				<osclass type="media device" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="90"><cpe>cpe:/o:linux:linux_kernel:2.6</cpe></osclass>
+				<osclass type="media device" vendor="Infomir" osfamily="embedded" accuracy="90"><cpe>cpe:/h:infomir:mag-250</cpe></osclass>
+			</osmatch>
+			<osmatch name="Ubiquiti AirMax NanoStation WAP (Linux 2.6.32)" accuracy="90" line="61488">
+				<osclass type="WAP" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="90"><cpe>cpe:/o:linux:linux_kernel:2.6.32</cpe></osclass>
+				<osclass type="WAP" vendor="Ubiquiti" osfamily="embedded" accuracy="90"><cpe>cpe:/h:ubnt:airmax_nanostation</cpe></osclass>
+			</osmatch>
+			<osmatch name="Ubiquiti AirOS 5.5.9" accuracy="90" line="102769">
+				<osclass type="WAP" vendor="Ubiquiti" osfamily="AirOS" osgen="5.X" accuracy="90"><cpe>cpe:/o:ubnt:airos:5.5.9</cpe></osclass>
+			</osmatch>
+			<osmatch name="Linux 2.6.32 - 3.13" accuracy="89" line="56411">
+				<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="89"><cpe>cpe:/o:linux:linux_kernel:2.6</cpe></osclass>
+				<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="89"><cpe>cpe:/o:linux:linux_kernel:3</cpe></osclass>
+			</osmatch>
+			<osmatch name="Linux 3.3" accuracy="89" line="65197">
+				<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="89"><cpe>cpe:/o:linux:linux_kernel:3.3</cpe></osclass>
+			</osmatch>
+			<osmatch name="Linux 2.6.32 - 3.1" accuracy="89" line="56315">
+				<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="89"><cpe>cpe:/o:linux:linux_kernel:2.6</cpe></osclass>
+				<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="89"><cpe>cpe:/o:linux:linux_kernel:3</cpe></osclass>
+			</osmatch>
+			<osmatch name="Linux 3.7" accuracy="89" line="65676">
+				<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="89"><cpe>cpe:/o:linux:linux_kernel:3.7</cpe></osclass>
+			</osmatch>
+			<osmatch name="Netgear RAIDiator 4.2.21 (Linux 2.6.37)" accuracy="89" line="87985">
+				<osclass type="storage-misc" vendor="Netgear" osfamily="RAIDiator" osgen="4.X" accuracy="89"><cpe>cpe:/o:netgear:raidiator:4.2.21</cpe></osclass>
+				<osclass type="storage-misc" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="89"><cpe>cpe:/o:linux:linux_kernel:2.6.37</cpe></osclass>
+			</osmatch>
+		</os>
+		<uptime seconds="703398" lastboot="Sat Aug  8 11:16:40 2020"/>
+		<distance value="2"/>
+		<tcpsequence index="259" difficulty="Good luck!" values="B574B487,1B27CBFF,3D643A10,B6E77684,6AE0AF13,D713C4F2"/>
+		<ipidsequence class="All zeros" values="0,0,0,0,0,0"/>
+		<tcptssequence class="1000HZ" values="29E969A5,29E96A10,29E96A7A,29E96ADF,29E96B4A,29E96BAD"/>
+		<trace port="25572" proto="tcp">
+			<hop ttl="1" ipaddr="10.10.14.1" rtt="24.63"/>
+			<hop ttl="2" ipaddr="10.10.10.190" rtt="22.18"/>
+		</trace>
+		<times srtt="22894" rttvar="2164" to="100000"/>
+	</host>
+	<taskbegin task="SYN Stealth Scan" time="1597603198"/>
+	<taskprogress task="SYN Stealth Scan" time="1597603229" percent="3.89" remaining="766" etc="1597603994"/>
+	<taskprogress task="SYN Stealth Scan" time="1597603259" percent="6.96" remaining="817" etc="1597604075"/>
+	<taskprogress task="SYN Stealth Scan" time="1597603289" percent="10.60" remaining="768" etc="1597604057"/>
+	<taskprogress task="SYN Stealth Scan" time="1597603325" percent="14.95" remaining="723" etc="1597604048"/>
+	<taskprogress task="SYN Stealth Scan" time="1597603370" percent="20.29" remaining="676" etc="1597604046"/>
+	<taskprogress task="SYN Stealth Scan" time="1597603421" percent="26.10" remaining="632" etc="1597604053"/>
+	<taskprogress task="SYN Stealth Scan" time="1597603481" percent="32.59" remaining="586" etc="1597604066"/>
+	<taskprogress task="SYN Stealth Scan" time="1597603526" percent="37.87" remaining="539" etc="1597604064"/>
+	<taskprogress task="SYN Stealth Scan" time="1597603599" percent="44.60" remaining="499" etc="1597604097"/>
+	<taskprogress task="SYN Stealth Scan" time="1597603599" percent="44.71" remaining="496" etc="1597604095"/>
+	<taskprogress task="SYN Stealth Scan" time="1597603607" percent="45.58" remaining="489" etc="1597604095"/>
+	<taskprogress task="SYN Stealth Scan" time="1597603649" percent="50.61" remaining="441" etc="1597604089"/>
+	<taskprogress task="SYN Stealth Scan" time="1597603694" percent="55.74" remaining="394" etc="1597604088"/>
+	<taskprogress task="SYN Stealth Scan" time="1597603745" percent="61.21" remaining="347" etc="1597604092"/>
+	<taskprogress task="SYN Stealth Scan" time="1597603805" percent="66.85" remaining="302" etc="1597604106"/>
+	<taskprogress task="SYN Stealth Scan" time="1597603856" percent="72.25" remaining="253" etc="1597604109"/>
+	<taskprogress task="SYN Stealth Scan" time="1597603898" percent="77.33" remaining="206" etc="1597604103"/>
+	<taskprogress task="SYN Stealth Scan" time="1597603946" percent="82.70" remaining="157" etc="1597604103"/>
+	<taskprogress task="SYN Stealth Scan" time="1597603988" percent="87.84" remaining="110" etc="1597604097"/>
+	<taskprogress task="SYN Stealth Scan" time="1597604002" percent="89.41" remaining="96" etc="1597604097"/>
+	<taskprogress task="SYN Stealth Scan" time="1597604068" percent="94.85" remaining="48" etc="1597604115"/>
+	<taskprogress task="SYN Stealth Scan" time="1597604198" percent="99.81" remaining="2" etc="1597604200"/>
+	<taskend task="SYN Stealth Scan" time="1597604233" extrainfo="786432 total ports"/>
+	<taskbegin task="Service scan" time="1597604233"/>
+	<taskend task="Service scan" time="1597604395" extrainfo="61 services on 12 hosts"/>
+	<taskbegin task="Traceroute" time="1597604419"/>
+	<taskend task="Traceroute" time="1597604422"/>
+	<taskbegin task="Parallel DNS resolution of 13 hosts." time="1597604422"/>
+	<taskend task="Parallel DNS resolution of 13 hosts." time="1597604422"/>
+	<taskbegin task="NSE" time="1597604422"/>
+	<taskend task="NSE" time="1597604478"/>
+	<taskbegin task="NSE" time="1597604478"/>
+	<taskend task="NSE" time="1597604606"/>
+	<taskbegin task="NSE" time="1597604606"/>
+	<taskend task="NSE" time="1597604606"/>
+	<host starttime="1597602614" endtime="1597604606"><status state="up" reason="echo-reply" reason_ttl="63"/>
+		<address addr="10.10.10.191" addrtype="ipv4"/>
+		<hostnames>
+		</hostnames>
+		<ports><extraports state="filtered" count="65534">
+				<extrareasons reason="no-responses" count="65534"/>
+			</extraports>
+			<port protocol="tcp" portid="21"><state state="closed" reason="reset" reason_ttl="63"/><service name="ftp" method="table" conf="3"/></port>
+			<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http" product="Apache httpd" version="2.4.41" extrainfo="(Ubuntu)" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.4.41</cpe></service><script id="http-favicon" output="Unknown favicon MD5: A0F0E5D852F0E3783AF700B6EE9D00DA"/><script id="http-generator" output="Blunder"/><script id="http-methods" output="&#xa;  Supported Methods: GET HEAD POST OPTIONS"><table key="Supported Methods">
+						<elem>GET</elem>
+						<elem>HEAD</elem>
+						<elem>POST</elem>
+						<elem>OPTIONS</elem>
+					</table>
+					</script><script id="http-server-header" output="Apache/2.4.41 (Ubuntu)"><elem>Apache/2.4.41 (Ubuntu)</elem>
+					</script><script id="http-title" output="Blunder | A blunder of interesting facts"><elem key="title">Blunder | A blunder of interesting facts</elem>
+			</script></port>
+		</ports>
+		<os><portused state="open" proto="tcp" portid="80"/>
+			<portused state="closed" proto="tcp" portid="21"/>
+			<osmatch name="HP P2000 G3 NAS device" accuracy="91" line="34647">
+				<osclass type="storage-misc" vendor="HP" osfamily="embedded" accuracy="91"><cpe>cpe:/h:hp:p2000_g3</cpe></osclass>
+			</osmatch>
+			<osmatch name="Linux 2.6.32" accuracy="90" line="55463">
+				<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="90"><cpe>cpe:/o:linux:linux_kernel:2.6.32</cpe></osclass>
+			</osmatch>
+			<osmatch name="Linux 2.6.32 - 3.1" accuracy="90" line="56315">
+				<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="90"><cpe>cpe:/o:linux:linux_kernel:2.6</cpe></osclass>
+				<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="90"><cpe>cpe:/o:linux:linux_kernel:3</cpe></osclass>
+			</osmatch>
+			<osmatch name="Ubiquiti AirMax NanoStation WAP (Linux 2.6.32)" accuracy="90" line="61488">
+				<osclass type="WAP" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="90"><cpe>cpe:/o:linux:linux_kernel:2.6.32</cpe></osclass>
+				<osclass type="WAP" vendor="Ubiquiti" osfamily="embedded" accuracy="90"><cpe>cpe:/h:ubnt:airmax_nanostation</cpe></osclass>
+			</osmatch>
+			<osmatch name="Linux 3.7" accuracy="90" line="65676">
+				<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="90"><cpe>cpe:/o:linux:linux_kernel:3.7</cpe></osclass>
+			</osmatch>
+			<osmatch name="Ubiquiti AirOS 5.5.9" accuracy="90" line="102769">
+				<osclass type="WAP" vendor="Ubiquiti" osfamily="AirOS" osgen="5.X" accuracy="90"><cpe>cpe:/o:ubnt:airos:5.5.9</cpe></osclass>
+			</osmatch>
+			<osmatch name="Ubiquiti Pico Station WAP (AirOS 5.2.6)" accuracy="89" line="102825">
+				<osclass type="WAP" vendor="Ubiquiti" osfamily="AirOS" osgen="5.X" accuracy="89"><cpe>cpe:/o:ubnt:airos:5.2.6</cpe></osclass>
+			</osmatch>
+			<osmatch name="Linux 2.6.32 - 3.13" accuracy="89" line="56411">
+				<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="89"><cpe>cpe:/o:linux:linux_kernel:2.6</cpe></osclass>
+				<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="89"><cpe>cpe:/o:linux:linux_kernel:3</cpe></osclass>
+			</osmatch>
+			<osmatch name="Linux 3.0 - 3.2" accuracy="89" line="62456">
+				<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="89"><cpe>cpe:/o:linux:linux_kernel:3</cpe></osclass>
+			</osmatch>
+			<osmatch name="Infomir MAG-250 set-top box" accuracy="89" line="59437">
+				<osclass type="media device" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="89"><cpe>cpe:/o:linux:linux_kernel:2.6</cpe></osclass>
+				<osclass type="media device" vendor="Infomir" osfamily="embedded" accuracy="89"><cpe>cpe:/h:infomir:mag-250</cpe></osclass>
+			</osmatch>
+		</os>
+		<uptime seconds="3876823" lastboot="Thu Jul  2 18:09:43 2020"/>
+		<distance value="2"/>
+		<tcpsequence index="262" difficulty="Good luck!" values="6A4DD9DF,9510E7B0,39B5CC7C,3F9F7382,FCC8C28B,82A2139D"/>
+		<ipidsequence class="All zeros" values="0,0,0,0,0,0"/>
+		<tcptssequence class="1000HZ" values="E71097F8,E710985D,E71098CC,E7109975,E71099DA,E7109A42"/>
+		<trace port="21" proto="tcp">
+			<hop ttl="1" ipaddr="10.10.14.1" rtt="24.63"/>
+			<hop ttl="2" ipaddr="10.10.10.191" rtt="20.27"/>
+		</trace>
+		<times srtt="24185" rttvar="2326" to="100000"/>
+	</host>
+	<host starttime="1597602614" endtime="1597604606"><status state="up" reason="echo-reply" reason_ttl="127"/>
+		<address addr="10.10.10.192" addrtype="ipv4"/>
+		<hostnames>
+		</hostnames>
+		<ports><extraports state="filtered" count="65528">
+				<extrareasons reason="no-responses" count="65528"/>
+			</extraports>
+			<port protocol="tcp" portid="53"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="domain" servicefp="SF-Port53-TCP:V=7.80%I=7%D=8/16%Time=5F398194%P=x86_64-pc-linux-gnu%r(DNSVersionBindReqTCP,20,&quot;\0\x1e\0\x06\x81\x04\0\x01\0\0\0\0\0\0\x07version\x04bind\0\0\x10\0\x03&quot;);" method="table" conf="3"/><script id="fingerprint-strings" output="&#xa;  DNSVersionBindReqTCP: &#xa;    version&#xa;    bind"><elem key="DNSVersionBindReqTCP">&#xa;    version&#xa;    bind</elem>
+			</script></port>
+			<port protocol="tcp" portid="88"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="kerberos-sec" product="Microsoft Windows Kerberos" extrainfo="server time: 2020-08-17 01:59:14Z" ostype="Windows" method="probed" conf="10"><cpe>cpe:/a:microsoft:kerberos</cpe><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+			<port protocol="tcp" portid="135"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+			<port protocol="tcp" portid="389"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="ldap" product="Microsoft Windows Active Directory LDAP" extrainfo="Domain: BLACKFIELD.local0., Site: Default-First-Site-Name" hostname="DC01" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+			<port protocol="tcp" portid="445"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="microsoft-ds" method="table" conf="3"/></port>
+			<port protocol="tcp" portid="593"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="ncacn_http" product="Microsoft Windows RPC over HTTP" version="1.0" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+			<port protocol="tcp" portid="3268"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="ldap" product="Microsoft Windows Active Directory LDAP" extrainfo="Domain: BLACKFIELD.local0., Site: Default-First-Site-Name" hostname="DC01" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+			<port protocol="tcp" portid="5985"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="http" product="Microsoft HTTPAPI httpd" version="2.0" extrainfo="SSDP/UPnP" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service><script id="http-server-header" output="Microsoft-HTTPAPI/2.0"><elem>Microsoft-HTTPAPI/2.0</elem>
+					</script><script id="http-title" output="Not Found"><elem key="title">Not Found</elem>
+			</script></port>
+		</ports>
+		<os><portused state="open" proto="tcp" portid="53"/>
+		</os>
+		<distance value="2"/>
+		<tcpsequence index="252" difficulty="Good luck!" values="536AE496,473C9ECF,636BCFC1,A4A93534,AA9D619F,76D289B2"/>
+		<ipidsequence class="Incremental" values="DF54,DF55,DF56,DF57,DF58,DF59"/>
+		<tcptssequence class="none returned (unsupported)"/>
+		<hostscript><script id="clock-skew" output="7h01m54s"><elem key="stddev">0</elem>
+				<elem key="median">25314</elem>
+				<elem key="count">1</elem>
+				<elem key="mean">25314</elem>
+					</script><script id="smb2-security-mode" output="&#xa;  2.02: &#xa;    Message signing enabled and required"><table key="2.02">
+					<elem>Message signing enabled and required</elem>
+				</table>
+				</script><script id="smb2-time" output="&#xa;  date: 2020-08-17T02:02:32&#xa;  start_date: N/A"><elem key="date">2020-08-17T02:02:32</elem>
+				<elem key="start_date">N/A</elem>
+			</script></hostscript><trace port="445" proto="tcp">
+			<hop ttl="1" ipaddr="10.10.14.1" rtt="24.63"/>
+			<hop ttl="2" ipaddr="10.10.10.192" rtt="20.27"/>
+		</trace>
+		<times srtt="23733" rttvar="2891" to="100000"/>
+	</host>
+	<host starttime="1597602614" endtime="1597604606"><status state="up" reason="echo-reply" reason_ttl="127"/>
+		<address addr="10.10.10.193" addrtype="ipv4"/>
+		<hostnames>
+		</hostnames>
+		<ports><extraports state="filtered" count="65515">
+				<extrareasons reason="no-responses" count="65515"/>
+			</extraports>
+			<port protocol="tcp" portid="53"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="domain" servicefp="SF-Port53-TCP:V=7.80%I=7%D=8/16%Time=5F398194%P=x86_64-pc-linux-gnu%r(DNSVersionBindReqTCP,20,&quot;\0\x1e\0\x06\x81\x04\0\x01\0\0\0\0\0\0\x07version\x04bind\0\0\x10\0\x03&quot;);" method="table" conf="3"/><script id="fingerprint-strings" output="&#xa;  DNSVersionBindReqTCP: &#xa;    version&#xa;    bind"><elem key="DNSVersionBindReqTCP">&#xa;    version&#xa;    bind</elem>
+			</script></port>
+			<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="http" product="Microsoft IIS httpd" version="10.0" ostype="Windows" method="probed" conf="10"><cpe>cpe:/a:microsoft:iis:10.0</cpe><cpe>cpe:/o:microsoft:windows</cpe></service><script id="http-methods" output="&#xa;  Supported Methods: OPTIONS TRACE GET HEAD POST&#xa;  Potentially risky methods: TRACE"><table key="Supported Methods">
+						<elem>OPTIONS</elem>
+						<elem>TRACE</elem>
+						<elem>GET</elem>
+						<elem>HEAD</elem>
+						<elem>POST</elem>
+					</table>
+					<table key="Potentially risky methods">
+						<elem>TRACE</elem>
+					</table>
+					</script><script id="http-server-header" output="Microsoft-IIS/10.0"><elem>Microsoft-IIS/10.0</elem>
+			</script><script id="http-title" output="Site doesn&apos;t have a title (text/html)."></script></port>
+			<port protocol="tcp" portid="88"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="kerberos-sec" product="Microsoft Windows Kerberos" extrainfo="server time: 2020-08-16 19:12:14Z" ostype="Windows" method="probed" conf="10"><cpe>cpe:/a:microsoft:kerberos</cpe><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+			<port protocol="tcp" portid="135"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+			<port protocol="tcp" portid="139"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="netbios-ssn" product="Microsoft Windows netbios-ssn" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+			<port protocol="tcp" portid="389"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="ldap" product="Microsoft Windows Active Directory LDAP" extrainfo="Domain: fabricorp.local, Site: Default-First-Site-Name" hostname="FUSE" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+			<port protocol="tcp" portid="445"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="microsoft-ds" product="Windows Server 2016 Standard 14393 microsoft-ds" extrainfo="workgroup: FABRICORP" hostname="FUSE" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+			<port protocol="tcp" portid="464"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="kpasswd5" method="table" conf="3"/></port>
+			<port protocol="tcp" portid="593"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="ncacn_http" product="Microsoft Windows RPC over HTTP" version="1.0" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+			<port protocol="tcp" portid="636"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+			<port protocol="tcp" portid="3268"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="ldap" product="Microsoft Windows Active Directory LDAP" extrainfo="Domain: fabricorp.local, Site: Default-First-Site-Name" hostname="FUSE" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+			<port protocol="tcp" portid="3269"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+			<port protocol="tcp" portid="5985"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="http" product="Microsoft HTTPAPI httpd" version="2.0" extrainfo="SSDP/UPnP" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service><script id="http-server-header" output="Microsoft-HTTPAPI/2.0"><elem>Microsoft-HTTPAPI/2.0</elem>
+					</script><script id="http-title" output="Not Found"><elem key="title">Not Found</elem>
+			</script></port>
+			<port protocol="tcp" portid="9389"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="mc-nmf" product=".NET Message Framing" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+			<port protocol="tcp" portid="49666"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+			<port protocol="tcp" portid="49667"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+			<port protocol="tcp" portid="49675"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="ncacn_http" product="Microsoft Windows RPC over HTTP" version="1.0" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+			<port protocol="tcp" portid="49676"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+			<port protocol="tcp" portid="49680"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+			<port protocol="tcp" portid="49698"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+			<port protocol="tcp" portid="49754"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+		</ports>
+		<os><portused state="open" proto="tcp" portid="53"/>
+			<osmatch name="Microsoft Windows Server 2016" accuracy="91" line="75728">
+				<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2016" accuracy="91"><cpe>cpe:/o:microsoft:windows_server_2016</cpe></osclass>
+			</osmatch>
+			<osmatch name="Microsoft Windows Server 2012" accuracy="85" line="75072">
+				<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2012" accuracy="85"><cpe>cpe:/o:microsoft:windows_server_2012</cpe></osclass>
+			</osmatch>
+			<osmatch name="Microsoft Windows Server 2012 or Windows Server 2012 R2" accuracy="85" line="75205">
+				<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2012" accuracy="85"><cpe>cpe:/o:microsoft:windows_server_2012:r2</cpe></osclass>
+			</osmatch>
+			<osmatch name="Microsoft Windows Server 2012 R2" accuracy="85" line="75243">
+				<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2012" accuracy="85"><cpe>cpe:/o:microsoft:windows_server_2012:r2</cpe></osclass>
+			</osmatch>
+			<osmatch name="Microsoft Windows Server 2008 R2" accuracy="85" line="74118">
+				<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2008" accuracy="85"><cpe>cpe:/o:microsoft:windows_server_2008:r2</cpe></osclass>
+			</osmatch>
+			<osmatch name="Microsoft Windows 10 1607" accuracy="85" line="69286">
+				<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="10" accuracy="85"><cpe>cpe:/o:microsoft:windows_10:1607</cpe></osclass>
+			</osmatch>
+		</os>
+		<uptime seconds="24337" lastboot="Sun Aug 16 08:17:49 2020"/>
+		<distance value="2"/>
+		<tcpsequence index="259" difficulty="Good luck!" values="6797A10,44D31001,5F03EAC0,CE69150F,1D1EC726,973367F7"/>
+		<ipidsequence class="Incremental" values="43BD,43BE,43BF,43C0,43C1,43C2"/>
+		<tcptssequence class="1000HZ" values="1705252,17052B6,1705325,17053CF,1705433,170549C"/>
+		<hostscript><script id="clock-skew" output="mean: 2h34m59s, deviation: 4h02m39s, median: 14m53s"><elem key="stddev">14559</elem>
+				<elem key="median">893</elem>
+				<elem key="count">3</elem>
+				<elem key="mean">9299</elem>
+				</script><script id="smb-os-discovery" output="&#xa;  OS: Windows Server 2016 Standard 14393 (Windows Server 2016 Standard 6.3)&#xa;  Computer name: Fuse&#xa;  NetBIOS computer name: FUSE\x00&#xa;  Domain name: fabricorp.local&#xa;  Forest name: fabricorp.local&#xa;  FQDN: Fuse.fabricorp.local&#xa;  System time: 2020-08-16T12:15:33-07:00&#xa;"><elem key="os">Windows Server 2016 Standard 14393</elem>
+				<elem key="lanmanager">Windows Server 2016 Standard 6.3</elem>
+				<elem key="server">FUSE\x00</elem>
+				<elem key="date">2020-08-16T12:15:33-07:00</elem>
+				<elem key="fqdn">Fuse.fabricorp.local</elem>
+				<elem key="domain_dns">fabricorp.local</elem>
+				<elem key="forest_dns">fabricorp.local</elem>
+				<elem key="workgroup">FABRICORP\x00</elem>
+				</script><script id="smb-security-mode" output="&#xa;  account_used: &lt;blank&gt;&#xa;  authentication_level: user&#xa;  challenge_response: supported&#xa;  message_signing: required"><elem key="account_used">&lt;blank&gt;</elem>
+				<elem key="authentication_level">user</elem>
+				<elem key="challenge_response">supported</elem>
+				<elem key="message_signing">required</elem>
+					</script><script id="smb2-security-mode" output="&#xa;  2.02: &#xa;    Message signing enabled and required"><table key="2.02">
+					<elem>Message signing enabled and required</elem>
+				</table>
+				</script><script id="smb2-time" output="&#xa;  date: 2020-08-16T19:15:34&#xa;  start_date: 2020-08-16T12:33:04"><elem key="date">2020-08-16T19:15:34</elem>
+				<elem key="start_date">2020-08-16T12:33:04</elem>
+			</script></hostscript><trace port="80" proto="tcp">
+			<hop ttl="1" ipaddr="10.10.14.1" rtt="24.63"/>
+			<hop ttl="2" ipaddr="10.10.10.193" rtt="20.33"/>
+		</trace>
+		<times srtt="24125" rttvar="2944" to="100000"/>
+	</host>
+	<host starttime="1597602614" endtime="1597604606"><status state="up" reason="echo-reply" reason_ttl="63"/>
+		<address addr="10.10.10.194" addrtype="ipv4"/>
+		<hostnames>
+		</hostnames>
+		<ports><extraports state="closed" count="65532">
+				<extrareasons reason="resets" count="65532"/>
+			</extraports>
+			<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="ssh" product="OpenSSH" version="8.2p1 Ubuntu 4" extrainfo="Ubuntu Linux; protocol 2.0" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:8.2p1</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service></port>
+			<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http" product="Apache httpd" version="2.4.41" extrainfo="(Ubuntu)" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.4.41</cpe></service><script id="http-favicon" output="Unknown favicon MD5: 338ABBB5EA8D80B9869555ECA253D49D"/><script id="http-methods" output="&#xa;  Supported Methods: GET HEAD POST OPTIONS"><table key="Supported Methods">
+						<elem>GET</elem>
+						<elem>HEAD</elem>
+						<elem>POST</elem>
+						<elem>OPTIONS</elem>
+					</table>
+					</script><script id="http-server-header" output="Apache/2.4.41 (Ubuntu)"><elem>Apache/2.4.41 (Ubuntu)</elem>
+					</script><script id="http-title" output="Mega Hosting"><elem key="title">Mega Hosting</elem>
+			</script></port>
+			<port protocol="tcp" portid="4444"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="krb524" method="table" conf="3"/></port>
+			<port protocol="tcp" portid="8080"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http" product="Apache Tomcat" method="probed" conf="10"><cpe>cpe:/a:apache:tomcat</cpe></service><script id="http-methods" output="&#xa;  Supported Methods: OPTIONS GET HEAD POST"><table key="Supported Methods">
+						<elem>OPTIONS</elem>
+						<elem>GET</elem>
+						<elem>HEAD</elem>
+						<elem>POST</elem>
+					</table>
+					</script><script id="http-open-proxy" output="Proxy might be redirecting requests"/><script id="http-title" output="Apache Tomcat"><elem key="title">Apache Tomcat</elem>
+			</script></port>
+		</ports>
+		<os><portused state="open" proto="tcp" portid="22"/>
+			<portused state="closed" proto="tcp" portid="1"/>
+			<portused state="closed" proto="udp" portid="32737"/>
+			<osmatch name="Linux 2.6.32" accuracy="95" line="55463">
+				<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="95"><cpe>cpe:/o:linux:linux_kernel:2.6.32</cpe></osclass>
+			</osmatch>
+			<osmatch name="Linux 3.1" accuracy="95" line="62708">
+				<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="95"><cpe>cpe:/o:linux:linux_kernel:3.1</cpe></osclass>
+			</osmatch>
+			<osmatch name="Linux 3.2" accuracy="95" line="64455">
+				<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="95"><cpe>cpe:/o:linux:linux_kernel:3.2</cpe></osclass>
+			</osmatch>
+			<osmatch name="AXIS 210A or 211 Network Camera (Linux 2.6.17)" accuracy="94" line="61606">
+				<osclass type="webcam" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="94"><cpe>cpe:/o:linux:linux_kernel:2.6.17</cpe></osclass>
+				<osclass type="webcam" vendor="AXIS" osfamily="embedded" accuracy="94"><cpe>cpe:/h:axis:210a_network_camera</cpe><cpe>cpe:/h:axis:211_network_camera</cpe></osclass>
+			</osmatch>
+			<osmatch name="ASUS RT-N56U WAP (Linux 3.4)" accuracy="93" line="8344">
+				<osclass type="WAP" vendor="Asus" osfamily="embedded" accuracy="93"><cpe>cpe:/h:asus:rt-n56u</cpe></osclass>
+				<osclass type="WAP" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="93"><cpe>cpe:/o:linux:linux_kernel:3.4</cpe></osclass>
+			</osmatch>
+			<osmatch name="Linux 3.16" accuracy="93" line="63962">
+				<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="93"><cpe>cpe:/o:linux:linux_kernel:3.16</cpe></osclass>
+			</osmatch>
+			<osmatch name="Linux 2.6.39 - 3.2" accuracy="92" line="58074">
+				<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="92"><cpe>cpe:/o:linux:linux_kernel:2.6</cpe></osclass>
+				<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="92"><cpe>cpe:/o:linux:linux_kernel:3</cpe></osclass>
+			</osmatch>
+			<osmatch name="Linux 3.1 - 3.2" accuracy="92" line="62728">
+				<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="92"><cpe>cpe:/o:linux:linux_kernel:3</cpe></osclass>
+			</osmatch>
+			<osmatch name="Linux 3.2 - 4.9" accuracy="92" line="65105">
+				<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="92"><cpe>cpe:/o:linux:linux_kernel:3</cpe></osclass>
+				<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="4.X" accuracy="92"><cpe>cpe:/o:linux:linux_kernel:4</cpe></osclass>
+			</osmatch>
+			<osmatch name="Linux 3.5" accuracy="92" line="65438">
+				<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="92"><cpe>cpe:/o:linux:linux_kernel:3.5</cpe></osclass>
+			</osmatch>
+			<osfingerprint fingerprint="OS:SCAN(V=7.80%E=4%D=8/16%OT=22%CT=1%CU=32737%PV=Y%DS=2%DC=T%G=Y%TM=5F3982F&#xa;OS:E%P=x86_64-pc-linux-gnu)SEQ(SP=104%GCD=1%ISR=10C%TI=Z%CI=Z%II=I%TS=A)OPS&#xa;OS:(O1=M54DST11NW7%O2=M54DST11NW7%O3=M54DNNT11NW7%O4=M54DST11NW7%O5=M54DST1&#xa;OS:1NW7%O6=M54DST11)WIN(W1=FE88%W2=FE88%W3=FE88%W4=FE88%W5=FE88%W6=FE88)ECN&#xa;OS:(R=Y%DF=Y%T=40%W=FAF0%O=M54DNNSNW7%CC=Y%Q=)T1(R=Y%DF=Y%T=40%S=O%A=S+%F=A&#xa;OS:S%RD=0%Q=)T2(R=N)T3(R=N)T4(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T5(R&#xa;OS:=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F&#xa;OS:=R%O=%RD=0%Q=)T7(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)U1(R=Y%DF=N%&#xa;OS:T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)IE(R=Y%DFI=N%T=40%CD&#xa;OS:=S)&#xa;"/>
+		</os>
+		<uptime seconds="810274" lastboot="Fri Aug  7 05:58:52 2020"/>
+		<distance value="2"/>
+		<tcpsequence index="260" difficulty="Good luck!" values="9B5AA0B0,790686D0,D9DBF12A,C09082C0,21A1DE4D,BD82E391"/>
+		<ipidsequence class="All zeros" values="0,0,0,0,0,0"/>
+		<tcptssequence class="1000HZ" values="3048EDAC,3048EE17,3048EE7B,3048EEDE,3048EF43,3048EFA4"/>
+		<trace port="5900" proto="tcp">
+			<hop ttl="1" ipaddr="10.10.14.1" rtt="24.63"/>
+			<hop ttl="2" ipaddr="10.10.10.194" rtt="20.09"/>
+		</trace>
+		<times srtt="24212" rttvar="1921" to="100000"/>
+	</host>
+	<host starttime="1597602614" endtime="1597604606"><status state="up" reason="reset" reason_ttl="63"/>
+		<address addr="10.10.10.195" addrtype="ipv4"/>
+		<hostnames>
+		</hostnames>
+		<ports><extraports state="closed" count="65534">
+				<extrareasons reason="resets" count="65534"/>
+			</extraports>
+			<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="ssh" product="OpenSSH" version="7.6p1 Ubuntu 4ubuntu0.3" extrainfo="Ubuntu Linux; protocol 2.0" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:7.6p1</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service><script id="ssh-hostkey" output="&#xa;  2048 b4:7b:bd:c0:96:9a:c3:d0:77:80:c8:87:c6:2e:a2:2f (RSA)&#xa;  256 44:cb:fe:20:bb:8d:34:f2:61:28:9b:e8:c7:e9:7b:5e (ECDSA)&#xa;  256 28:23:8c:e2:da:54:ed:cb:82:34:a1:e3:b2:2d:04:ed (ED25519)"><table>
+						<elem key="key">AAAAB3NzaC1yc2EAAAADAQABAAABAQDo7X60SypUzv25Vt7Iy/Wq4WdPkBzmUn+TqK7RNSxIlfDZTmwCNo0LO/YOLyltVUSprEvJfW1miuiwBTQnjWKnWL8f82Og+Wq0TkQ/7AZHJVpGmG19Rj/J12cHBWV0vQNvx+DvdoVDky7yvQklUA5yv7Gl7nFR1K3rWFqaFxlTXfZLerRAIcuQp1PxHbPL6k+W5cmS2hpWT/KONz5eL7mdbHARp1oEoKO73s67J7Stuq0259SxA+xbCouwjPQVQkPEanPz5fHDKqTKkSiYXywKQhHOTKPrJ0lEcMlaO3y4DIOPVF8FwDccrwRKjYJ0IaDQduEirhv3HfNv4CYic9Xz</elem>
+						<elem key="bits">2048</elem>
+						<elem key="fingerprint">b47bbdc0969ac3d07780c887c62ea22f</elem>
+						<elem key="type">ssh-rsa</elem>
+					</table>
+					<table>
+						<elem key="key">AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBKGMG1ljcV0joEI3ilCOe1HaCYGlk2lkf4MLzDLMH7wdEY6LC16UBVmug76hbDzyRcBThWk7+ziVJUc9DoME/PY=</elem>
+						<elem key="bits">256</elem>
+						<elem key="fingerprint">44cbfe20bb8d34f261289be8c7e97b5e</elem>
+						<elem key="type">ecdsa-sha2-nistp256</elem>
+					</table>
+					<table>
+						<elem key="key">AAAAC3NzaC1lZDI1NTE5AAAAIPuRtbACSrUQCko9znobx9UhGA0t9yVg8tM4D1a5gj2E</elem>
+						<elem key="bits">256</elem>
+						<elem key="fingerprint">28238ce2da54edcb8234a1e3b22d04ed</elem>
+						<elem key="type">ssh-ed25519</elem>
+					</table>
+			</script></port>
+			<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http" product="nginx" version="1.14.0" extrainfo="Ubuntu" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:igor_sysoev:nginx:1.14.0</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service><script id="http-favicon" output="Unknown favicon MD5: FED84E16B6CCFE88EE7FFAAE5DFEFD34"/><script id="http-methods" output="&#xa;  Supported Methods: GET OPTIONS HEAD"><table key="Supported Methods">
+						<elem>GET</elem>
+						<elem>OPTIONS</elem>
+						<elem>HEAD</elem>
+					</table>
+					</script><script id="http-server-header" output="nginx/1.14.0 (Ubuntu)"><elem>nginx/1.14.0 (Ubuntu)</elem>
+					</script><script id="http-title" output="Intense - WebApp"><elem key="title">Intense - WebApp</elem>
+			</script></port>
+		</ports>
+		<os><portused state="open" proto="tcp" portid="22"/>
+			<portused state="closed" proto="tcp" portid="1"/>
+			<portused state="closed" proto="udp" portid="38474"/>
+			<osmatch name="Linux 3.2 - 4.9" accuracy="95" line="65105">
+				<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="95"><cpe>cpe:/o:linux:linux_kernel:3</cpe></osclass>
+				<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="4.X" accuracy="95"><cpe>cpe:/o:linux:linux_kernel:4</cpe></osclass>
+			</osmatch>
+			<osmatch name="Linux 3.16" accuracy="95" line="63962">
+				<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="95"><cpe>cpe:/o:linux:linux_kernel:3.16</cpe></osclass>
+			</osmatch>
+			<osmatch name="Linux 3.18" accuracy="95" line="64256">
+				<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="95"><cpe>cpe:/o:linux:linux_kernel:3.18</cpe></osclass>
+			</osmatch>
+			<osmatch name="ASUS RT-N56U WAP (Linux 3.4)" accuracy="95" line="8344">
+				<osclass type="WAP" vendor="Asus" osfamily="embedded" accuracy="95"><cpe>cpe:/h:asus:rt-n56u</cpe></osclass>
+				<osclass type="WAP" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="95"><cpe>cpe:/o:linux:linux_kernel:3.4</cpe></osclass>
+			</osmatch>
+			<osmatch name="Linux 3.1" accuracy="93" line="62708">
+				<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="93"><cpe>cpe:/o:linux:linux_kernel:3.1</cpe></osclass>
+			</osmatch>
+			<osmatch name="Linux 3.2" accuracy="93" line="64455">
+				<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="93"><cpe>cpe:/o:linux:linux_kernel:3.2</cpe></osclass>
+			</osmatch>
+			<osmatch name="Linux 3.10 - 4.11" accuracy="93" line="63230">
+				<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="93"><cpe>cpe:/o:linux:linux_kernel:3</cpe></osclass>
+				<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="4.X" accuracy="93"><cpe>cpe:/o:linux:linux_kernel:4</cpe></osclass>
+			</osmatch>
+			<osmatch name="Oracle VM Server 3.4.2 (Linux 4.1)" accuracy="93" line="91868">
+				<osclass type="specialized" vendor="Oracle" osfamily="VM Server" osgen="3.X" accuracy="93"><cpe>cpe:/o:oracle:vm_server:3.4.2</cpe></osclass>
+				<osclass type="specialized" vendor="Linux" osfamily="Linux" osgen="4.X" accuracy="93"><cpe>cpe:/o:linux:linux_kernel:4.1</cpe></osclass>
+			</osmatch>
+			<osmatch name="Linux 3.12" accuracy="93" line="63436">
+				<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="93"><cpe>cpe:/o:linux:linux_kernel:3.12</cpe></osclass>
+			</osmatch>
+			<osmatch name="Linux 3.13" accuracy="93" line="63553">
+				<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="93"><cpe>cpe:/o:linux:linux_kernel:3.13</cpe></osclass>
+			</osmatch>
+			<osfingerprint fingerprint="OS:SCAN(V=7.80%E=4%D=8/16%OT=22%CT=1%CU=38474%PV=Y%DS=2%DC=T%G=Y%TM=5F3982F&#xa;OS:E%P=x86_64-pc-linux-gnu)SEQ(SP=103%GCD=1%ISR=10D%TI=Z%CI=I%II=I%TS=A)OPS&#xa;OS:(O1=M54DST11NW7%O2=M54DST11NW7%O3=M54DNNT11NW7%O4=M54DST11NW7%O5=M54DST1&#xa;OS:1NW7%O6=M54DST11)WIN(W1=7120%W2=7120%W3=7120%W4=7120%W5=7120%W6=7120)ECN&#xa;OS:(R=Y%DF=Y%T=40%W=7210%O=M54DNNSNW7%CC=Y%Q=)T1(R=Y%DF=Y%T=40%S=O%A=S+%F=A&#xa;OS:S%RD=0%Q=)T2(R=N)T3(R=N)T4(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T5(R&#xa;OS:=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F&#xa;OS:=R%O=%RD=0%Q=)T7(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)U1(R=Y%DF=N%&#xa;OS:T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)IE(R=Y%DFI=N%T=40%CD&#xa;OS:=S)&#xa;"/>
+		</os>
+		<uptime seconds="29141" lastboot="Sun Aug 16 06:57:45 2020"/>
+		<distance value="2"/>
+		<tcpsequence index="259" difficulty="Good luck!" values="832D05AF,2B56355B,97C8831C,7CA922E7,DB14B7A4,76ADB0A3"/>
+		<ipidsequence class="All zeros" values="0,0,0,0,0,0"/>
+		<tcptssequence class="1000HZ" values="1B9C694,1B9C6FE,1B9C763,1B9C7C6,1B9C82A,1B9C88C"/>
+		<trace port="5900" proto="tcp">
+			<hop ttl="1" ipaddr="10.10.14.1" rtt="24.63"/>
+			<hop ttl="2" ipaddr="10.10.10.195" rtt="20.21"/>
+		</trace>
+		<times srtt="24199" rttvar="1913" to="100000"/>
+	</host>
+	<host starttime="1597602614" endtime="1597604606"><status state="up" reason="echo-reply" reason_ttl="63"/>
+		<address addr="10.10.10.196" addrtype="ipv4"/>
+		<hostnames>
+		</hostnames>
+		<ports><extraports state="closed" count="65531">
+				<extrareasons reason="resets" count="65531"/>
+			</extraports>
+			<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="ssh" product="OpenSSH" version="7.9p1 Ubuntu 10" extrainfo="Ubuntu Linux; protocol 2.0" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:7.9p1</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service><script id="ssh-hostkey" output="&#xa;  2048 bc:d9:40:18:5e:2b:2b:12:3d:0b:1f:f3:6f:03:1b:8f (RSA)&#xa;  256 15:23:6f:a6:d8:13:6e:c4:5b:c5:4a:6f:5a:6b:0b:4d (ECDSA)&#xa;  256 83:44:a5:b4:88:c2:e9:28:41:6a:da:9e:a8:3a:10:90 (ED25519)"><table>
+						<elem key="key">AAAAB3NzaC1yc2EAAAADAQABAAABAQC4bXLRmOqeREMWskLCDUiQjW+gJS1vBeD2gUlYfgQokQfDVsro6JR9JQGIdRcSNzw+Ve1D+vjkereFXqE6Kqs4zM+06a6PqXEc1pOQoIPwuf1PXUjemVk0CCbDLwAGJ7PXpTvRsx697yh9Gy/sU3OqFvh8RG/wT03nget3TvRKLwhe6Ifwmbp6YjJIMozhlFODWFH3lzO1Fn9uvfXvzvMHZ2kCSGLeYuF/FXg9WAwaFZXlRlK1vL3J2dcwGrGxSQ4J+bN5B36o2LDYh/87dQ+qr0onHFGf9fUFzdPeNvmYFPjuheIB6hUo/kGLgZNBuPyZWlkkEwbMFfHqSF3clbPL</elem>
+						<elem key="bits">2048</elem>
+						<elem key="fingerprint">bcd940185e2b2b123d0b1ff36f031b8f</elem>
+						<elem key="type">ssh-rsa</elem>
+					</table>
+					<table>
+						<elem key="key">AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBNCLx3XzDjzytP4AYqpean4Lu2/QOlXskZdTHspve2lAwe49HszunwY2i1RsBc9m3uoOKrOuo5vNMngE5yI01Y0=</elem>
+						<elem key="bits">256</elem>
+						<elem key="fingerprint">15236fa6d8136ec45bc54a6f5a6b0b4d</elem>
+						<elem key="type">ecdsa-sha2-nistp256</elem>
+					</table>
+					<table>
+						<elem key="key">AAAAC3NzaC1lZDI1NTE5AAAAIBKXOSnSTEbFkMz/3pF3ZymVGHSRmbOL4nBFpGjSCM1i</elem>
+						<elem key="bits">256</elem>
+						<elem key="fingerprint">8344a5b488c2e928416ada9ea83a1090</elem>
+						<elem key="type">ssh-ed25519</elem>
+					</table>
+			</script></port>
+			<port protocol="tcp" portid="5000"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http" product="nginx" method="probed" conf="10"><cpe>cpe:/a:igor_sysoev:nginx</cpe></service><script id="http-favicon" output="Unknown favicon MD5: F7E3D97F404E71D302B3239EEF48D5F2"/><script id="http-methods" output="&#xa;  Supported Methods: GET HEAD POST OPTIONS"><table key="Supported Methods">
+						<elem>GET</elem>
+						<elem>HEAD</elem>
+						<elem>POST</elem>
+						<elem>OPTIONS</elem>
+					</table>
+					</script><script id="http-robots.txt" output="55 disallowed entries (15 shown)&#xa;/ /autocomplete/users /search /api /admin /profile &#xa;/dashboard /projects/new /groups/new /groups/*/edit /users /help &#xa;/s/ /snippets/new /snippets/*/edit"/><script id="http-title" output="Sign in \xC2\xB7 GitLab&#xa;Requested resource was http://10.10.10.196:5000/users/sign_in"><elem key="title">Sign in \xC2\xB7 GitLab</elem>
+					<elem key="redirect_url">http://10.10.10.196:5000/users/sign_in</elem>
+			</script><script id="http-trane-info" output="Problem with XML parsing of /evox/about"/></port>
+			<port protocol="tcp" portid="8000"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http" product="Werkzeug httpd" version="0.14.1" extrainfo="Python 3.7.3" method="probed" conf="10"><cpe>cpe:/a:python:python:3.7.3</cpe></service><script id="http-methods" output="&#xa;  Supported Methods: GET OPTIONS HEAD"><table key="Supported Methods">
+						<elem>GET</elem>
+						<elem>OPTIONS</elem>
+						<elem>HEAD</elem>
+					</table>
+					</script><script id="http-server-header" output="Werkzeug/0.14.1 Python/3.7.3"><elem>Werkzeug/0.14.1 Python/3.7.3</elem>
+					</script><script id="http-title" output="Home"><elem key="title">Home</elem>
+			</script></port>
+			<port protocol="tcp" portid="8060"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http" product="nginx" version="1.14.2" method="probed" conf="10"><cpe>cpe:/a:igor_sysoev:nginx:1.14.2</cpe></service><script id="http-methods" output="&#xa;  Supported Methods: GET HEAD POST"><table key="Supported Methods">
+						<elem>GET</elem>
+						<elem>HEAD</elem>
+						<elem>POST</elem>
+					</table>
+					</script><script id="http-server-header" output="nginx/1.14.2"><elem>nginx/1.14.2</elem>
+					</script><script id="http-title" output="404 Not Found"><elem key="title">404 Not Found</elem>
+			</script></port>
+			<port protocol="tcp" portid="9094"><state state="open" reason="syn-ack" reason_ttl="63"/></port>
+		</ports>
+		<os><portused state="open" proto="tcp" portid="22"/>
+			<portused state="closed" proto="tcp" portid="1"/>
+			<portused state="closed" proto="udp" portid="38120"/>
+			<osmatch name="Linux 2.6.32" accuracy="95" line="55463">
+				<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="95"><cpe>cpe:/o:linux:linux_kernel:2.6.32</cpe></osclass>
+			</osmatch>
+			<osmatch name="Linux 3.1" accuracy="95" line="62708">
+				<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="95"><cpe>cpe:/o:linux:linux_kernel:3.1</cpe></osclass>
+			</osmatch>
+			<osmatch name="Linux 3.2" accuracy="95" line="64455">
+				<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="95"><cpe>cpe:/o:linux:linux_kernel:3.2</cpe></osclass>
+			</osmatch>
+			<osmatch name="AXIS 210A or 211 Network Camera (Linux 2.6.17)" accuracy="94" line="61606">
+				<osclass type="webcam" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="94"><cpe>cpe:/o:linux:linux_kernel:2.6.17</cpe></osclass>
+				<osclass type="webcam" vendor="AXIS" osfamily="embedded" accuracy="94"><cpe>cpe:/h:axis:210a_network_camera</cpe><cpe>cpe:/h:axis:211_network_camera</cpe></osclass>
+			</osmatch>
+			<osmatch name="ASUS RT-N56U WAP (Linux 3.4)" accuracy="93" line="8344">
+				<osclass type="WAP" vendor="Asus" osfamily="embedded" accuracy="93"><cpe>cpe:/h:asus:rt-n56u</cpe></osclass>
+				<osclass type="WAP" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="93"><cpe>cpe:/o:linux:linux_kernel:3.4</cpe></osclass>
+			</osmatch>
+			<osmatch name="Linux 3.16" accuracy="93" line="63962">
+				<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="93"><cpe>cpe:/o:linux:linux_kernel:3.16</cpe></osclass>
+			</osmatch>
+			<osmatch name="Linux 2.6.39 - 3.2" accuracy="92" line="58074">
+				<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="92"><cpe>cpe:/o:linux:linux_kernel:2.6</cpe></osclass>
+				<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="92"><cpe>cpe:/o:linux:linux_kernel:3</cpe></osclass>
+			</osmatch>
+			<osmatch name="Linux 3.1 - 3.2" accuracy="92" line="62728">
+				<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="92"><cpe>cpe:/o:linux:linux_kernel:3</cpe></osclass>
+			</osmatch>
+			<osmatch name="Linux 3.11" accuracy="92" line="63278">
+				<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="92"><cpe>cpe:/o:linux:linux_kernel:3.11</cpe></osclass>
+			</osmatch>
+			<osmatch name="Linux 3.2 - 4.9" accuracy="92" line="65105">
+				<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="92"><cpe>cpe:/o:linux:linux_kernel:3</cpe></osclass>
+				<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="4.X" accuracy="92"><cpe>cpe:/o:linux:linux_kernel:4</cpe></osclass>
+			</osmatch>
+			<osfingerprint fingerprint="OS:SCAN(V=7.80%E=4%D=8/16%OT=22%CT=1%CU=38120%PV=Y%DS=2%DC=T%G=Y%TM=5F3982F&#xa;OS:E%P=x86_64-pc-linux-gnu)SEQ(SP=101%GCD=1%ISR=10A%TI=Z%CI=Z%II=I%TS=A)OPS&#xa;OS:(O1=M54DST11NW7%O2=M54DST11NW7%O3=M54DNNT11NW7%O4=M54DST11NW7%O5=M54DST1&#xa;OS:1NW7%O6=M54DST11)WIN(W1=FE88%W2=FE88%W3=FE88%W4=FE88%W5=FE88%W6=FE88)ECN&#xa;OS:(R=Y%DF=Y%T=40%W=FAF0%O=M54DNNSNW7%CC=Y%Q=)T1(R=Y%DF=Y%T=40%S=O%A=S+%F=A&#xa;OS:S%RD=0%Q=)T2(R=N)T3(R=N)T4(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T5(R&#xa;OS:=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F&#xa;OS:=R%O=%RD=0%Q=)T7(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)U1(R=Y%DF=N%&#xa;OS:T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)IE(R=Y%DFI=N%T=40%CD&#xa;OS:=S)&#xa;"/>
+		</os>
+		<uptime seconds="148570" lastboot="Fri Aug 14 21:47:16 2020"/>
+		<distance value="2"/>
+		<tcpsequence index="258" difficulty="Good luck!" values="DA1D2550,C7EE3049,98757DEC,3A56C3B0,7D7CCB87,2C03C9B7"/>
+		<ipidsequence class="All zeros" values="0,0,0,0,0,0"/>
+		<tcptssequence class="1000HZ" values="8D81FEE,8D82058,8D820BD,8D8211F,8D82184,8D821E6"/>
+		<trace port="5900" proto="tcp">
+			<hop ttl="1" ipaddr="10.10.14.1" rtt="24.63"/>
+			<hop ttl="2" ipaddr="10.10.10.196" rtt="27.25"/>
+		</trace>
+		<times srtt="25096" rttvar="1396" to="100000"/>
+	</host>
+	<host starttime="1597602614" endtime="1597604606"><status state="up" reason="echo-reply" reason_ttl="63"/>
+		<address addr="10.10.10.197" addrtype="ipv4"/>
+		<hostnames>
+		</hostnames>
+		<ports><extraports state="closed" count="65529">
+				<extrareasons reason="resets" count="65529"/>
+			</extraports>
+			<port protocol="tcp" portid="21"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="ftp" product="vsftpd" version="3.0.3" ostype="Unix" method="probed" conf="10"><cpe>cpe:/a:vsftpd:vsftpd:3.0.3</cpe></service></port>
+			<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="ssh" product="OpenSSH" version="7.9p1 Debian 10+deb10u2" extrainfo="protocol 2.0" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:7.9p1</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service><script id="ssh-hostkey" output="&#xa;  2048 57:c9:00:35:36:56:e6:6f:f6:de:86:40:b2:ee:3e:fd (RSA)&#xa;  256 d8:21:23:28:1d:b8:30:46:e2:67:2d:59:65:f0:0a:05 (ECDSA)&#xa;  256 5e:4f:23:4e:d4:90:8e:e9:5e:89:74:b3:19:0c:fc:1a (ED25519)"><table>
+						<elem key="key">AAAAB3NzaC1yc2EAAAADAQABAAABAQCy6l2NxLZItm85sZuNKU/OzDEhlvYMmmrKpTD0+uxdQyySppZN3Lo6xOM2dC6pqG5DQjz+GPJl1/kbdla6qJXDZ1D5lnnCaImTqU++a1WceLck3/6/04B5RlTYUoLQFwRuy84CX8NDvs0mIyR7bpbd8W03+EAwTabOxXfukQG1MbgCY5V8QmLRdi/ZtsIqVxVZWOYI5rvuAQ+YM9D/Oa6mwAO5l2V3/h/A5nHDx2Vkl1++kfDqFNop2D2vssInvdwLKZ0M5RvXLQPlsqRLfqtcTBBLxYY6ZVcLHkvEA+gekHGcPRw0MV5U9vsx18+6O8wm9ZNI/a1Y4TyXIHMcbHi9</elem>
+						<elem key="bits">2048</elem>
+						<elem key="fingerprint">57c900353656e66ff6de8640b2ee3efd</elem>
+						<elem key="type">ssh-rsa</elem>
+					</table>
+					<table>
+						<elem key="key">AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBOHL62JJEI1N8SHtcSypj9IjyD3dm6CA5iyog1Rmi4P5N6VtA/5RxBxegMYv7bTFymmFm02+w9zXdKMUcSs5TbE=</elem>
+						<elem key="bits">256</elem>
+						<elem key="fingerprint">d82123281db83046e2672d5965f00a05</elem>
+						<elem key="type">ecdsa-sha2-nistp256</elem>
+					</table>
+					<table>
+						<elem key="key">AAAAC3NzaC1lZDI1NTE5AAAAILZ/TeP6ZPj9zbHyFVfwZg48EElGqKCENQgPw+QCoC7x</elem>
+						<elem key="bits">256</elem>
+						<elem key="fingerprint">5e4f234ed4908ee95e8974b3190cfc1a</elem>
+						<elem key="type">ssh-ed25519</elem>
+					</table>
+			</script></port>
+			<port protocol="tcp" portid="25"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="smtp" product="Postfix smtpd" hostname=" debian" method="probed" conf="10"><cpe>cpe:/a:postfix:postfix</cpe></service><script id="smtp-commands" output="debian, PIPELINING, SIZE 10240000, VRFY, ETRN, STARTTLS, ENHANCEDSTATUSCODES, 8BITMIME, DSN, SMTPUTF8, CHUNKING, "/></port>
+			<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http" product="nginx" version="1.14.2" method="probed" conf="10"><cpe>cpe:/a:igor_sysoev:nginx:1.14.2</cpe></service><script id="http-methods" output="&#xa;  Supported Methods: GET HEAD POST OPTIONS"><table key="Supported Methods">
+						<elem>GET</elem>
+						<elem>HEAD</elem>
+						<elem>POST</elem>
+						<elem>OPTIONS</elem>
+					</table>
+					</script><script id="http-server-header" output="nginx/1.14.2"><elem>nginx/1.14.2</elem>
+					</script><script id="http-title" output="Did not follow redirect to http://sneakycorp.htb"><elem key="redirect_url">http://sneakycorp.htb</elem>
+			</script></port>
+			<port protocol="tcp" portid="143"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="imap" product="Courier Imapd" extrainfo="released 2018" method="probed" conf="10"/><script id="imap-capabilities" output="THREAD=REFERENCES STARTTLS NAMESPACE SORT ACL CHILDREN QUOTA UTF8=ACCEPTA0001 OK ACL2=UNION IDLE UIDPLUS CAPABILITY IMAP4rev1 completed ENABLE THREAD=ORDEREDSUBJECT"/><script id="ssl-cert" output="Subject: commonName=localhost/organizationName=Courier Mail Server/stateOrProvinceName=NY/countryName=US&#xa;Subject Alternative Name: email:postmaster@example.com&#xa;Issuer: commonName=localhost/organizationName=Courier Mail Server/stateOrProvinceName=NY/countryName=US&#xa;Public Key type: rsa&#xa;Public Key bits: 3072&#xa;Signature Algorithm: sha256WithRSAEncryption&#xa;Not valid before: 2020-05-14T17:14:21&#xa;Not valid after:  2021-05-14T17:14:21&#xa;MD5:   3faf 4166 f274 83c5 8161 03ed f9c2 0308&#xa;SHA-1: f79f 040b 2cd7 afe0 31fa 08c3 b30a 5ff5 7b63 566c"><table key="subject">
+						<elem key="countryName">US</elem>
+						<elem key="organizationName">Courier Mail Server</elem>
+						<elem key="stateOrProvinceName">NY</elem>
+						<elem key="organizationalUnitName">Automatically-generated IMAP SSL key</elem>
+						<elem key="commonName">localhost</elem>
+						<elem key="localityName">New York</elem>
+					</table>
+					<table key="issuer">
+						<elem key="countryName">US</elem>
+						<elem key="organizationName">Courier Mail Server</elem>
+						<elem key="stateOrProvinceName">NY</elem>
+						<elem key="organizationalUnitName">Automatically-generated IMAP SSL key</elem>
+						<elem key="commonName">localhost</elem>
+						<elem key="localityName">New York</elem>
+					</table>
+					<table key="pubkey">
+						<elem key="bits">3072</elem>
+						<elem key="exponent">userdata: 0x560bf7dac528</elem>
+						<elem key="modulus">userdata: 0x560bf7dac568</elem>
+						<elem key="type">rsa</elem>
+					</table>
+					<table key="extensions">
+						<table>
+							<elem key="name">X509v3 Basic Constraints</elem>
+							<elem key="value">CA:FALSE</elem>
+							<elem key="critical">true</elem>
+						</table>
+						<table>
+							<elem key="name">X509v3 Subject Alternative Name</elem>
+							<elem key="value">email:postmaster@example.com</elem>
+						</table>
+						<table>
+							<elem key="name">X509v3 Subject Key Identifier</elem>
+							<elem key="value">F2:97:17:4C:FC:01:E5:4E:82:B1:36:F9:A7:3D:D5:C9:0A:38:DB:9C</elem>
+						</table>
+					</table>
+					<elem key="sig_algo">sha256WithRSAEncryption</elem>
+					<table key="validity">
+						<elem key="notBefore">2020-05-14T17:14:21</elem>
+						<elem key="notAfter">2021-05-14T17:14:21</elem>
+					</table>
+					<elem key="md5">3faf4166f27483c5816103edf9c20308</elem>
+					<elem key="sha1">f79f040b2cd7afe031fa08c3b30a5ff57b63566c</elem>
+					<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIE6zCCA1OgAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjjESMBAGA1UEAxMJbG9j&#xa;YWxob3N0MS0wKwYDVQQLEyRBdXRvbWF0aWNhbGx5LWdlbmVyYXRlZCBJTUFQIFNT&#xa;TCBrZXkxHDAaBgNVBAoTE0NvdXJpZXIgTWFpbCBTZXJ2ZXIxETAPBgNVBAcTCE5l&#xa;dyBZb3JrMQswCQYDVQQIEwJOWTELMAkGA1UEBhMCVVMwHhcNMjAwNTE0MTcxNDIx&#xa;WhcNMjEwNTE0MTcxNDIxWjCBjjESMBAGA1UEAxMJbG9jYWxob3N0MS0wKwYDVQQL&#xa;EyRBdXRvbWF0aWNhbGx5LWdlbmVyYXRlZCBJTUFQIFNTTCBrZXkxHDAaBgNVBAoT&#xa;E0NvdXJpZXIgTWFpbCBTZXJ2ZXIxETAPBgNVBAcTCE5ldyBZb3JrMQswCQYDVQQI&#xa;EwJOWTELMAkGA1UEBhMCVVMwggGiMA0GCSqGSIb3DQEBAQUAA4IBjwAwggGKAoIB&#xa;gQDCzBP4iuxxLmXPkmi5jABQrywLJK0meyW49umfYhqayBH7qtuIjyAmznnyDIR0&#xa;543qHgWAfSvGHLFDB9B1wnkvAU3aprjURn1956X/4jEi9xmhRwvum5T+vp3TT96d&#xa;JgW9SSLiPFQty5eVrKuQvg1bZg/Vjp7CUUQ0+7PmdylMOipohls5RDEppCDGFmiS&#xa;HN0ZayXpjd/kwqZ/O9uTJGHOzagY+ruTYAx3tanO4oDwdrz9FPr3S2KNPTjjtzqf&#xa;CPdcsi+6JTQJI03eMEftBKo3HZTp7Hx6FObZcvcNskTLqtsYZYuzHS7KQwiuTAJ5&#xa;d/ZKowCeJDaVlS35tQleisu+pJCkwcStpM1BJ51UQRZ5IpvItTfnrChEa1uyTlAy&#xa;ZIOQK2/+34K2ZrldYWyfKlYHxieGZgzQXLo/vyW/1gqzXy7KHx+Uuf4CAzzOP1p3&#xa;8QNmvsqkJrQMuH3XPXLswr9A1gPe7KTLEGNRJSxcGF1Q25m4e04HhZzK76KlBfVt&#xa;IJ0CAwEAAaNSMFAwDAYDVR0TAQH/BAIwADAhBgNVHREEGjAYgRZwb3N0bWFzdGVy&#xa;QGV4YW1wbGUuY29tMB0GA1UdDgQWBBTylxdM/AHlToKxNvmnPdXJCjjbnDANBgkq&#xa;hkiG9w0BAQsFAAOCAYEAAo7NqfYlXSEC8q3JXvI5EeVpkgBDOwnjxuC/P5ziEU0c&#xa;PRx6L3w+MxuYJdndC0hT9FexXzSgtps9Xm+TE81LgNvuipZ9bulF5pMmmO579U2Y&#xa;suJJpORD4P+65ezkfWDbPbdKyHMeRvVCkZCH74z2rCu+OeQTGb6GLfaaB7v9dThR&#xa;rfvHwM50hxNb4Zb4of7Eyw2OJGeeohoG4mFT4v7cu1WwimsDF/A7OCVOmvvFWeRA&#xa;EjdEReekDJsBFpHa8uRjxZ+4Ch9YvbFlYtYi6VyXV1AFR1Mb91w+iIitc6ROzjJ2&#xa;pVO69ePygQcjBRUTDX5reuBzaF5p9/6Ta9HP8NDI9+gdw6VGVTmYRJUbj7OeKSUq&#xa;FWUmtZYC288ErDAZ7z+6VqJtZsPXIItZ8J6UZE3zBclGMcQ7peL9wEvJQ8oSaHHM&#xa;AmgHIoMwKXSNEkHbBD24cf9KwVhcyJ4QCrSJBMAys98X6TzCwQI4Hy7XyifU3x/L&#xa;XUFD0JSVQp4Rmcg5Uzuk&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+			</script><script id="ssl-date" output="TLS randomness does not represent time"></script></port>
+			<port protocol="tcp" portid="993"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="imap" product="Courier Imapd" extrainfo="released 2018" tunnel="ssl" method="probed" conf="10"/><script id="imap-capabilities" output="THREAD=REFERENCES NAMESPACE SORT ACL CHILDREN QUOTA UTF8=ACCEPTA0001 OK ACL2=UNION AUTH=PLAIN UIDPLUS CAPABILITY IMAP4rev1 ENABLE completed IDLE THREAD=ORDEREDSUBJECT"/><script id="ssl-cert" output="Subject: commonName=localhost/organizationName=Courier Mail Server/stateOrProvinceName=NY/countryName=US&#xa;Subject Alternative Name: email:postmaster@example.com&#xa;Issuer: commonName=localhost/organizationName=Courier Mail Server/stateOrProvinceName=NY/countryName=US&#xa;Public Key type: rsa&#xa;Public Key bits: 3072&#xa;Signature Algorithm: sha256WithRSAEncryption&#xa;Not valid before: 2020-05-14T17:14:21&#xa;Not valid after:  2021-05-14T17:14:21&#xa;MD5:   3faf 4166 f274 83c5 8161 03ed f9c2 0308&#xa;SHA-1: f79f 040b 2cd7 afe0 31fa 08c3 b30a 5ff5 7b63 566c"><table key="subject">
+						<elem key="countryName">US</elem>
+						<elem key="organizationName">Courier Mail Server</elem>
+						<elem key="stateOrProvinceName">NY</elem>
+						<elem key="organizationalUnitName">Automatically-generated IMAP SSL key</elem>
+						<elem key="commonName">localhost</elem>
+						<elem key="localityName">New York</elem>
+					</table>
+					<table key="issuer">
+						<elem key="countryName">US</elem>
+						<elem key="organizationName">Courier Mail Server</elem>
+						<elem key="stateOrProvinceName">NY</elem>
+						<elem key="organizationalUnitName">Automatically-generated IMAP SSL key</elem>
+						<elem key="commonName">localhost</elem>
+						<elem key="localityName">New York</elem>
+					</table>
+					<table key="pubkey">
+						<elem key="bits">3072</elem>
+						<elem key="exponent">userdata: 0x560bf7676648</elem>
+						<elem key="modulus">userdata: 0x560bf7676688</elem>
+						<elem key="type">rsa</elem>
+					</table>
+					<table key="extensions">
+						<table>
+							<elem key="name">X509v3 Basic Constraints</elem>
+							<elem key="value">CA:FALSE</elem>
+							<elem key="critical">true</elem>
+						</table>
+						<table>
+							<elem key="name">X509v3 Subject Alternative Name</elem>
+							<elem key="value">email:postmaster@example.com</elem>
+						</table>
+						<table>
+							<elem key="name">X509v3 Subject Key Identifier</elem>
+							<elem key="value">F2:97:17:4C:FC:01:E5:4E:82:B1:36:F9:A7:3D:D5:C9:0A:38:DB:9C</elem>
+						</table>
+					</table>
+					<elem key="sig_algo">sha256WithRSAEncryption</elem>
+					<table key="validity">
+						<elem key="notBefore">2020-05-14T17:14:21</elem>
+						<elem key="notAfter">2021-05-14T17:14:21</elem>
+					</table>
+					<elem key="md5">3faf4166f27483c5816103edf9c20308</elem>
+					<elem key="sha1">f79f040b2cd7afe031fa08c3b30a5ff57b63566c</elem>
+					<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIE6zCCA1OgAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjjESMBAGA1UEAxMJbG9j&#xa;YWxob3N0MS0wKwYDVQQLEyRBdXRvbWF0aWNhbGx5LWdlbmVyYXRlZCBJTUFQIFNT&#xa;TCBrZXkxHDAaBgNVBAoTE0NvdXJpZXIgTWFpbCBTZXJ2ZXIxETAPBgNVBAcTCE5l&#xa;dyBZb3JrMQswCQYDVQQIEwJOWTELMAkGA1UEBhMCVVMwHhcNMjAwNTE0MTcxNDIx&#xa;WhcNMjEwNTE0MTcxNDIxWjCBjjESMBAGA1UEAxMJbG9jYWxob3N0MS0wKwYDVQQL&#xa;EyRBdXRvbWF0aWNhbGx5LWdlbmVyYXRlZCBJTUFQIFNTTCBrZXkxHDAaBgNVBAoT&#xa;E0NvdXJpZXIgTWFpbCBTZXJ2ZXIxETAPBgNVBAcTCE5ldyBZb3JrMQswCQYDVQQI&#xa;EwJOWTELMAkGA1UEBhMCVVMwggGiMA0GCSqGSIb3DQEBAQUAA4IBjwAwggGKAoIB&#xa;gQDCzBP4iuxxLmXPkmi5jABQrywLJK0meyW49umfYhqayBH7qtuIjyAmznnyDIR0&#xa;543qHgWAfSvGHLFDB9B1wnkvAU3aprjURn1956X/4jEi9xmhRwvum5T+vp3TT96d&#xa;JgW9SSLiPFQty5eVrKuQvg1bZg/Vjp7CUUQ0+7PmdylMOipohls5RDEppCDGFmiS&#xa;HN0ZayXpjd/kwqZ/O9uTJGHOzagY+ruTYAx3tanO4oDwdrz9FPr3S2KNPTjjtzqf&#xa;CPdcsi+6JTQJI03eMEftBKo3HZTp7Hx6FObZcvcNskTLqtsYZYuzHS7KQwiuTAJ5&#xa;d/ZKowCeJDaVlS35tQleisu+pJCkwcStpM1BJ51UQRZ5IpvItTfnrChEa1uyTlAy&#xa;ZIOQK2/+34K2ZrldYWyfKlYHxieGZgzQXLo/vyW/1gqzXy7KHx+Uuf4CAzzOP1p3&#xa;8QNmvsqkJrQMuH3XPXLswr9A1gPe7KTLEGNRJSxcGF1Q25m4e04HhZzK76KlBfVt&#xa;IJ0CAwEAAaNSMFAwDAYDVR0TAQH/BAIwADAhBgNVHREEGjAYgRZwb3N0bWFzdGVy&#xa;QGV4YW1wbGUuY29tMB0GA1UdDgQWBBTylxdM/AHlToKxNvmnPdXJCjjbnDANBgkq&#xa;hkiG9w0BAQsFAAOCAYEAAo7NqfYlXSEC8q3JXvI5EeVpkgBDOwnjxuC/P5ziEU0c&#xa;PRx6L3w+MxuYJdndC0hT9FexXzSgtps9Xm+TE81LgNvuipZ9bulF5pMmmO579U2Y&#xa;suJJpORD4P+65ezkfWDbPbdKyHMeRvVCkZCH74z2rCu+OeQTGb6GLfaaB7v9dThR&#xa;rfvHwM50hxNb4Zb4of7Eyw2OJGeeohoG4mFT4v7cu1WwimsDF/A7OCVOmvvFWeRA&#xa;EjdEReekDJsBFpHa8uRjxZ+4Ch9YvbFlYtYi6VyXV1AFR1Mb91w+iIitc6ROzjJ2&#xa;pVO69ePygQcjBRUTDX5reuBzaF5p9/6Ta9HP8NDI9+gdw6VGVTmYRJUbj7OeKSUq&#xa;FWUmtZYC288ErDAZ7z+6VqJtZsPXIItZ8J6UZE3zBclGMcQ7peL9wEvJQ8oSaHHM&#xa;AmgHIoMwKXSNEkHbBD24cf9KwVhcyJ4QCrSJBMAys98X6TzCwQI4Hy7XyifU3x/L&#xa;XUFD0JSVQp4Rmcg5Uzuk&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+			</script><script id="ssl-date" output="TLS randomness does not represent time"></script></port>
+			<port protocol="tcp" portid="8080"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http" product="nginx" version="1.14.2" method="probed" conf="10"><cpe>cpe:/a:igor_sysoev:nginx:1.14.2</cpe></service><script id="http-methods" output="&#xa;  Supported Methods: GET HEAD"><table key="Supported Methods">
+						<elem>GET</elem>
+						<elem>HEAD</elem>
+					</table>
+					</script><script id="http-open-proxy" output="Proxy might be redirecting requests"/><script id="http-server-header" output="nginx/1.14.2"><elem>nginx/1.14.2</elem>
+					</script><script id="http-title" output="Welcome to nginx!"><elem key="title">Welcome to nginx!</elem>
+			</script></port>
+		</ports>
+		<os><portused state="open" proto="tcp" portid="21"/>
+			<portused state="closed" proto="tcp" portid="1"/>
+			<portused state="closed" proto="udp" portid="32189"/>
+			<osmatch name="Linux 2.6.32" accuracy="95" line="55463">
+				<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="95"><cpe>cpe:/o:linux:linux_kernel:2.6.32</cpe></osclass>
+			</osmatch>
+			<osmatch name="Linux 3.1" accuracy="95" line="62708">
+				<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="95"><cpe>cpe:/o:linux:linux_kernel:3.1</cpe></osclass>
+			</osmatch>
+			<osmatch name="Linux 3.2" accuracy="95" line="64455">
+				<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="95"><cpe>cpe:/o:linux:linux_kernel:3.2</cpe></osclass>
+			</osmatch>
+			<osmatch name="AXIS 210A or 211 Network Camera (Linux 2.6.17)" accuracy="94" line="61606">
+				<osclass type="webcam" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="94"><cpe>cpe:/o:linux:linux_kernel:2.6.17</cpe></osclass>
+				<osclass type="webcam" vendor="AXIS" osfamily="embedded" accuracy="94"><cpe>cpe:/h:axis:210a_network_camera</cpe><cpe>cpe:/h:axis:211_network_camera</cpe></osclass>
+			</osmatch>
+			<osmatch name="ASUS RT-N56U WAP (Linux 3.4)" accuracy="93" line="8344">
+				<osclass type="WAP" vendor="Asus" osfamily="embedded" accuracy="93"><cpe>cpe:/h:asus:rt-n56u</cpe></osclass>
+				<osclass type="WAP" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="93"><cpe>cpe:/o:linux:linux_kernel:3.4</cpe></osclass>
+			</osmatch>
+			<osmatch name="Linux 3.16" accuracy="93" line="63962">
+				<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="93"><cpe>cpe:/o:linux:linux_kernel:3.16</cpe></osclass>
+			</osmatch>
+			<osmatch name="Linux 2.6.39 - 3.2" accuracy="92" line="58074">
+				<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="92"><cpe>cpe:/o:linux:linux_kernel:2.6</cpe></osclass>
+				<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="92"><cpe>cpe:/o:linux:linux_kernel:3</cpe></osclass>
+			</osmatch>
+			<osmatch name="Linux 3.1 - 3.2" accuracy="92" line="62728">
+				<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="92"><cpe>cpe:/o:linux:linux_kernel:3</cpe></osclass>
+			</osmatch>
+			<osmatch name="Linux 3.2 - 4.9" accuracy="92" line="65105">
+				<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="92"><cpe>cpe:/o:linux:linux_kernel:3</cpe></osclass>
+				<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="4.X" accuracy="92"><cpe>cpe:/o:linux:linux_kernel:4</cpe></osclass>
+			</osmatch>
+			<osmatch name="Linux 3.7 - 3.10" accuracy="92" line="65736">
+				<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="92"><cpe>cpe:/o:linux:linux_kernel:3</cpe></osclass>
+			</osmatch>
+			<osfingerprint fingerprint="OS:SCAN(V=7.80%E=4%D=8/16%OT=21%CT=1%CU=32189%PV=Y%DS=2%DC=T%G=Y%TM=5F3982F&#xa;OS:E%P=x86_64-pc-linux-gnu)SEQ(SP=105%GCD=1%ISR=10A%TI=Z%CI=Z%II=I%TS=A)OPS&#xa;OS:(O1=M54DST11NW7%O2=M54DST11NW7%O3=M54DNNT11NW7%O4=M54DST11NW7%O5=M54DST1&#xa;OS:1NW7%O6=M54DST11)WIN(W1=FE88%W2=FE88%W3=FE88%W4=FE88%W5=FE88%W6=FE88)ECN&#xa;OS:(R=Y%DF=Y%T=40%W=FAF0%O=M54DNNSNW7%CC=Y%Q=)T1(R=Y%DF=Y%T=40%S=O%A=S+%F=A&#xa;OS:S%RD=0%Q=)T2(R=N)T3(R=N)T4(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T5(R&#xa;OS:=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F&#xa;OS:=R%O=%RD=0%Q=)T7(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)U1(R=Y%DF=N%&#xa;OS:T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)IE(R=Y%DFI=N%T=40%CD&#xa;OS:=S)&#xa;"/>
+		</os>
+		<uptime seconds="2472559" lastboot="Sun Jul 19 00:14:07 2020"/>
+		<distance value="2"/>
+		<tcpsequence index="261" difficulty="Good luck!" values="673811A8,6C96E83F,13C0143,28BC7CC7,E29DC9C7,395A8087"/>
+		<ipidsequence class="All zeros" values="0,0,0,0,0,0"/>
+		<tcptssequence class="1000HZ" values="935D6145,935D61A9,935D620D,935D6270,935D62D5,935D6336"/>
+		<trace port="5900" proto="tcp">
+			<hop ttl="1" ipaddr="10.10.14.1" rtt="24.63"/>
+			<hop ttl="2" ipaddr="10.10.10.197" rtt="27.29"/>
+		</trace>
+		<times srtt="25379" rttvar="1262" to="100000"/>
+	</host>
+	<host starttime="1597602614" endtime="1597604606"><status state="up" reason="echo-reply" reason_ttl="127"/>
+		<address addr="10.10.10.198" addrtype="ipv4"/>
+		<hostnames>
+		</hostnames>
+		<ports><extraports state="filtered" count="65534">
+				<extrareasons reason="no-responses" count="65534"/>
+			</extraports>
+			<port protocol="tcp" portid="7680"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="pando-pub" method="table" conf="3"/></port>
+			<port protocol="tcp" portid="8080"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="http" product="Apache httpd" version="2.4.43" extrainfo="(Win64) OpenSSL/1.1.1g PHP/7.4.6" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.4.43</cpe></service></port>
+		</ports>
+		<os><portused state="open" proto="tcp" portid="7680"/>
+			<osmatch name="iPXE 1.0.0+" accuracy="100" line="40429">
+				<osclass type="specialized" vendor="iPXE" osfamily="iPXE" osgen="1.X" accuracy="100"><cpe>cpe:/o:ipxe:ipxe:1.0.0%2b</cpe></osclass>
+			</osmatch>
+			<osmatch name="Tomato 1.28 (Linux 2.4.20)" accuracy="100" line="46662">
+				<osclass type="WAP" vendor="Linux" osfamily="Linux" osgen="2.4.X" accuracy="100"><cpe>cpe:/o:linux:linux_kernel:2.4.20</cpe></osclass>
+			</osmatch>
+			<osmatch name="Tomato firmware (Linux 2.6.22)" accuracy="100" line="61430">
+				<osclass type="WAP" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="100"><cpe>cpe:/o:linux:linux_kernel:2.6.22</cpe></osclass>
+			</osmatch>
+			<osmatch name="Sony Ericsson U8i Vivaz mobile phone" accuracy="100" line="98544">
+				<osclass type="phone" vendor="Sony Ericsson" osfamily="embedded" accuracy="100"><cpe>cpe:/h:sonyericsson:u8i_vivaz</cpe></osclass>
+			</osmatch>
+		</os>
+		<distance value="2"/>
+		<trace port="8080" proto="tcp">
+			<hop ttl="1" ipaddr="10.10.14.1" rtt="24.63"/>
+			<hop ttl="2" ipaddr="10.10.10.198" rtt="64.07"/>
+		</trace>
+		<times srtt="350850" rttvar="430804" to="1250000"/>
+	</host>
+	<host starttime="1597602614" endtime="1597604606"><status state="up" reason="echo-reply" reason_ttl="254"/>
+		<address addr="10.10.10.199" addrtype="ipv4"/>
+		<hostnames>
+		</hostnames>
+		<ports><extraports state="closed" count="65534">
+				<extrareasons reason="resets" count="65534"/>
+			</extraports>
+			<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="ssh" product="OpenSSH" version="8.1" extrainfo="protocol 2.0" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:8.1</cpe></service><script id="ssh-hostkey" output="&#xa;  3072 5e:ff:81:e9:1f:9b:f8:9a:25:df:5d:82:1a:dd:7a:81 (RSA)&#xa;  256 64:7a:5a:52:85:c5:6d:d5:4a:6b:a7:1a:9a:8a:b9:bb (ECDSA)&#xa;  256 12:35:4b:6e:23:09:dc:ea:00:8c:72:20:c7:50:32:f3 (ED25519)"><table>
+						<elem key="key">AAAAB3NzaC1yc2EAAAADAQABAAABgQDe8l1l+kUpCKDTLXtOj9CY1xcde98zhpP0ANXSj7eI2KRVQuOpowxjzNf/NrDoIffaCtsNY36nnVw5JDbX2zU0+wKeMEoVHBlelNSneBHrYv4CuhlO7ll6tHZcs0kWSvFk8nipNTYXSm48EhFbspsC89Yv7REeRFq+uE1unEo8d+Dt2MmDzNnu+QtATp4wlSE1LIROq7cDRsR10S5j6fnaRbEYGquXSJkW6sV6PTZhGm8y6sXXQ3RynYJ129m5YTevg4fKpF/FkfEuPn5sRIj+aZCT6GjP9WEae+R/6lVEcMOmuq9K9CCqoGuwGakoK+m/upQDlI7pXcN8359a7XcMXSgriJIjV8yv350JsdLqIN704w5NLowAaInYPqXKNrXdxa5olprzF1dMlN0ClvV96tX9bg2ERrRhrLbSOZudrqefMNjSKqdNWLh7AQh8TnwdDMdXf/IOat1CjQMNwPTi3XkklU+Lm92J8Nd6gO8uLd6HuRLPVxUqJp6hKwLIbHM=</elem>
+						<elem key="bits">3072</elem>
+						<elem key="fingerprint">5eff81e91f9bf89a25df5d821add7a81</elem>
+						<elem key="type">ssh-rsa</elem>
+					</table>
+					<table>
+						<elem key="key">AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBOM044THRHSb9MKRgg+pCGqLErFIOMaaGjCwwSpxVFsdQWW9kg3fROwqwtNVM1McgJ4Y4NwVzl+w5DZGK2OdhNE=</elem>
+						<elem key="bits">256</elem>
+						<elem key="fingerprint">647a5a5285c56dd54a6ba71a9a8ab9bb</elem>
+						<elem key="type">ecdsa-sha2-nistp256</elem>
+					</table>
+					<table>
+						<elem key="key">AAAAC3NzaC1lZDI1NTE5AAAAIIKuJoZTZonWY0/JkBfYeM2POVzE/TZfUJGA10PMXB1s</elem>
+						<elem key="bits">256</elem>
+						<elem key="fingerprint">12354b6e2309dcea008c7220c75032f3</elem>
+						<elem key="type">ssh-ed25519</elem>
+					</table>
+			</script></port>
+			<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http" product="OpenBSD httpd" method="probed" conf="10"><cpe>cpe:/a:openbsd:httpd</cpe></service><script id="http-methods" output="&#xa;  Supported Methods: GET HEAD"><table key="Supported Methods">
+						<elem>GET</elem>
+						<elem>HEAD</elem>
+					</table>
+			</script><script id="http-title" output="Site doesn&apos;t have a title (text/html)."></script></port>
+		</ports>
+		<os><portused state="open" proto="tcp" portid="22"/>
+			<portused state="closed" proto="tcp" portid="1"/>
+			<portused state="closed" proto="udp" portid="42071"/>
+			<osmatch name="OpenBSD 4.4 - 4.5" accuracy="95" line="90809">
+				<osclass type="general purpose" vendor="OpenBSD" osfamily="OpenBSD" osgen="4.X" accuracy="95"><cpe>cpe:/o:openbsd:openbsd:4.4</cpe></osclass>
+			</osmatch>
+			<osmatch name="OpenBSD 6.0 - 6.1" accuracy="95" line="91558">
+				<osclass type="general purpose" vendor="OpenBSD" osfamily="OpenBSD" osgen="6.X" accuracy="95"><cpe>cpe:/o:openbsd:openbsd:6</cpe></osclass>
+			</osmatch>
+			<osmatch name="OpenBSD 5.0 - 5.8" accuracy="95" line="91148">
+				<osclass type="general purpose" vendor="OpenBSD" osfamily="OpenBSD" osgen="5.X" accuracy="95"><cpe>cpe:/o:openbsd:openbsd:5</cpe></osclass>
+			</osmatch>
+			<osmatch name="OpenBSD 4.1" accuracy="94" line="90425">
+				<osclass type="general purpose" vendor="OpenBSD" osfamily="OpenBSD" osgen="4.X" accuracy="94"><cpe>cpe:/o:openbsd:openbsd:4.1</cpe></osclass>
+			</osmatch>
+			<osmatch name="OpenBSD 5.0" accuracy="93" line="91127">
+				<osclass type="general purpose" vendor="OpenBSD" osfamily="OpenBSD" osgen="5.X" accuracy="93"><cpe>cpe:/o:openbsd:openbsd:5.0</cpe></osclass>
+			</osmatch>
+			<osmatch name="OpenBSD 4.2" accuracy="93" line="90518">
+				<osclass type="general purpose" vendor="OpenBSD" osfamily="OpenBSD" osgen="4.X" accuracy="93"><cpe>cpe:/o:openbsd:openbsd:4.2</cpe></osclass>
+			</osmatch>
+			<osmatch name="OpenBSD 4.0" accuracy="93" line="90317">
+				<osclass type="general purpose" vendor="OpenBSD" osfamily="OpenBSD" osgen="4.X" accuracy="93"><cpe>cpe:/o:openbsd:openbsd:4.0</cpe></osclass>
+			</osmatch>
+			<osmatch name="OpenBSD 3.8 - 4.7" accuracy="92" line="90193">
+				<osclass type="general purpose" vendor="OpenBSD" osfamily="OpenBSD" osgen="3.X" accuracy="92"><cpe>cpe:/o:openbsd:openbsd:3</cpe></osclass>
+				<osclass type="general purpose" vendor="OpenBSD" osfamily="OpenBSD" osgen="4.X" accuracy="92"><cpe>cpe:/o:openbsd:openbsd:4</cpe></osclass>
+			</osmatch>
+			<osmatch name="OpenBSD 4.6" accuracy="92" line="90900">
+				<osclass type="general purpose" vendor="OpenBSD" osfamily="OpenBSD" osgen="4.X" accuracy="92"><cpe>cpe:/o:openbsd:openbsd:4.6</cpe></osclass>
+			</osmatch>
+			<osmatch name="OpenBSD 4.7" accuracy="92" line="91009">
+				<osclass type="general purpose" vendor="OpenBSD" osfamily="OpenBSD" osgen="4.X" accuracy="92"><cpe>cpe:/o:openbsd:openbsd:4.7</cpe></osclass>
+			</osmatch>
+			<osfingerprint fingerprint="OS:SCAN(V=7.80%E=4%D=8/16%OT=22%CT=1%CU=42071%PV=Y%DS=2%DC=T%G=Y%TM=5F3982F&#xa;OS:E%P=x86_64-pc-linux-gnu)SEQ(SP=100%GCD=1%ISR=10A%TI=RD%CI=RI%II=RI%TS=21&#xa;OS:)SEQ(SP=101%GCD=1%ISR=103%TI=RD%CI=RI%TS=21)OPS(O1=M54DNNSNW6NNT11%O2=M5&#xa;OS:4DNNSNW6NNT11%O3=M54DNW6NNT11%O4=M54DNNSNW6NNT11%O5=M54DNNSNW6NNT11%O6=M&#xa;OS:54DNNSNNT11)WIN(W1=4000%W2=4000%W3=4000%W4=4000%W5=4000%W6=4000)ECN(R=Y%&#xa;OS:DF=Y%T=40%W=4000%O=M54DNNSNW6%CC=N%Q=)T1(R=Y%DF=Y%T=40%S=O%A=S+%F=AS%RD=&#xa;OS:0%Q=)T2(R=N)T3(R=N)T4(R=Y%DF=Y%T=40%W=0%S=A%A=S%F=AR%O=%RD=0%Q=)T5(R=Y%D&#xa;OS:F=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=Y%T=40%W=0%S=A%A=S%F=AR%&#xa;OS:O=%RD=0%Q=)T7(R=N)U1(R=Y%DF=N%T=FF%IPL=38%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK&#xa;OS:=G%RUD=G)IE(R=Y%DFI=S%T=FF%CD=S)&#xa;"/>
+		</os>
+		<uptime seconds="189" lastboot="Sun Aug 16 15:00:17 2020"/>
+		<distance value="2"/>
+		<tcpsequence index="257" difficulty="Good luck!" values="5F94EF09,3BC208BA,764C6EB5,8100193D,C0BE2B1A,C2E9CE12"/>
+		<ipidsequence class="Randomized" values="A6E0,F56B,C800,C69A,8E39,7DF3"/>
+		<tcptssequence class="other" values="EB4D700,2172773D,7ECCBCC0,5E3D982B,6AA32E3,A4384AF2"/>
+		<trace port="5900" proto="tcp">
+			<hop ttl="2" ipaddr="10.10.10.199" rtt="27.29"/>
+		</trace>
+		<times srtt="25537" rttvar="1475" to="100000"/>
+	</host>
+	<host starttime="1597602614" endtime="1597604606"><status state="up" reason="echo-reply" reason_ttl="63"/>
+		<address addr="10.10.10.200" addrtype="ipv4"/>
+		<hostnames>
+		</hostnames>
+		<ports><extraports state="closed" count="65533">
+				<extrareasons reason="resets" count="65533"/>
+			</extraports>
+			<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="ssh" product="OpenSSH" version="7.9p1 Debian 10+deb10u2" extrainfo="protocol 2.0" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:7.9p1</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service><script id="ssh-hostkey" output="&#xa;  2048 a2:76:5c:b0:88:6f:9e:62:e8:83:51:e7:cf:bf:2d:f2 (RSA)&#xa;  256 d0:65:fb:f6:3e:11:b1:d6:e6:f7:5e:c0:15:0c:0a:77 (ECDSA)&#xa;  256 5e:2b:93:59:1d:49:28:8d:43:2c:c1:f7:e3:37:0f:83 (ED25519)"><table>
+						<elem key="key">AAAAB3NzaC1yc2EAAAADAQABAAABAQC/YjsyMxXIT238iuTCGqvn1d8V8qA+GvRq0I0id9OfyIc7TZ2UKakBUQmNJFQ7GxheeKK4w+hqWxJm3aytFXuMOU2m/6osew7yT/pOu2cgnXWGCJX0BoyQcjPR6RD2vNQLlS5ALwD2g1qRDKfC1G99s0id+1TsQVwteLvk+Lsv1FAQ6YYzkfoSR9dGXvx7DPH8ifVsFWfyLsMSd7aW7QRC0tNBl67J4bC9YLQeNjbt0jKul3ClfSc53fYznIUMIsEBGbqVmuBx/ce2uwThAXfMkGiombhkCuMxKNW6tj1gHYPispkzvFk9CP3zWWSFAvfCjOc10bEGbUfXIN5612dZ</elem>
+						<elem key="bits">2048</elem>
+						<elem key="fingerprint">a2765cb0886f9e62e88351e7cfbf2df2</elem>
+						<elem key="type">ssh-rsa</elem>
+					</table>
+					<table>
+						<elem key="key">AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBJ1LlzLG7OYXlmwZROwufoiMb7DoMBUkPbQGUgTlgn0g9TzcPZCPH8vQ6IoA/0Lyl9AzwAAyN+29Z6BT1k+AtyM=</elem>
+						<elem key="bits">256</elem>
+						<elem key="fingerprint">d065fbf63e11b1d6e6f75ec0150c0a77</elem>
+						<elem key="type">ecdsa-sha2-nistp256</elem>
+					</table>
+					<table>
+						<elem key="key">AAAAC3NzaC1lZDI1NTE5AAAAINDqAge8JZ7KRtCKOk+gsSG+VC/SqyaVl3WY44LwYfv+</elem>
+						<elem key="bits">256</elem>
+						<elem key="fingerprint">5e2b93591d49288d432cc1f7e3370f83</elem>
+						<elem key="type">ssh-ed25519</elem>
+					</table>
+			</script></port>
+			<port protocol="tcp" portid="873"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="rsync" extrainfo="protocol version 31" method="probed" conf="10"/></port>
+			<port protocol="tcp" portid="3128"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http-proxy" product="Squid http proxy" version="4.6" method="probed" conf="10"><cpe>cpe:/a:squid-cache:squid:4.6</cpe></service><script id="http-server-header" output="squid/4.6"><elem>squid/4.6</elem>
+					</script><script id="http-title" output="ERROR: The requested URL could not be retrieved"><elem key="title">ERROR: The requested URL could not be retrieved</elem>
+			</script></port>
+		</ports>
+		<os><portused state="open" proto="tcp" portid="22"/>
+			<portused state="closed" proto="tcp" portid="1"/>
+			<portused state="closed" proto="udp" portid="40592"/>
+			<osmatch name="Linux 2.6.32" accuracy="95" line="55463">
+				<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="95"><cpe>cpe:/o:linux:linux_kernel:2.6.32</cpe></osclass>
+			</osmatch>
+			<osmatch name="Linux 3.1" accuracy="95" line="62708">
+				<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="95"><cpe>cpe:/o:linux:linux_kernel:3.1</cpe></osclass>
+			</osmatch>
+			<osmatch name="Linux 3.2" accuracy="95" line="64455">
+				<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="95"><cpe>cpe:/o:linux:linux_kernel:3.2</cpe></osclass>
+			</osmatch>
+			<osmatch name="AXIS 210A or 211 Network Camera (Linux 2.6.17)" accuracy="94" line="61606">
+				<osclass type="webcam" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="94"><cpe>cpe:/o:linux:linux_kernel:2.6.17</cpe></osclass>
+				<osclass type="webcam" vendor="AXIS" osfamily="embedded" accuracy="94"><cpe>cpe:/h:axis:210a_network_camera</cpe><cpe>cpe:/h:axis:211_network_camera</cpe></osclass>
+			</osmatch>
+			<osmatch name="ASUS RT-N56U WAP (Linux 3.4)" accuracy="93" line="8344">
+				<osclass type="WAP" vendor="Asus" osfamily="embedded" accuracy="93"><cpe>cpe:/h:asus:rt-n56u</cpe></osclass>
+				<osclass type="WAP" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="93"><cpe>cpe:/o:linux:linux_kernel:3.4</cpe></osclass>
+			</osmatch>
+			<osmatch name="Linux 3.16" accuracy="93" line="63962">
+				<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="93"><cpe>cpe:/o:linux:linux_kernel:3.16</cpe></osclass>
+			</osmatch>
+			<osmatch name="Linux 2.6.39 - 3.2" accuracy="92" line="58074">
+				<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="92"><cpe>cpe:/o:linux:linux_kernel:2.6</cpe></osclass>
+				<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="92"><cpe>cpe:/o:linux:linux_kernel:3</cpe></osclass>
+			</osmatch>
+			<osmatch name="Linux 3.1 - 3.2" accuracy="92" line="62728">
+				<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="92"><cpe>cpe:/o:linux:linux_kernel:3</cpe></osclass>
+			</osmatch>
+			<osmatch name="Linux 3.2 - 4.9" accuracy="92" line="65105">
+				<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="92"><cpe>cpe:/o:linux:linux_kernel:3</cpe></osclass>
+				<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="4.X" accuracy="92"><cpe>cpe:/o:linux:linux_kernel:4</cpe></osclass>
+			</osmatch>
+			<osmatch name="Linux 3.5" accuracy="92" line="65438">
+				<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="92"><cpe>cpe:/o:linux:linux_kernel:3.5</cpe></osclass>
+			</osmatch>
+			<osfingerprint fingerprint="OS:SCAN(V=7.80%E=4%D=8/16%OT=22%CT=1%CU=40592%PV=Y%DS=2%DC=T%G=Y%TM=5F3982F&#xa;OS:E%P=x86_64-pc-linux-gnu)SEQ(SP=104%GCD=1%ISR=10D%TI=Z%CI=Z%II=I%TS=A)OPS&#xa;OS:(O1=M54DST11NW7%O2=M54DST11NW7%O3=M54DNNT11NW7%O4=M54DST11NW7%O5=M54DST1&#xa;OS:1NW7%O6=M54DST11)WIN(W1=FE88%W2=FE88%W3=FE88%W4=FE88%W5=FE88%W6=FE88)ECN&#xa;OS:(R=Y%DF=Y%T=40%W=FAF0%O=M54DNNSNW7%CC=Y%Q=)T1(R=Y%DF=Y%T=40%S=O%A=S+%F=A&#xa;OS:S%RD=0%Q=)T2(R=N)T3(R=N)T4(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T5(R&#xa;OS:=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F&#xa;OS:=R%O=%RD=0%Q=)T7(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)U1(R=Y%DF=N%&#xa;OS:T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)IE(R=Y%DFI=N%T=40%CD&#xa;OS:=S)&#xa;"/>
+		</os>
+		<uptime seconds="1660780" lastboot="Tue Jul 28 09:43:46 2020"/>
+		<distance value="2"/>
+		<tcpsequence index="260" difficulty="Good luck!" values="AA8B1469,C5E99FAC,8518A550,E4140A9C,35CDDD8E,B3FD292C"/>
+		<ipidsequence class="All zeros" values="0,0,0,0,0,0"/>
+		<tcptssequence class="1000HZ" values="62FA9F1D,62FA9F81,62FA9FE5,62FAA049,62FAA0AD,62FAA115"/>
+		<trace port="5900" proto="tcp">
+			<hop ttl="2" ipaddr="10.10.10.200" rtt="27.30"/>
+		</trace>
+		<times srtt="23303" rttvar="3507" to="100000"/>
+	</host>
+	<host starttime="1597602614" endtime="1597604606"><status state="up" reason="reset" reason_ttl="63"/>
+		<address addr="10.10.10.201" addrtype="ipv4"/>
+		<hostnames>
+		</hostnames>
+		<ports><extraports state="closed" count="65533">
+				<extrareasons reason="resets" count="65533"/>
+			</extraports>
+			<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="ssh" product="OpenSSH" version="8.2p1 Ubuntu 4" extrainfo="Ubuntu Linux; protocol 2.0" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:8.2p1</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service></port>
+			<port protocol="tcp" portid="9000"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="cslistener" servicefp="SF-Port9000-TCP:V=7.80%I=7%D=8/16%Time=5F398195%P=x86_64-pc-linux-gnu%r(NULL,3F,&quot;\0\0\x18\x04\0\0\0\0\0\0\x04\0@\0\0\0\x05\0@\0\0\0\x06\0\0\x20\0\xfe\x03\0\0\0\x01\0\0\x04\x08\0\0\0\0\0\0\?\0\x01\0\0\x08\x06\0\0\0\0\0\0\0\0\0\0\0\0\0&quot;)%r(GenericLines,3F,&quot;\0\0\x18\x04\0\0\0\0\0\0\x04\0@\0\0\0\x05\0@\0\0\0\x06\0\0\x20\0\xfe\x03\0\0\0\x01\0\0\x04\x08\0\0\0\0\0\0\?\0\x01\0\0\x08\x06\0\0\0\0\0\0\0\0\0\0\0\0\0&quot;)%r(GetRequest,3F,&quot;\0\0\x18\x04\0\0\0\0\0\0\x04\0@\0\0\0\x05\0@\0\0\0\x06\0\0\x20\0\xfe\x03\0\0\0\x01\0\0\x04\x08\0\0\0\0\0\0\?\0\x01\0\0\x08\x06\0\0\0\0\0\0\0\0\0\0\0\0\0&quot;)%r(HTTPOptions,3F,&quot;\0\0\x18\x04\0\0\0\0\0\0\x04\0@\0\0\0\x05\0@\0\0\0\x06\0\0\x20\0\xfe\x03\0\0\0\x01\0\0\x04\x08\0\0\0\0\0\0\?\0\x01\0\0\x08\x06\0\0\0\0\0\0\0\0\0\0\0\0\0&quot;)%r(RTSPRequest,3F,&quot;\0\0\x18\x04\0\0\0\0\0\0\x04\0@\0\0\0\x05\0@\0\0\0\x06\0\0\x20\0\xfe\x03\0\0\0\x01\0\0\x04\x08\0\0\0\0\0\0\?\0\x01\0\0\x08\x06\0\0\0\0\0\0\0\0\0\0\0\0\0&quot;)%r(RPCCheck,3F,&quot;\0\0\x18\x04\0\0\0\0\0\0\x04\0@\0\0\0\x05\0@\0\0\0\x06\0\0\x20\0\xfe\x03\0\0\0\x01\0\0\x04\x08\0\0\0\0\0\0\?\0\x01\0\0\x08\x06\0\0\0\0\0\0\0\0\0\0\0\0\0&quot;)%r(DNSVersionBindReqTCP,3F,&quot;\0\0\x18\x04\0\0\0\0\0\0\x04\0@\0\0\0\x05\0@\0\0\0\x06\0\0\x20\0\xfe\x03\0\0\0\x01\0\0\x04\x08\0\0\0\0\0\0\?\0\x01\0\0\x08\x06\0\0\0\0\0\0\0\0\0\0\0\0\0&quot;)%r(DNSStatusRequestTCP,3F,&quot;\0\0\x18\x04\0\0\0\0\0\0\x04\0@\0\0\0\x05\0@\0\0\0\x06\0\0\x20\0\xfe\x03\0\0\0\x01\0\0\x04\x08\0\0\0\0\0\0\?\0\x01\0\0\x08\x06\0\0\0\0\0\0\0\0\0\0\0\0\0&quot;)%r(Help,3F,&quot;\0\0\x18\x04\0\0\0\0\0\0\x04\0@\0\0\0\x05\0@\0\0\0\x06\0\0\x20\0\xfe\x03\0\0\0\x01\0\0\x04\x08\0\0\0\0\0\0\?\0\x01\0\0\x08\x06\0\0\0\0\0\0\0\0\0\0\0\0\0&quot;)%r(SSLSessionReq,3F,&quot;\0\0\x18\x04\0\0\0\0\0\0\x04\0@\0\0\0\x05\0@\0\0\0\x06\0\0\x20\0\xfe\x03\0\0\0\x01\0\0\x04\x08\0\0\0\0\0\0\?\0\x01\0\0\x08\x06\0\0\0\0\0\0\0\0\0\0\0\0\0&quot;)%r(TerminalServerCookie,3F,&quot;\0\0\x18\x04\0\0\0\0\0\0\x04\0@\0\0\0\x05\0@\0\0\0\x06\0\0\x20\0\xfe\x03\0\0\0\x01\0\0\x04\x08\0\0\0\0\0\0\?\0\x01\0\0\x08\x06\0\0\0\0\0\0\0\0\0\0\0\0\0&quot;)%r(TLSSessionReq,3F,&quot;\0\0\x18\x04\0\0\0\0\0\0\x04\0@\0\0\0\x05\0@\0\0\0\x06\0\0\x20\0\xfe\x03\0\0\0\x01\0\0\x04\x08\0\0\0\0\0\0\?\0\x01\0\0\x08\x06\0\0\0\0\0\0\0\0\0\0\0\0\0&quot;);" method="table" conf="3"/></port>
+			<port protocol="tcp" portid="9100"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="jetdirect" method="table" conf="3"/></port>
+		</ports>
+		<os><portused state="open" proto="tcp" portid="22"/>
+			<portused state="closed" proto="tcp" portid="1"/>
+			<portused state="closed" proto="udp" portid="37050"/>
+			<osmatch name="Linux 2.6.32" accuracy="95" line="55463">
+				<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="95"><cpe>cpe:/o:linux:linux_kernel:2.6.32</cpe></osclass>
+			</osmatch>
+			<osmatch name="Linux 3.1" accuracy="95" line="62708">
+				<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="95"><cpe>cpe:/o:linux:linux_kernel:3.1</cpe></osclass>
+			</osmatch>
+			<osmatch name="Linux 3.2" accuracy="95" line="64455">
+				<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="95"><cpe>cpe:/o:linux:linux_kernel:3.2</cpe></osclass>
+			</osmatch>
+			<osmatch name="AXIS 210A or 211 Network Camera (Linux 2.6.17)" accuracy="94" line="61606">
+				<osclass type="webcam" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="94"><cpe>cpe:/o:linux:linux_kernel:2.6.17</cpe></osclass>
+				<osclass type="webcam" vendor="AXIS" osfamily="embedded" accuracy="94"><cpe>cpe:/h:axis:210a_network_camera</cpe><cpe>cpe:/h:axis:211_network_camera</cpe></osclass>
+			</osmatch>
+			<osmatch name="ASUS RT-N56U WAP (Linux 3.4)" accuracy="93" line="8344">
+				<osclass type="WAP" vendor="Asus" osfamily="embedded" accuracy="93"><cpe>cpe:/h:asus:rt-n56u</cpe></osclass>
+				<osclass type="WAP" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="93"><cpe>cpe:/o:linux:linux_kernel:3.4</cpe></osclass>
+			</osmatch>
+			<osmatch name="Linux 3.16" accuracy="93" line="63962">
+				<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="93"><cpe>cpe:/o:linux:linux_kernel:3.16</cpe></osclass>
+			</osmatch>
+			<osmatch name="Linux 2.6.39 - 3.2" accuracy="92" line="58074">
+				<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="92"><cpe>cpe:/o:linux:linux_kernel:2.6</cpe></osclass>
+				<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="92"><cpe>cpe:/o:linux:linux_kernel:3</cpe></osclass>
+			</osmatch>
+			<osmatch name="Linux 3.1 - 3.2" accuracy="92" line="62728">
+				<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="92"><cpe>cpe:/o:linux:linux_kernel:3</cpe></osclass>
+			</osmatch>
+			<osmatch name="Linux 3.11" accuracy="92" line="63278">
+				<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="92"><cpe>cpe:/o:linux:linux_kernel:3.11</cpe></osclass>
+			</osmatch>
+			<osmatch name="Linux 3.2 - 4.9" accuracy="92" line="65105">
+				<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="92"><cpe>cpe:/o:linux:linux_kernel:3</cpe></osclass>
+				<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="4.X" accuracy="92"><cpe>cpe:/o:linux:linux_kernel:4</cpe></osclass>
+			</osmatch>
+			<osfingerprint fingerprint="OS:SCAN(V=7.80%E=4%D=8/16%OT=22%CT=1%CU=37050%PV=Y%DS=2%DC=T%G=Y%TM=5F3982F&#xa;OS:E%P=x86_64-pc-linux-gnu)SEQ(SP=101%GCD=1%ISR=10B%TI=Z%CI=Z%II=I%TS=A)OPS&#xa;OS:(O1=M54DST11NW7%O2=M54DST11NW7%O3=M54DNNT11NW7%O4=M54DST11NW7%O5=M54DST1&#xa;OS:1NW7%O6=M54DST11)WIN(W1=FE88%W2=FE88%W3=FE88%W4=FE88%W5=FE88%W6=FE88)ECN&#xa;OS:(R=Y%DF=Y%T=40%W=FAF0%O=M54DNNSNW7%CC=Y%Q=)T1(R=Y%DF=Y%T=40%S=O%A=S+%F=A&#xa;OS:S%RD=0%Q=)T2(R=N)T3(R=N)T4(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T5(R&#xa;OS:=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F&#xa;OS:=R%O=%RD=0%Q=)T7(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)U1(R=Y%DF=N%&#xa;OS:T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)IE(R=Y%DFI=N%T=40%CD&#xa;OS:=S)&#xa;"/>
+		</os>
+		<uptime seconds="850793" lastboot="Thu Aug  6 18:43:33 2020"/>
+		<distance value="2"/>
+		<tcpsequence index="259" difficulty="Good luck!" values="C945C8B6,2C75215,6F4720A6,BDEDB909,D15382A6,16C1EA59"/>
+		<ipidsequence class="All zeros" values="0,0,0,0,0,0"/>
+		<tcptssequence class="1000HZ" values="32B332E9,32B33353,32B333B8,32B3341B,32B3347F,32B334E1"/>
+		<trace port="5900" proto="tcp">
+			<hop ttl="2" ipaddr="10.10.10.201" rtt="19.74"/>
+		</trace>
+		<times srtt="24209" rttvar="2107" to="100000"/>
+	</host>
+	<host starttime="1597602614" endtime="1597604606"><status state="up" reason="echo-reply" reason_ttl="127"/>
+		<address addr="10.10.10.203" addrtype="ipv4"/>
+		<hostnames>
+		</hostnames>
+		<ports><extraports state="filtered" count="65533">
+				<extrareasons reason="no-responses" count="65533"/>
+			</extraports>
+			<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="http" product="Microsoft IIS httpd" version="10.0" ostype="Windows" method="probed" conf="10"><cpe>cpe:/a:microsoft:iis:10.0</cpe><cpe>cpe:/o:microsoft:windows</cpe></service><script id="http-methods" output="&#xa;  Supported Methods: OPTIONS TRACE GET HEAD POST&#xa;  Potentially risky methods: TRACE"><table key="Supported Methods">
+						<elem>OPTIONS</elem>
+						<elem>TRACE</elem>
+						<elem>GET</elem>
+						<elem>HEAD</elem>
+						<elem>POST</elem>
+					</table>
+					<table key="Potentially risky methods">
+						<elem>TRACE</elem>
+					</table>
+					</script><script id="http-server-header" output="Microsoft-IIS/10.0"><elem>Microsoft-IIS/10.0</elem>
+					</script><script id="http-title" output="IIS Windows Server"><elem key="title">IIS Windows Server</elem>
+			</script></port>
+			<port protocol="tcp" portid="3690"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="svnserve" product="Subversion" method="probed" conf="10"><cpe>cpe:/a:apache:subversion</cpe></service></port>
+			<port protocol="tcp" portid="5985"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="http" product="Microsoft HTTPAPI httpd" version="2.0" extrainfo="SSDP/UPnP" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service><script id="http-server-header" output="Microsoft-HTTPAPI/2.0"><elem>Microsoft-HTTPAPI/2.0</elem>
+					</script><script id="http-title" output="Not Found"><elem key="title">Not Found</elem>
+			</script></port>
+		</ports>
+		<os><portused state="open" proto="tcp" portid="80"/>
+		</os>
+		<distance value="2"/>
+		<tcpsequence index="264" difficulty="Good luck!" values="23812FE,CE34B978,94CCCB46,987126D0,1BFE61F4,1DB5AAD8"/>
+		<ipidsequence class="Incremental" values="AF41,AF42,AF43,AF44,AF45,AF46"/>
+		<tcptssequence class="none returned (unsupported)"/>
+		<trace port="80" proto="tcp">
+			<hop ttl="2" ipaddr="10.10.10.203" rtt="19.71"/>
+		</trace>
+		<times srtt="24880" rttvar="3446" to="100000"/>
+	</host>
+	<taskbegin task="NSE" time="1597604606"/>
+	<taskend task="NSE" time="1597604606"/>
+	<taskbegin task="NSE" time="1597604606"/>
+	<taskend task="NSE" time="1597604606"/>
+	<taskbegin task="NSE" time="1597604606"/>
+	<taskend task="NSE" time="1597604606"/>
+	<runstats><finished time="1597604606" timestr="Sun Aug 16 15:03:26 2020" elapsed="1992.83" summary="Nmap done at Sun Aug 16 15:03:26 2020; 20 IP addresses (20 hosts up) scanned in 1992.83 seconds" exit="success"/><hosts up="20" down="0" total="20"/>
+	</runstats>
+</nmaprun>
