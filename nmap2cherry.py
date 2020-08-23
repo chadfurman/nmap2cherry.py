@@ -28,28 +28,52 @@ def create_blank_cherrytree_nmap_root():
 	return (cherrytree, scan_results)
 
 def extract_scan_type_from_raw_nmap_tree(raw_nmap_tree):
-	return raw_nmap_tree.find('scaninfo').get('type')
+	try:
+		return raw_nmap_tree.find('scaninfo').get('type')
+	except:
+		return None
 
 def extract_scan_protocol_from_raw_nmap_tree(raw_nmap_tree):
-	return raw_nmap_tree.find('scaninfo').get('protocol')
+	try:
+		return raw_nmap_tree.find('scaninfo').get('protocol')
+	except:
+		return None
 
 def extract_scan_num_services_from_raw_nmap_tree(raw_nmap_tree):
-	return raw_nmap_tree.find('scaninfo').get('numservices')
+	try:
+		return raw_nmap_tree.find('scaninfo').get('numservices')
+	except:
+		return None
 
 def extract_scan_services_from_raw_nmap_tree(raw_nmap_tree):
-	return raw_nmap_tree.find('scaninfo').get('services')
+	try:
+		return raw_nmap_tree.find('scaninfo').get('services')
+	except:
+		return None
 
 def extract_scan_start_time_from_raw_nmap_tree(raw_nmap_tree):
-	return raw_nmap_tree.getroot().get('startstr')
+	try:
+		return raw_nmap_tree.getroot().get('startstr')
+	except:
+		return None
 
 def extract_scan_end_time_from_raw_nmap_tree(raw_nmap_tree):
-	return raw_nmap_tree.find('runstats').find('finished').get('timestr')
+	try:
+		return raw_nmap_tree.find('runstats').find('finished').get('timestr')
+	except:
+		return None
 
 def extract_scan_args_from_raw_nmap_tree(raw_nmap_tree):
-	return raw_nmap_tree.getroot().get('args')
+	try:
+		return raw_nmap_tree.getroot().get('args')
+	except:
+		return None
 
 def extract_scan_summary_from_raw_nmap_tree(raw_nmap_tree):
-	return raw_nmap_tree.find('runstats').find('finished').get('summary')
+	try:
+		return raw_nmap_tree.find('runstats').find('finished').get('summary')
+	except:
+		return None
 
 def extract_scan_metadata_from_raw_nmap_tree(raw_nmap_tree):
 	return {
@@ -66,6 +90,38 @@ def extract_scan_metadata_from_raw_nmap_tree(raw_nmap_tree):
 
 def extract_hosts_from_raw_nmap_tree(raw_nmap_tree):
 	return raw_nmap_tree.findall('host')
+
+def extract_ip_addr_from_host(host):
+	try:
+		return host.find("address[@addrtype='ipv4']").get('addr')
+	except:
+		return None
+
+def extract_mac_addr_from_host(host):
+	try:
+		return host.find("address[@addrtype='mac']").get('addr')
+	except:
+		return None
+
+def extract_up_reason_from_host(host):
+	try:
+		return host.find("status").get('reason')
+	except:
+		return None
+
+def extract_hostname_from_host(host):
+	try:
+		return host.find("hostnames").find('hostname').text
+	except:
+		return None
+
+def extract_host_metadata_from_host(host):
+		return {
+			'ip_addr' :	extract_ip_addr_from_host(host),
+		#	'mac_addr':	extract_mac_addr_from_host(host),
+			'up_reason': extract_up_reason_from_host(host),
+		#	'hostnames': extract_hostname_from_host(host)
+		}
 
 def run():
 	'''
@@ -87,12 +143,9 @@ def run():
 	# 5. write the resulting cherrytree to a file
 	nmap_root = create_blank_cherrytree_nmap_root()
 	scan_metadata = extract_scan_metadata_from_raw_nmap_tree(raw_nmap_tree)
-	#hosts = get_hosts()
-	#for host in hosts:
-	#	 ip_addr = # get ip addr from parse
-	#	 mac_addr = # get from address @addrtype=mac
-	#	 up_reason = # get from status/reason
-	#	 hostnames= # get from hostnames/hostname (name/type)
+	hosts = get_hosts()
+	for host in hosts:
+		host_metadata = extract_host_metadata_from_host(host)
 	#	 ports = # get state @state=open
 		# for each port: 
 			# if state/@state=='open'

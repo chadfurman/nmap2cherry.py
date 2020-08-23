@@ -64,14 +64,14 @@ class TestNmap2Cherry(unittest.TestCase):
 		scan_metadata = test_subject.extract_scan_metadata_from_raw_nmap_tree(tree)
 
 		# 3. assert
-		self.assertEquals(scan_metadata['type'], 'syn', msg = "Error: metadata failed to successfully parse type")
-		self.assertEquals(scan_metadata['protocol'], 'tcp', msg = "Error: metadata failed to successfully parse protocol")
-		self.assertEquals(scan_metadata['num_services'], '65536', msg = "Error: metadata failed to successfully parse num_services")
-		self.assertEquals(scan_metadata['services'], '0-65535', msg = "Error: metadata failed to successfully parse services")
-		self.assertEquals(scan_metadata['start_time'], 'Sun Aug 16 14:30:14 2020', msg = "Error: metadata failed to successfully parse start_time")
-		self.assertEquals(scan_metadata['end_time'], 'Sun Aug 16 15:03:26 2020', msg = "Error: metadata failed to successfully parse end_time")
-		self.assertEquals(scan_metadata['args'], 'nmap -p0- -v -A -T4 -oN nmap_output.nmap -oG nmap_output.grep -oX nmap_output.xml 10.10.10.179,180,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,201,203', msg = "Error: metadata failed to successfully parse args")
-		self.assertEquals(scan_metadata['summary'], 'Nmap done at Sun Aug 16 15:03:26 2020; 20 IP addresses (20 hosts up) scanned in 1992.83 seconds', msg = "Error: metadata failed to successfully parse summary")
+		self.assertEquals(scan_metadata['type'], 'syn', msg = "Error: scan metadata failed to successfully parse type")
+		self.assertEquals(scan_metadata['protocol'], 'tcp', msg = "Error: scan metadata failed to successfully parse protocol")
+		self.assertEquals(scan_metadata['num_services'], '65536', msg = "Error: scan metadata failed to successfully parse num_services")
+		self.assertEquals(scan_metadata['services'], '0-65535', msg = "Error: scan metadata failed to successfully parse services")
+		self.assertEquals(scan_metadata['start_time'], 'Sun Aug 16 14:30:14 2020', msg = "Error: scan metadata failed to successfully parse start_time")
+		self.assertEquals(scan_metadata['end_time'], 'Sun Aug 16 15:03:26 2020', msg = "Error: scan metadata failed to successfully parse end_time")
+		self.assertEquals(scan_metadata['args'], 'nmap -p0- -v -A -T4 -oN nmap_output.nmap -oG nmap_output.grep -oX nmap_output.xml 10.10.10.179,180,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,201,203', msg = "Error: scan metadata failed to successfully parse args")
+		self.assertEquals(scan_metadata['summary'], 'Nmap done at Sun Aug 16 15:03:26 2020; 20 IP addresses (20 hosts up) scanned in 1992.83 seconds', msg = "Error: scan metadata failed to successfully parse summary")
 
 
 	def test_get_hosts(self):
@@ -84,6 +84,21 @@ class TestNmap2Cherry(unittest.TestCase):
 
 		# 3. assert
 		self.assertEquals(len(hosts), 20, msg = "Error: Incorrect number of hosts")
+	
+	def test_get_host_metadata(self):
+		# 1. setup
+		# pull a host from the tree
+		host = ET.ElementTree(file="test_nmap_output.xml").findall('host')[0]
+
+		# 2. execute
+		host_metadata = test_subject.extract_host_metadata_from_host(host)
+
+		# 3. assert
+		self.assertEquals(host_metadata['ip_addr'], '10.10.10.179', msg = "Error: host metadata failed to successfully parse ip_addr")
+	#	self.assertEquals(host_metadata['mac_addr'], None, msg = "Error: host metadata failed to successfully parse mac_addr")
+		self.assertEquals(host_metadata['up_reason'], 'echo-reply', msg = "Error: host metadata failed to successfully parse up_reason")
+	#	self.assertEquals(host_metadata['hostnames'], None, msg = "Error: host metadata failed to successfully parse hostnames")
+
 
 
 #	def test_(self):
