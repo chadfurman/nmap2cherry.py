@@ -6,20 +6,31 @@ A python script inspired by [this hacky XSLT](https://github.com/CBonnell/nmap2c
 
 Use [git](https://guides.github.com/introduction/git-handbook/) to clone down the repository locally as follows:
 
-```
-git clone 
 ```bash
-pip install foobar
+git clone https://github.com/chadfurman/nmap2cherry.py.git
 ```
 
 ## Usage
 
-```python
-import foobar
+Run nmap2cherry.py using python3 and passing the path to your nmap.xml file (nmap -oX path ...)
 
-foobar.pluralize('word') # returns 'words'
-foobar.pluralize('goose') # returns 'geese'
-foobar.singularize('phenomena') # returns 'phenomenon'
+```bash
+cd nmap2cherry.py/
+python3 nmap2cherry.py /path/to/nmap.xml
+cherrytree new_cherrytree.ctd # optional step to launch cherrytree on the newly created .ctd file
+```
+
+## Tests
+
+Tests help make sure that when you change the code, everything still works as expected.
+
+This project strives for test-coverage of most if not all functionality.
+
+Running the tests is easy, as they use the built-in unittest module:
+
+```bash
+cd nmap2cherry.py
+python3 nmap2cherry.test.py
 ```
 
 ## Contributing
