@@ -2,6 +2,8 @@
 
 A python script inspired by [this hacky XSLT](https://github.com/CBonnell/nmap2cherry)
 
+Generate a new_cherrytree.ctd file from nmap.xml output!
+
 ## Installation
 
 Use [git](https://guides.github.com/introduction/git-handbook/) to clone down the repository locally as follows:
